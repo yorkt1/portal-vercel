@@ -4,41 +4,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fátima Felippe — Portal Jurídico: Artigos e orientação em Direito</title>
+  <title>Fatima Felippe — Portal Jurídico: Artigos e Notícias</title>
   <meta name="description"
-    content="Artigos e guias práticos sobre temas jurídicos (direito do consumidor, guarda compartilhada, responsabilidade civil e mais). Conteúdo confiável, modelos e orientações para cidadãos e advogados." />
+    content="Fatima Felippe - Portal Jurídico com artigos, reflexões e notícias na área do Direito. Informações precisas e relevantes para profissionais, estudantes e leitores." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://fatimafelipe.com.br/" />
+  <link rel="icon"
+    href="https://res.cloudinary.com/dqewxdbfx/image/upload/v1768103475/ChatGPT_Image_11_de_jan._de_2026_00_50_34_liswp9.png" />
   <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
-        "url": "https://fatimafelipe.com.br/",
-        "name": "Portal Jurídico Fátima Felippe",
+        "url": "https://fatimafelippe.com.br/",
+        "name": "Portal Jurídico Fatima Felippe",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://fatimafelipe.com.br/?s={search_term_string}",
+          "target": "https://fatimafelippe.com.br/?s={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "Organization",
-        "name": "Portal Jurídico Fátima Felippe",
-        "url": "https://fatimafelipe.com.br/",
+        "name": "Portal Jurídico Fatima Felippe",
+        "url": "https://fatimafelippe.com.br/",
         "sameAs": ["https://www.instagram.com/fatimafelippe7?utm_source=qr&igsh=ZTUyeDhwcjlsem5h"]
       },
       {
         "@type": "Article",
-        "@id": "https://fatimafelipe.com.br/#article-curatela",
+        "@id": "https://fatimafelippe.com.br/#article-curatela",
         "headline": "Curatela: Instrumento de Proteção e Cuidado no Ordenamento Jurídico Brasileiro",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762624801/maos-dadas-umas-as-outras-para-apoio_page-0001_n0v2bn.jpg",
         "datePublished": "2025-08-25T00:00:00+00:00",
         "dateModified": "2025-12-27T10:00:00+00:00",
         "author": {
           "@type": "Person",
-          "name": "Fátima T. Felippe",
-          "url": "https://fatimafelipe.com.br/sobre.html"
+          "name": "Fatima T. Felippe",
+          "url": "https://fatimafelippe.com.br/sobre.html"
         },
         "description": "Análise do instrumento da curatela como forma de proteção da pessoa com incapacidade no código civil brasileiro e legislação correlata.",
         "wordCount": 8500
@@ -52,7 +54,7 @@
         "dateModified": "2025-12-27T10:00:00+00:00",
         "author": {
           "@type": "Person",
-          "name": "Fátima T. Felippe",
+          "name": "Fatima T. Felippe",
           "url": "https://fatimafelipe.com.br/sobre.html"
         },
         "description": "Análise do instrumento da tutela como forma de proteção do menor no ordenamento jurídico brasileiro.",
@@ -124,7 +126,7 @@
 
     a {
       color: var(--accent);
-      text-decoration: none;
+      text-decoration: none
     }
 
     header {
@@ -387,17 +389,7 @@
       display: flex;
       gap: 8px;
       justify-content: center;
-      margin: 18px 0;
-    }
-
-    .pagination .btn {
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: inline-block;
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: 1px solid #e6e9ee;
-      background: #fff;
+      margin: 18px 0
     }
 
     .btn {
@@ -563,15 +555,18 @@
       grid-template-columns: 1fr 1fr;
       gap: 40px;
       align-items: center;
+      justify-content: center;
       position: relative;
       z-index: 2;
+      min-height: 450px;
     }
 
     .hero-image {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 500px;
+      height: 100%;
+      min-height: 350px;
       position: relative;
     }
 
@@ -599,6 +594,17 @@
 
     .hero-text {
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .hero-text p {
+      text-align: justify;
+      text-justify: inter-word;
+    }
     }
 
     .hero-text h2 {
@@ -619,6 +625,8 @@
       display: flex;
       gap: 30px;
       margin-top: 30px;
+      justify-content: center;
+      align-items: center;
     }
 
     .stat-item {
@@ -817,16 +825,29 @@
         grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
+        justify-items: center;
       }
 
       .hero-image {
-        height: 400px;
+        height: 320px;
         order: -1;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .hero-text {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-text p {
+        text-align: center;
       }
 
       .frame-rectangular {
         max-width: 350px;
-        height: 380px;
+        height: 280px;
       }
     }
 
@@ -838,6 +859,8 @@
       .hero-stats {
         flex-direction: column;
         gap: 15px;
+        justify-content: center;
+        align-items: center;
       }
 
       .frame-rectangular {
@@ -1007,6 +1030,16 @@
       cursor: pointer;
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16535568761">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16535568761');
+  </script>
 </head>
 
 <body>
@@ -1015,8 +1048,9 @@
       <div class="brand">
         <div class="logo">FF</div>
         <div>
-          <div style="font-weight:700">Fatima Felippe</div>
-          <div style="font-size:13px;color:var(--muted)">Artigos, reflexões e notícias</div>
+          <div style="font-weight:1000;
+          font-size: 25px;" ,>Fatima Felippe</div>
+          <div style="font-size:13px;color:var(--muted);font-weight: 500;">Artigos, reflexões e notícias</div>
         </div>
       </div>
 
@@ -1058,12 +1092,11 @@
           </div>
         </div>
         <div class="hero-text">
-          <h2>Bem-vindo ao Portal Jurídico</h2>
-          <p>Este é um espaço online para escrever, publicar e compartilhar conhecimentos na área do direito e matérias
-            afins, com pessoas interessadas e conectadas a grande rede.</p>
-          <p>Esperamos que você tenha acesso a informações precisas e relevantes para sua prática profissional,
-            estudos ou vida pessoal.</p>
-
+          <h1 style="text-align: center;">Bem-vindo ao Portal Jurídico</h1>
+   
+            <p>Este &eacute; um espa&ccedil;o online para escrever, publicar e compartilhar conhecimentos na &aacute;rea do direito e mat&eacute;rias afins, com pessoas interessadas e conectadas a grande rede.</p>
+            <p>Al&eacute;m de artigos, oferece reflex&otilde;es que possam auxiliar a estimular pensamentos, fornecendo novas perspectivas do cotidiano para al&eacute;m do &acirc;mbito estritamente jur&iacute;dico, bem como a not&iacute;cia informativa que faz parte da educa&ccedil;&atilde;o e da constru&ccedil;&atilde;o do conhecimento, mantendo os leitores inteirados sobre assuntos que interessem ao seu dia a dia.</p>
+            <p>Esperamos que voc&ecirc; tenha acesso a informa&ccedil;&otilde;es precisas e relevantes para sua pr&aacute;tica profissional, estudos ou vida pessoal.</p>
           <div class="hero-stats">
             <!-- As estatísticas serão preenchidas dinamicamente -->
           </div>
@@ -1124,6 +1157,7 @@
             <li><a href="#" onclick="openArticle(103, event)">PENSAMENTOS</a></li>
             <li><a href="#" onclick="openArticle(104, event)">RECIPROCIDADE</a></li>
             <li><a href="#" onclick="openArticle(105, event)">TOLERÂNCIA</a></li>
+            <li><a href="#" onclick="openArticle(106, event)">MUDANÇA</a></li>
           </ol>
         </div>
       </aside>
@@ -1227,14 +1261,14 @@
 <p><span style="font-weight: 400;">Em outras palavras, &eacute; respeit&aacute;vel para si mesmo quando deparamos com o insucesso na obten&ccedil;&atilde;o de algo que desej&aacute;vamos muito em nossa jornada de vida, ou de um objetivo que n&atilde;o foi satisfeito naquele momento, digo porque n&atilde;o sabemos do dia seguinte, pois que no momento devemos parar, respirar e analisar analiticamente os poss&iacute;veis erros que foram cometidos na busca do objetivo e o que fazer para identificar os poss&iacute;veis acertos, assim se recome&ccedil;a a jornada.&nbsp;</span></p>
 <p><span style="font-weight: 400;">Todavia, ao delinear novas estrat&eacute;gias para a consecu&ccedil;&atilde;o dos objetivos propostos extinguindo os poss&iacute;veis erros e visando os poss&iacute;veis acertos, estaremos buscando mais c</span><span style="font-weight: 400;">hances de estudar e aprender, avaliar e ajustar as estrat&eacute;gias, e como consequ&ecirc;ncia melhorar os resultados.</span></p>
 <p><span style="font-weight: 400;">Em consequ&ecirc;ncia, estaremos utilizando a intelig&ecirc;ncia com a habilidade necess&aacute;ria para solucionar as adversidades e contornar os desafios, aceitando e entendendo que novas estrat&eacute;gias ser&atilde;o necess&aacute;rias para a conquista dos objetivos propostos.</span></p>
-<p><strong>Intelig&ecirc;ncia</strong><span style="font-weight: 400;">, segundo o dicion&aacute;rio</span><strong>,</strong><span style="font-weight: 400;"> significa: &ldquo;habilidade para entender e solucionar adversidades ou problemas, adaptando-se as circunst&acirc;ncias novas&rdquo;.&nbsp;</span></p>
+<p style="color: DARKGOLDENROD"><strong>Intelig&ecirc;ncia</strong><span style="font-weight: 400;">, segundo o dicion&aacute;rio</span><strong>,</strong><span style="font-weight: 400;"> significa: &ldquo;habilidade para entender e solucionar adversidades ou problemas, adaptando-se as circunst&acirc;ncias novas&rdquo;.&nbsp;</span></p>
 <p><span style="font-weight: 400;">A palavra </span><strong>intelig&ecirc;ncia</strong><span style="font-weight: 400;"> parece simplesmente algo corriqueiro e normal, porque estamos acostumados a falar sobre ela, sem muitas vezes nos atermos ao real significado e import&acirc;ncia da qual possui.&nbsp;</span></p>
 <p><span style="font-weight: 400;">J&aacute; paramos para pensar que precisamos de &aacute;gua para beber e fazer as demais necessidades, mas</span> <span style="font-weight: 400;">precisamos muito de</span><strong> intelig&ecirc;ncia</strong><span style="font-weight: 400;"> para compreender </span><span style="font-weight: 400;">o quanto a &aacute;gua &eacute; importante para o nosso organismo, bem como todo o bem que ela traz a nossa vida.</span></p>
 <p><span style="font-weight: 400;">E, para desenvolver a intelig&ecirc;ncia de forma eficaz, necessitamos dar a ela o verdadeiro valor, e para isso precisamos usar melhor o nosso c&eacute;rebro o qual &eacute; o maior e verdadeiro computador natural.</span></p>
 <p><span style="font-weight: 400;">Todavia, as faculdades de conhecer, compreender, raciocinar e pensar formam o bojo das caracter&iacute;sticas inerentes a intelig&ecirc;ncia. E por meio dos cinco sentidos tais como vis&atilde;o, olfato, audi&ccedil;&atilde;o, paladar e tato nos conectamos com o mundo e com as pessoas a nossa volta.&nbsp;</span></p>
 <p><span style="font-weight: 400;">Quando estamos estudando ou aprendendo algo, precisamos verdadeiramente conhecer, compreender, raciocinar e pensar usando nossos cinco sentidos com a finalidade de assimilar o conte&uacute;do.</span></p>
 <p><span style="font-weight: 400;">Como exemplo disso, n&atilde;o basta tirar notas boas na escola, primordial &eacute; entender o conte&uacute;do e estud&aacute;-lo, </span><strong>dando o real valor ao estudo e consequentemente a intelig&ecirc;ncia.</strong></p>
-<p><strong>No dicion&aacute;rio de psicologia</strong><span style="font-weight: 400;"> (Associa&ccedil;&atilde;o Psicol&oacute;gica Americana, 2010, p. 521), pode-se encontrar a defini&ccedil;&atilde;o de intelig&ecirc;ncia como sendo a </span><span style="font-weight: 400;">capacidade de:&nbsp;</span><span style="font-weight: 400;">&ldquo;extrair informa&ccedil;&otilde;es, aprender com a experi&ecirc;ncia, adaptar-se ao ambiente, compreender e utilizar corretamente o pensamento e a raz&atilde;o&rdquo;.</span></p>
+<p><strong>No dicion&aacute;rio de psicologia</strong><span style="font-weight: 400;"> (Associa&ccedil;&atilde;o Psicol&oacute;gica Americana, 2010, p. 521), pode-se encontrar a defini&ccedil;&atilde;o de intelig&ecirc;ncia como sendo a </span><span style="font-weight: 400;">capacidade de:&nbsp;</span><span style="font-weight: 400;color: DARKGOLDENROD" style="">&ldquo;extrair informa&ccedil;&otilde;es, aprender com a experi&ecirc;ncia, adaptar-se ao ambiente, compreender e utilizar corretamente o pensamento e a raz&atilde;o&rdquo;.</span></p>
 <p><span style="font-weight: 400;">Inclusive, na</span> <strong>B&iacute;blia</strong><span style="font-weight: 400;">, a intelig&ecirc;ncia </span><span style="font-weight: 400;">est&aacute; relacionada com a capacidade de compreender, processar informa&ccedil;&otilde;es e resolver problemas.&nbsp;</span></p>
 <p><span style="font-weight: 400;">&nbsp;</span></p>
 <p><strong>Vejamos</strong><strong>:</strong></p>
@@ -1272,7 +1306,7 @@
         "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800",
         "author": "Redação",
         "tags": ["Sociedade", "Competência", "Produtividade", "Eficácia", "Poder"],
-        "content": `<p><strong>ORGANIZA&Ccedil;&Atilde;O</strong></p>
+        "content": `<p style="color: DARKGOLDENROD"><strong>ORGANIZA&Ccedil;&Atilde;O</strong></p>
 <p>&nbsp;</p>
 <div style="margin: 20px 0; padding: 15px; background: #f0f0f0; border-radius: 8px;">
   <p><strong>🎧 Áudio da Reflexão</strong></p>
@@ -1282,7 +1316,7 @@
   </audio>
 </div>
 <p>&nbsp;</p>
-<p><strong>Breve coment&aacute;rio.</strong></p>
+<p style="color: DARKGOLDENROD"><strong>Breve coment&aacute;rio.</strong></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Voc&ecirc; se considera que vive dentro de uma sociedade eminentemente organizacional?</span></p>
 <p>&nbsp;</p>
@@ -1300,7 +1334,7 @@
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">At&eacute; breve!!!</span></p>
 <p><br /><br /></p>
-<p><span style="font-weight: 400;">Esse texto foi inspirado no autor: Antonio Cury. &nbsp; - &nbsp; Cury, Antonio. Organiza&ccedil;&atilde;o e M&eacute;todos: uma vis&atilde;o hol&iacute;stica. 8. ed. Ver. e ampl. S&atilde;o Paulo: Atlas, 2009.</span></p>
+<p style="color: DARKGOLDENROD"><span style="font-weight: 400;">Esse texto foi inspirado no autor: Antonio Cury. &nbsp; - &nbsp; Cury, Antonio. Organiza&ccedil;&atilde;o e M&eacute;todos: uma vis&atilde;o hol&iacute;stica. 8. ed. Ver. e ampl. S&atilde;o Paulo: Atlas, 2009.</span></p>
 `},
 
 
@@ -1315,7 +1349,7 @@
         "image": "https://images.unsplash.com/photo-1493612276216-ee3925520721?w=800",
         "author": "Redação",
         "tags": ["Sentimentos", "Vibração", "Autorresponsabilidade", "lapidar", "Alegria"],
-        "content": `<p><strong>PENSAMENTOS</strong></p>
+        "content": `<p style="color: DARKGOLDENROD"><strong>PENSAMENTOS</strong></p>
 <p>&nbsp;</p>
 <div style="margin: 20px 0; padding: 15px; background: #f0f0f0; border-radius: 8px;">
   <p><strong>🎧 Áudio da Reflexão</strong></p>
@@ -1325,8 +1359,8 @@
   </audio>
 </div>
 <p>&nbsp;</p>
-<p><strong>O que vem antes, o pensamento ou o sentimento?</strong></p>
-<p><strong>Quando voc&ecirc; pensa, sente e quando voc&ecirc; sente, pensa! Porque tudo isso, parece confuso?</strong></p>
+<p style="color: DARKGOLDENROD"><strong>O que vem antes, o pensamento ou o sentimento?</strong></p>
+<p style="color: DARKGOLDENROD"><strong>Quando voc&ecirc; pensa, sente e quando voc&ecirc; sente, pensa! Porque tudo isso, parece confuso?</strong></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Quando nascemos e at&eacute; certa idade somos educados e orientados por outra pessoa que escolhe o que vamos ver, comer, ouvir, vestir e muitas vezes sentir.&nbsp;</span></p>
 <p><span style="font-weight: 400;">Digo, sentir porque todas as informa&ccedil;&otilde;es que s&atilde;o transmitidas as pessoas geram pensamentos e consequentemente sentimentos bons ou ruins, os quais podem ser expressos por um sorriso, perplexidade, tristeza, alegria, f&uacute;ria e etc.</span></p>
@@ -1358,7 +1392,7 @@
         "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800",
         "author": "Redação",
         "tags": ["Recíproco", "Relação", "Espiritual", "Relacionamento", "Harmonia"],
-        "content": `RECIPROCIDADE
+        "content": `<p style="color: DARKGOLDENROD">RECIPROCIDADE</p>
 <p>&nbsp;</p>
 <div style="margin: 20px 0; padding: 15px; background: #f0f0f0; border-radius: 8px;">
   <p><strong>🎧 Áudio da Reflexão</strong></p>
@@ -1368,14 +1402,14 @@
   </audio>
 </div>
 <p>&nbsp;</p>
-<p><strong>Algumas palavras sobre a reciprocidade.</strong></p>
+<p " ><strong>Algumas palavras sobre a reciprocidade.</strong></p>
+<p >&nbsp;</p>
+<p ><strong>No D&iacute;cio on line: dicion&aacute;rio brasileiro de L&iacute;ngua Portuguesa, a palavra </strong><span style="font-weight: 400;">reciprocidade&nbsp;demonstra:</span></p>
 <p>&nbsp;</p>
-<p><strong>No D&iacute;cio on line: dicion&aacute;rio brasileiro de L&iacute;ngua Portuguesa, a palavra </strong><span style="font-weight: 400;">reciprocidade&nbsp;demonstra:</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Estado de rec&iacute;proco, do que se realiza ao mesmo tempo que outra coisa; mutualidade: acordos de coopera&ccedil;&atilde;o estabelecem uma rela&ccedil;&atilde;o de reciprocidade entre pa&iacute;ses. Troca de uma coisa por outra coisa id&ecirc;ntica; correspond&ecirc;ncia, coopera&ccedil;&atilde;o: uma amizade n&atilde;o existe sem reciprocidade de sentimentos.&nbsp;</span></p>
-<p><strong>[Pol&iacute;tica]</strong><span style="font-weight: 400;">&nbsp;Situa&ccedil;&atilde;o em que dois pa&iacute;ses firmam um acordo de coopera&ccedil;&atilde;o, fornecendo aux&iacute;lio ou trocando vantagens entre si: exemplo: o Brasil e o Chile assinaram contratos comerciais de reciprocidade.</span></p>
-<p><strong>[Filosofia]</strong><span style="font-weight: 400;">&nbsp;Capacidade intelectual que, segundo Kant, torna compreens&iacute;vel a rela&ccedil;&atilde;o entre dois ou mais componentes, mutuamente percebidos no espa&ccedil;o, de aspecto e forma integrantes.</span></p>
-<p><strong>[Gram&aacute;tica]</strong><span style="font-weight: 400;">&nbsp;Correspond&ecirc;ncia entre duas palavras de sentidos opostos, com uma rela&ccedil;&atilde;o de conformidade m&uacute;tua: alto e baixo.</span></p>
+<p style="color: DARKGOLDENROD"><span style="font-weight: 400;">Estado de rec&iacute;proco, do que se realiza ao mesmo tempo que outra coisa; mutualidade: acordos de coopera&ccedil;&atilde;o estabelecem uma rela&ccedil;&atilde;o de reciprocidade entre pa&iacute;ses. Troca de uma coisa por outra coisa id&ecirc;ntica; correspond&ecirc;ncia, coopera&ccedil;&atilde;o: uma amizade n&atilde;o existe sem reciprocidade de sentimentos.&nbsp;</span></p>
+<p style="color: DARKGOLDENROD"><strong>[Pol&iacute;tica]</strong><span style="font-weight: 400;">&nbsp;Situa&ccedil;&atilde;o em que dois pa&iacute;ses firmam um acordo de coopera&ccedil;&atilde;o, fornecendo aux&iacute;lio ou trocando vantagens entre si: exemplo: o Brasil e o Chile assinaram contratos comerciais de reciprocidade.</span></p>
+<p style="color: DARKGOLDENROD"><strong>[Filosofia]</strong><span style="font-weight: 400;">&nbsp;Capacidade intelectual que, segundo Kant, torna compreens&iacute;vel a rela&ccedil;&atilde;o entre dois ou mais componentes, mutuamente percebidos no espa&ccedil;o, de aspecto e forma integrantes.</span></p>
+<p style="color: DARKGOLDENROD"><strong>[Gram&aacute;tica]</strong><span style="font-weight: 400;">&nbsp;Correspond&ecirc;ncia entre duas palavras de sentidos opostos, com uma rela&ccedil;&atilde;o de conformidade m&uacute;tua: alto e baixo.</span></p>
 <p><br /><br /><br /></p>
 <p><span style="font-weight: 400;">Reciprocidade &eacute; a &ldquo;caracter&iacute;stica de algo rec&iacute;proco, ou seja, m&uacute;tuo.&nbsp;&Eacute; a qualidade de dar e receber como sendo uma condi&ccedil;&atilde;o fundamental para a qualidade das rela&ccedil;&otilde;es entre as pessoas&rdquo;.&nbsp;</span></p>
 <p>&nbsp;</p>
@@ -1415,14 +1449,14 @@
         "id": 105,
         "category": "reflexoes",
         "categoryName": "Reflexão",
-        "date": "08 de novembro de 2025",
+        "date": "01 de dezembro de 2025",
         "readTime": "6 min de leitura",
         "title": "TOLERÂNCIA",
         "excerpt": "Reflexão sobre o desafio da tolerância e como lidar com as diferenças no convívio social",
         "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800",
         "author": "Redação",
         "tags": ["Respeito", "Diferença", "Paciência", "Escolha", "Admitir", "Dever"],
-        "content": `<p><strong>TOLER&Acirc;NCIA</strong></p>
+        "content": `<p style="color: DARKGOLDENROD"><strong>TOLER&Acirc;NCIA</strong></p>
 <p>&nbsp;</p>
 <div style="margin: 20px 0; padding: 15px; background: #f0f0f0; border-radius: 8px;">
   <p><strong>🎧 Áudio da Reflexão</strong></p>
@@ -1432,14 +1466,14 @@
   </audio>
 </div>
 <p>&nbsp;</p>
-<p><strong>A toler&acirc;ncia torna a diferen&ccedil;a poss&iacute;vel; a diferen&ccedil;a torna a toler&acirc;ncia necess&aacute;ria.</strong></p>
-<p><strong>MICHAEL WALZER</strong></p>
+<p style="color: DARKGOLDENROD"><strong>A toler&acirc;ncia torna a diferen&ccedil;a poss&iacute;vel; a diferen&ccedil;a torna a toler&acirc;ncia necess&aacute;ria.</strong></p>
+<p style="color: DARKGOLDENROD" ><strong>MICHAEL WALZER</strong></p>
 <p>&nbsp;</p>
 <p><strong>Porque &eacute; t&atilde;o dif&iacute;cil ser tolerante?</strong></p>
 <p><strong>A quem a toler&acirc;ncia sustenta? E como ela funciona?</strong></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Segundo o </span><strong>dicion&aacute;rio Aur&eacute;lio</strong><span style="font-weight: 400;">, </span><span style="font-weight: 400;">"toler&acirc;ncia" de modo geral &eacute; definida como:</span></p>
-<p><span style="font-weight: 400;">A disposi&ccedil;&atilde;o ou tend&ecirc;ncia a admitir ou aceitar modos de pensar, agir e sentir que diferem dos pr&oacute;prios, ou dos de um grupo determinado.&nbsp;&Eacute;, portanto, uma forma de respeito e compreens&atilde;o, mesmo em rela&ccedil;&atilde;o a ideias ou comportamentos com os quais n&atilde;o concordamos.</span></p>
+<p style="color: DARKGOLDENROD"><span style="font-weight: 400;">A disposi&ccedil;&atilde;o ou tend&ecirc;ncia a admitir ou aceitar modos de pensar, agir e sentir que diferem dos pr&oacute;prios, ou dos de um grupo determinado.&nbsp;&Eacute;, portanto, uma forma de respeito e compreens&atilde;o, mesmo em rela&ccedil;&atilde;o a ideias ou comportamentos com os quais n&atilde;o concordamos.</span></p>
 <p><br /><br /></p>
 <p><strong>Por conseguinte</strong><strong>:</strong></p>
 <p>&nbsp;</p>
@@ -1466,11 +1500,11 @@
 <p>&nbsp;</p>
 <p><strong>E, ao mesmo tempo</strong><span style="font-weight: 400;"> em que podemos olhar para uma pessoa desconhecida e sentir o amor, ou um carinho inexplic&aacute;vel.</span></p>
 <p>&nbsp;</p>
-<p><strong>►</strong><strong>Portanto, a toler&acirc;ncia pode ser sustentada para evitar o caos, como diz o autor </strong><strong>MICHAEL WALZER</strong><span style="font-weight: 400;">:</span></p>
+<p><strong style="color: DARKGOLDENROD">►</strong><strong>Portanto, a toler&acirc;ncia pode ser sustentada para evitar o caos, como diz o autor </strong><strong style="color: DARKGOLDENROD">MICHAEL WALZER</strong><span style="font-weight: 400;">:</span></p>
 <p>&nbsp;</p>
 <p><strong>Vejamos:</strong></p>
 <p>&nbsp;</p>
-<p><strong>&ldquo;A toler&acirc;ncia sustenta a pr&oacute;pria vida, porque a persegui&ccedil;&atilde;o muitas vezes visa a morte, e tamb&eacute;m sustenta as vidas comuns, as diferentes comunidades em que vivemos&rdquo;.</strong></p>
+<p style="color: DARKGOLDENROD"><strong>&ldquo;A toler&acirc;ncia sustenta a pr&oacute;pria vida, porque a persegui&ccedil;&atilde;o muitas vezes visa a morte, e tamb&eacute;m sustenta as vidas comuns, as diferentes comunidades em que vivemos&rdquo;.</strong></p>
 <p>&nbsp;</p>
 <p><strong>Para ilustrar o texto, cito alguns trechos da B&iacute;blia</strong><span style="font-weight: 400;">:&nbsp;</span></p>
 <p>&nbsp;</p>
@@ -1498,12 +1532,334 @@
 <p><span style="font-weight: 400;">Walzer Michel. </span><strong>DA TOLERANCIA</strong><span style="font-weight: 400;">/Michel Walzer: tradu&ccedil;&atilde;o Almiro Pisetta. &ndash; S&atilde;o Paulo: Martins Fontes, 1999.</span></p>
 <p>&nbsp;</p>
 <p><strong>TOLER&Acirc;NCIA</strong><span style="font-weight: 400;">. In: DICION&Aacute;RIO Aur&eacute;lio online. [S.l.]: UOL, [entre 2001 e 2025]. Dispon&iacute;vel em:&nbsp;[http://www.dicionariodoaurelio.com/br/toler&acirc;ncia]. Acesso em: 8 nov. 2025.</span></p>`},
+      {
+        "id": 106,
+        "category": "reflexoes",
+        "categoryName": "MUDANÇAS",
+        "date": "24 de janeiro de 2026",
+        "readTime": "10 min de leitura",
+        "title": "MUDANÇAS",
+        "excerpt": " Reflexão sobre a importância de entender a mudança quando necessária como um meio para aprender e se desenvolver recomeçando com mais sabedoria.",
+        "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1769778473/mudan%C3%A7a_page-0001_xsciz1.jpg",
+        "author": "Redação",
+        "tags": ["Comunicação", "Perspectiva", "Sucesso", "Oportunidade", "Pensamentos", "Habilidade", "Coragem"],
+        "content": `
+<p><strong>MUDAN&Ccedil;AS</strong></p>
+<p>&nbsp;</p>
+<div style="margin: 20px 0; padding: 15px; background: #f0f0f0; border-radius: 8px;">
+  <p><strong>🎧 Áudio da Reflexão</strong></p>
+  <audio controls style="width: 100%; margin-top: 10px;">
+    <source src="mudança.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+</div>
+
+<p style="color: DARKGOLDENROD"><strong>Eis que,</strong></p>
+<p>&nbsp;</p>
+<p style="color: DARKGOLDENROD"><strong>&ldquo;Muitas pessoas falam em mudar, mas continuam comunicando as mesmas coisas&rdquo;.&nbsp; (Livro: O Poder da A&ccedil;&atilde;o).</strong></p>
+<p style="color: DARKGOLDENROD"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paulo&nbsp;Vieira</strong></p>
+<p style="color: DARKGOLDENROD"><strong>&nbsp;&nbsp;(Autor e PhD em Coaching).</strong></p>
+<p>&nbsp;</p>
+<p><strong>Em outras palavras, a frase de abertura do tema demonstra a import&acirc;ncia da comunica&ccedil;&atilde;o e do comportamento na mudan&ccedil;a pessoal, expondo que persistir em uma "mesma comunica&ccedil;&atilde;o" (verbal e n&atilde;o verbal) antiga e de forma estagnada impede que as mudan&ccedil;as necess&aacute;rias e reais venham ao encontro do indiv&iacute;duo, perdendo este a chance de conquistar o que deseja.&nbsp;</strong></p>
+<p><br /><br /></p>
+<p style="color: DARKGOLDENROD"><strong>O que nos leva a mudan&ccedil;a, e ela nos traz novas perspectivas?</strong></p>
+<p><br /><br /></p>
+<p><span style="font-weight: 400;">A palavra mudar possui v&aacute;rios significados, pois pode advir da transfer&ecirc;ncia de um lugar para outro quer seja perto ou longe, de uma cidade, estado ou pa&iacute;s, quer seja de forma natural como da inf&acirc;ncia a fase adulta e cada fase com seus desafios, quer seja de ordem religiosa, ou mudan&ccedil;a de trabalho, de carreira, quer seja dentro de casa como a disposi&ccedil;&atilde;o dos m&oacute;veis, quer seja para atingir o sucesso, bem como a mudan&ccedil;a de h&aacute;bitos, oportunidades, e a&iacute; vai.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">E muitas vezes a mudan&ccedil;a est&aacute; ligada a uma insatisfa&ccedil;&atilde;o constante ou aus&ecirc;ncia de interesse em alguma &aacute;rea da vida e sem um motivo aparente, com isso o indiv&iacute;duo sente a sua vida paralisada al&eacute;m de estar acostumado a permanecer na zona de conforto.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">No entanto, muitas vezes pela dificuldade de se autoconhecer o indiv&iacute;duo pensa que o melhor &eacute; ficar na zona de conforto mesmo que as coisas n&atilde;o estejam t&atilde;o corretas, e quem sabe esperando algu&eacute;m para resolver a sua estagna&ccedil;&atilde;o.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Entretanto, toda a mudan&ccedil;a passa por um processo interno e bem definido conforme descreve o renomado </span><strong>Napole&atilde;o Hill</strong><strong>:</strong></p>
+<p>&nbsp;</p>
+<p style="color: DARKGOLDENROD"><strong>A &ldquo;mudan&ccedil;a&nbsp;&eacute; um processo interno que come&ccedil;a na mente, exigindo a transforma&ccedil;&atilde;o de pensamentos, cren&ccedil;as e atitudes para alterar o destino</strong><span style="font-weight: 400;">&rdquo;.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Ou seja, a mudan&ccedil;a de mentalidade &eacute; o impulsor interno para converter ideias e desejos em realidades concretas, onde a certeza de vencer precede a vit&oacute;ria.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Quando se pensa em crescimento e busca de novas oportunidades quase sempre as palavras desejo e mudan&ccedil;a est&atilde;o atreladas, pois &eacute; preciso agir em busca do que se quer e para agir &eacute; preciso mudar, deixar muitas vezes as ra&iacute;zes de velhos h&aacute;bitos esses que j&aacute; n&atilde;o se agregam mais ao contexto atual de vida e de crescimento do indiv&iacute;duo.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Quando o indiv&iacute;duo sente que algo est&aacute; errado com ele pois os resultados de suas a&ccedil;&otilde;es n&atilde;o est&atilde;o a contento e com isso tendem a refletir ao seu redor, ele percebe que deve mudar os rumos da sua hist&oacute;ria e tomar uma atitude en&eacute;rgica para resolver aquilo que julga estar errado, e converter naquilo que julga ser o correto.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Todavia, pode haver uma grande maioria de pessoas contr&aacute;rias as mudan&ccedil;as, mesmo sabendo que elas s&atilde;o necess&aacute;rias em determinado contexto de vida, e por v&aacute;rios motivos felizes ou infelizes das quais vivem, no entanto n&atilde;o a fazem, n&atilde;o fazem essa mudan&ccedil;a porque n&atilde;o acreditam que a m&atilde;o pesada do destino num determinado dia vem bater a sua porta, e perguntar:&nbsp; &ldquo;</span><strong style="color: DARKGOLDENROD">VOC&Ecirc; MUDOU&rdquo; ?&nbsp; E &ldquo;AGORA&rdquo; ?</strong><span style="font-weight: 400;">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">E, &eacute; nesse momento o indiv&iacute;duo muito sem gra&ccedil;a olha, pensa e diz:&nbsp; &ldquo;</span><strong style="color: DARKGOLDENROD">POIS &Eacute;!!!</strong><span style="font-weight: 400;">&rdquo;, </span><strong style="color: DARKGOLDENROD">E &ldquo;AGORA&rdquo; ?</strong><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong style="color: DARKGOLDENROD">&Eacute; dif&iacute;cil mudar</strong><strong style="color: DARKGOLDENROD">?</strong></p>
+<p><span style="font-weight: 400;">Sim, e muito. Sair da zona de conforto requer habilidade e coragem do indiv&iacute;duo o qual possui um universo enigm&aacute;tico robusto muitas vezes de vit&oacute;rias e fracassos, por&eacute;m &eacute; importante n&atilde;o desistir, buscar o autoconhecimento ou aux&iacute;lio de um profissional para que a mudan&ccedil;a ocorra de forma racional com objetivos e metas bem definidas.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="color: DARKGOLDENROD"><strong>E quando preciso mudar rapidamente, por exemplo de cidade, pa&iacute;s ou casa seja para um fim profissional, estudantil, particular e outros?</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Sim. Nesse momento &eacute; necess&aacute;rio usar bem a sua raz&atilde;o, parar, pensar e conhecer o que se quer, ver o que tem em m&atilde;os, o que est&aacute; a sua volta, tra&ccedil;ar um </span><strong>plano B</strong><span style="font-weight: 400;">, arquitetado, robusto de metas e objetivos para ampar&aacute;-lo nas decis&otilde;es, ter f&eacute; no seu plano, </span><strong>ou seja, entender que mudar faz parte da vida e que resistir a ela quando se faz necess&aacute;ria pode ser uma op&ccedil;&atilde;o prejudicial</strong><span style="font-weight: 400;">, pois &eacute; necess&aacute;rio sentir a </span><strong>mudan&ccedil;a como um meio para aprender e se desenvolver</strong><span style="font-weight: 400;">.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Todavia, &eacute; importante encontrar quais pessoas de confian&ccedil;a se pode buscar para pedir apoio, sugest&otilde;es e que essas sugest&otilde;es possam se alinhar aos objetivos em rumo a mudan&ccedil;a.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Entretanto, acontecem mudan&ccedil;as que n&atilde;o foram escolhidas pelo indiv&iacute;duo, por&eacute;m devido as circunst&acirc;ncias de vida muitas vezes surgidas quer pelas pr&oacute;prias a&ccedil;&otilde;es ou pelas a&ccedil;&otilde;es de outros a levaram a decis&atilde;o de mudar.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Mudar significa transformar o indiv&iacute;duo e prepar&aacute;-lo para o mundo.</span></p>
+<p>&nbsp;</p>
+<p><strong>Vejamos o trecho da b&iacute;blia que cita sobre mudan&ccedil;a:</strong></p>
+<h2>&nbsp;</h2>
+<h2><strong>Deuteron&ocirc;mio 31,6:</strong></h2>
+<h2><strong>&uml;Sede fortes e corajosos. N&atilde;o temais, nem vos acovardais diante deles, porque o Senhor vosso Deus est&aacute; convosco&rdquo;.</strong><strong><br /><br /></strong></h2>
+<p><span style="font-weight: 400;">Em outras palavras, a cita&ccedil;&atilde;o b&iacute;blica afirma que a cada passo que avan&ccedil;amos </span><strong>&ldquo;DEUS&rdquo;</strong><span style="font-weight: 400;"> est&aacute; conosco, mesmo quando n&atilde;o temos certeza. Ele nos fortalece e nos guia para enfrentar o novo com f&eacute; e coragem. </span><strong>N&atilde;o estamos desamparados.</strong></p>
+<p><strong><em>Ou seja, </em></strong><strong><em>&ldquo;DEUS&rdquo;, permanece firme presente e amoroso em todas as esta&ccedil;&otilde;es da sua vida</em></strong><strong>.</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Ent&atilde;o, &eacute; isso</span><span style="font-weight: 400;">. Existe muito assunto para falar sobre o tema, mas no momento fico por aqui.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><strong>At&eacute; breve!!!</strong></p>
+<p>&nbsp;</p>
+<p><strong>_________________________________________________</strong></p>
+<p><strong>Bibliografia</strong></p>
+<p><span style="font-weight: 400;">HILL, Napoleon.&nbsp;</span><strong>Quem pensa enriquece: o legado oficial e original de 1937</strong><span style="font-weight: 400;">. [S.l.]: Citadel Editora. (Originalmente publicado em 1937).&nbsp;</span><span style="font-weight: 400;">Dispon&iacute;vel em: </span><a href="https://www.pensador.com/frase/NTUyOTU5/"><span style="font-weight: 400;">https://www.pensador.com/frase/NTUyOTU5/</span></a><span style="font-weight: 400;">. Acesso em: 24 de jan.2026.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">VIEIRA, Paulo.&nbsp;</span><strong>O poder da a&ccedil;&atilde;o</strong><span style="font-weight: 400;">: fa&ccedil;a sua vida ideal sair do papel. 1. ed. S&atilde;o Paulo: Editora Gente, 2015.&nbsp;</span></p>
+`},
     ]
 
 
 
 
     const posts = [
+
+//      {
+//         "id": 333,
+//         "category": "Finanças Públicas",
+//         "categoryName": "Finanças Públicas",
+//         "date": "20 de fevereiro de 2026",
+//         "readTime": "10 min de leitura",
+//         "title": "Isenção do Imposto de renda - lei n°15.270/2025  - Novo teto",
+//         "excerpt": "Análise da ampliação da isenção do Imposto de Renda - Novo teto, como uma medida de política fiscal e justiça tributária trazendo benefícios para milhões de contribuintes a partir de 2026. principalmente para quem ganha até R$5.000,00.",
+//         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1772625459/WhatsApp_Image_2026-02-28_at_21.27.53_lthxci.jpg",
+//         "author": "Redação",
+//         "content": `<p><strong>FINAN&Ccedil;AS P&Uacute;BLICAS - ISEN&Ccedil;&Atilde;O DE IMPOSTO DE RENDA NOVO TETO.</strong></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">Import&acirc;ncia -&nbsp; Isen&ccedil;&atilde;o &ndash; Novo teto - Projeto de Lei n&deg;1.087/2025 (PL) - Lei n&deg;15.270/2025 -&nbsp; </span><span style="font-weight: 400;">Lei n&ordm; 9.250/1995 - Lei n&ordm; 9.249/1995</span><span style="font-weight: 400;">.</span></p>
+// <p>&nbsp;</p>
+// <ul>
+// <li><strong>Breve Introdu&ccedil;&atilde;o</strong></li>
+// </ul>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">Finan&ccedil;as p&uacute;blicas &eacute; o termo utilizado o qual se refere a import&acirc;ncia na gest&atilde;o de recursos financeiros que o Estado arrecada por meio de receitas, principalmente as advindas da coleta de tributos.&nbsp;</span></p>
+// <p><span style="font-weight: 400;">O manuseio na gest&atilde;o de recursos visa garantir o funcionamento do Estado, a capacita&ccedil;&atilde;o de seus colaboradores (pessoal), as despesas para fazer investimentos e outros servi&ccedil;os muito importantes ao crescimento do pa&iacute;s, propiciando o bem-estar social e a estabilidade econ&ocirc;mica.&nbsp;</span></p>
+// <p><span style="font-weight: 400;">Por meio da gest&atilde;o de receitas (impostos) e despesas, se torna vi&aacute;vel a presta&ccedil;&atilde;o de servi&ccedil;os essenciais como educa&ccedil;&atilde;o, sa&uacute;de, seguran&ccedil;a, infraestrutura, e quando realizada com efici&ecirc;ncia permite controlar a d&iacute;vida p&uacute;blica, reduzir as desigualdades sociais e promover o desenvolvimento econ&ocirc;mico do pa&iacute;s.</span></p>
+// <p><span style="font-weight: 400;">Nesse momento</span><span style="font-weight: 400;"> que o Estado brasileiro al&eacute;m da tarefa de administrar as receitas e despesas, utiliza tamb&eacute;m instrumentos de </span><span style="font-weight: 400;">pol&iacute;tica fiscal e social para a concretiza&ccedil;&atilde;o dos fundamentos e objetivos previstos nos artigos 1&ordm; e 3&ordm;, da Constitui&ccedil;&atilde;o Federal/88.</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Vejamos:</strong></p>
+// <p>&nbsp;</p>
+// <p><strong>Art. 1&ordm;</strong><span style="font-weight: 400;">. A Rep&uacute;blica Federativa do Brasil, formada pela uni&atilde;o indissol&uacute;vel dos Estados e Munic&iacute;pios e do Distrito Federal, constitui-se em Estado Democr&aacute;tico de Direito e tem como fundamentos:</span></p>
+// <p>&nbsp;</p>
+// <p><strong>I</strong><span style="font-weight: 400;"> -&nbsp; a soberania;</span></p>
+// <p><strong>II</strong><span style="font-weight: 400;"> - a cidadania;</span></p>
+// <p><strong>III</strong><span style="font-weight: 400;"> - a dignidade da pessoa humana;</span></p>
+// <p><strong>IV</strong><span style="font-weight: 400;"> - os valores sociais do trabalho e da livre iniciativa;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13874.htm#art1"><span style="font-weight: 400;">(Vide Lei n&ordm; 13.874, de 2019)</span></a></p>
+// <p><strong>V</strong><span style="font-weight: 400;"> - o pluralismo pol&iacute;tico.</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Par&aacute;grafo &uacute;nico</strong><span style="font-weight: 400;">. Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constitui&ccedil;&atilde;o.</span></p>
+// <p><strong>Art. 3&ordm;</strong><span style="font-weight: 400;">. Constituem objetivos fundamentais da Rep&uacute;blica Federativa do Brasil:</span></p>
+// <p><strong>I</strong><span style="font-weight: 400;"> - construir uma sociedade livre, justa e solid&aacute;ria;</span></p>
+// <p><strong>II </strong><span style="font-weight: 400;">- garantir o desenvolvimento nacional;</span></p>
+// <p><strong>III</strong><span style="font-weight: 400;"> - erradicar a pobreza e a marginaliza&ccedil;&atilde;o e reduzir as desigualdades sociais e regionais;</span></p>
+// <p><strong>IV</strong><span style="font-weight: 400;"> - promover o bem de todos, sem preconceitos de origem, ra&ccedil;a, sexo, cor, idade e quaisquer outras formas de discrimina&ccedil;&atilde;o.</span></p>
+// <p><strong>Sendo assim</strong><span style="font-weight: 400;">, a exemplo ocorre quando se refere a isen&ccedil;&atilde;o de Imposto de Renda</span><strong>, que embora</strong><span style="font-weight: 400;"> n&atilde;o esteja descrita diretamente na Constitui&ccedil;&atilde;o Federal/88, a isen&ccedil;&atilde;o se constitui numa ferramenta que utiliza a pol&iacute;tica fiscal em prol da justi&ccedil;a social (especialmente para portadores de doen&ccedil;as graves ou faixas de rendas mais baixas), </span><strong>a qual</strong><span style="font-weight: 400;"> encontra um s&oacute;lido fundamento nos princ&iacute;pios e objetivos constitucionais, mesmo que a </span><strong>isen&ccedil;&atilde;o espec&iacute;fica para doen&ccedil;as graves esteja prevista na lei n&deg;</strong><strong>7.713, de 22 de dezembro de 1988, mas tem base na CF/88</strong><strong>.</strong></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">Entretanto, estabelece o artigo </span><strong>145, &sect; 1&deg; da CF/88</strong><span style="font-weight: 400;">, de acordo com a capacidade econ&ocirc;mica do contribuinte os impostos ter&atilde;o car&aacute;ter pessoal, e ser&atilde;o graduados respeitando a realidade de disponibilidade econ&ocirc;mica que vive cada cidad&atilde;o, </span><strong>ou seja, quem tem menos renda paga menos, ou n&atilde;o paga</strong><span style="font-weight: 400;">.</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">►</span><strong>OBS</strong><span style="font-weight: 400;">: O artigo </span><strong>145, &sect; 1&deg; da CF/88 </strong><span style="font-weight: 400;">em tela, se refere ao </span><span style="font-weight: 400;">princ&iacute;pio da capacidade contributiva.</span></p>
+// <p><span style="font-weight: 400;">.</span></p>
+// <p><strong>►Por isso</strong><span style="font-weight: 400;">, como parte da gest&atilde;o de receitas e pol&iacute;tica fiscal, que o ano de 2026 iniciou com uma conquista hist&oacute;rica de justi&ccedil;a tribut&aacute;ria para milh&otilde;es de brasileiros em todo o pa&iacute;s, que se concretizou com a </span><strong>reforma do Imposto de Renda</strong><span style="font-weight: 400;">, onde cerca de 10 milh&otilde;es de contribuintes permanecem totalmente isentos e cerca de 5 milh&otilde;es a isen&ccedil;&atilde;o foi ampliada de forma parcial e ter&atilde;o redu&ccedil;&atilde;o no valor devido, al&eacute;m de trazer um al&iacute;vio no bolso de milh&otilde;es de brasileiros quer sejam os isentos totais quer sejam os isentos parciais.</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">A nova regra abrange a isen&ccedil;&atilde;o total aos trabalhadores com carteira assinada, servidores p&uacute;blicos, aposentados e pensionistas do INSS ou de regimes pr&oacute;prios, </span><strong>lembrando</strong><span style="font-weight: 400;"> que a isen&ccedil;&atilde;o &eacute; total para renda mensal que </span><strong>n&atilde;o ultrapassar a R$5.000,00</strong><strong><br /></strong><strong>e isen&ccedil;&atilde;o parcial para renda mensal que esteja entre os valores de R$5.000,01 a R$7.350,00.</strong><span style="font-weight: 400;">&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">A iniciativa veio por meio de P</span><strong>rojeto de Lei n&deg;1.087 de 2025 (PL)</strong><span style="font-weight: 400;">, aprovado pelo Congresso Nacional por unanimidade na data de </span><strong>05/11/2025</strong><span style="font-weight: 400;">, e sancionado pelo Presidente da Rep&uacute;blica em </span><strong>26 de novembro de 2025, onde converteu-se na lei</strong> <strong>n&deg;15.270, em 26 de novembro de 2025, a qual</strong><span style="font-weight: 400;"> alterou as </span><strong>Leis n&ordm; 9.250/1995 e n&ordm; 9.249/1995.</strong><span style="font-weight: 400;">&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Todavia,</strong><span style="font-weight: 400;"> a norma federal foi publicada no </span><strong>Di&aacute;rio Oficial da Uni&atilde;o (DOU), em 27 de novembro de 2025</strong><span style="font-weight: 400;">, e </span><strong>produziu efeitos a partir de 1&ordm; de janeiro de 2026</strong><span style="font-weight: 400;">.</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Desde 2023</strong><span style="font-weight: 400;">, a isen&ccedil;&atilde;o do IR alcan&ccedil;ava apenas quem ganhava </span><strong>at&eacute; dois sal&aacute;rios-m&iacute;nimos</strong><span style="font-weight: 400;">.</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Com isso, a norma federal que est&aacute; em vigor desde 01 de janeiro de 2026, busca compensar aquelas pessoas que ganham menos a pagar menos, e quem ganha mais a contribuir mais, ou seja um sistema tribut&aacute;rio mais solid&aacute;rio.</strong></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">A isen&ccedil;&atilde;o tamb&eacute;m foi acompanhada de um projeto de lei que aumenta a taxa&ccedil;&atilde;o </span><span style="font-weight: 400;">das bets e fintech, por&eacute;m ainda tramita na Comiss&atilde;o de Assuntos Econ&ocirc;micos (CAE).</span></p>
+// <p>&nbsp;</p>
+// <p><strong>►O que significa a isen&ccedil;&atilde;o tribut&aacute;ria?</strong></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">Em outras palavras, a isen&ccedil;&atilde;o&nbsp;&eacute; uma modalidade de exclus&atilde;o do cr&eacute;dito tribut&aacute;rio, sendo compreendida como uma dispensa legal do pagamento do tributo. Obrigatoriamente deve ser criada por lei espec&iacute;fica. </span><strong>(Art. 175, CTN).</strong></p>
+// <p><span style="font-weight: 400;">&nbsp;&nbsp;</span></p>
+// <p><strong>►E quais valores seriam isentos de acordo com a Lei n&deg;15.270/2025?</strong></p>
+// <p><span style="font-weight: 400;">De acordo com a lei, a isen&ccedil;&atilde;o total do Imposto de Renda da Pessoa F&iacute;sica (IRPF) alcan&ccedil;a quem possui renda at&eacute; </span><strong>R$5.000,00 ao m&ecirc;s</strong><span style="font-weight: 400;">. Por&eacute;m, rendas entre </span><strong>R$5.000,01 a R$7.350,00 ao m&ecirc;s</strong><span style="font-weight: 400;"> possui redu&ccedil;&atilde;o parcial e decrescente do imposto, e acompanha uma f&oacute;rmula matem&aacute;tica para verificar qual o seu desconto, pois cada contribuinte pode vir a auferir renda diferente um do outro.&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">No entanto, para aqueles os quais a </span><strong>renda for maior</strong><span style="font-weight: 400;"> que </span><strong>R$7.350,00</strong><span style="font-weight: 400;">, ao m&ecirc;s, </span><strong>n&atilde;o haver&aacute;</strong><span style="font-weight: 400;"> isen&ccedil;&atilde;o parcial e segue o percentual de desconto normal da tabela </span><strong>(al&iacute;quotas de 7,5% a 27,5%)</strong><span style="font-weight: 400;">.&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Obs: </strong><strong>Lembrando que as novas regras s&atilde;o aplic&aacute;veis tamb&eacute;m ao 13&ordm; sal&aacute;rio</strong><span style="font-weight: 400;">.&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Regra geral (mensal):&nbsp;&nbsp;</strong></p>
+// <p>&nbsp;</p>
+// <p><strong>Remunera&ccedil;&atilde;o mensal&nbsp; -&nbsp; &nbsp; Valores de redu&ccedil;&atilde;o do Imposto</strong></p>
+// <table>
+// <tbody>
+// <tr>
+// <td>
+// <p><strong>At&eacute; R$5.000,00</strong></p>
+// </td>
+// <td>
+// <p><strong>At&eacute; R$ 312,89 - zerando o imposto</strong></p>
+// </td>
+// </tr>
+// <tr>
+// <td>
+// <p><strong>De R$5.000,01 a R$7.350,00</strong></p>
+// </td>
+// <td>
+// <p><strong>R$978,62 - (0,133145 &times; renda mensal), at&eacute; zerar para quem ganha R$7.350,00 (redu&ccedil;&atilde;o gradual de desconto)</strong></p>
+// </td>
+// </tr>
+// <tr>
+// <td>
+// <p><strong>A partir de R$ 7.350,01</strong></p>
+// </td>
+// <td><br />
+// <p><strong>N&atilde;o haver&aacute; redu&ccedil;&atilde;o (segue o percentual de desconto normal com al&iacute;quotas de 7,5% a 27,5%).&nbsp;</strong></p>
+// </td>
+// </tr>
+// </tbody>
+// </table>
+// <p><strong>Fonte: Gov.br</strong></p>
+// <p></p>
+// <p><span style="font-weight: 400;">►</span><span style="font-weight: 400;">Lembrando que a </span><strong>declara&ccedil;&atilde;o de 2026 - ano calend&aacute;rio 2025, segue a regra antiga em vigor.&nbsp;</strong></p>
+// <p></p>
+// <p><span style="font-weight: 400;">►</span><span style="font-weight: 400;">E as novas mudan&ccedil;as na tabela de valores a declarar, abrange a </span><strong>declara&ccedil;&atilde;o de 2027 - ano calend&aacute;rio 2026.&nbsp;</strong></p>
+// <p></p>
+// <p><strong>Regra geral (anual):&nbsp;&nbsp;</strong></p>
+// <p></p>
+// <p><strong>Remunera&ccedil;&atilde;o anual&nbsp; -&nbsp; &nbsp; Valores de redu&ccedil;&atilde;o do Imposto</strong></p>
+// <table>
+// <tbody>
+// <tr>
+// <td>
+// <p><strong>At&eacute; R$60.000,00</strong></p>
+// </td>
+// <td>
+// <p><strong>At&eacute; R$2.694,15, zerando o imposto</strong></p>
+// </td>
+// </tr>
+// <tr>
+// <td>
+// <p><strong>*</strong><strong>De R$60.000,01 a R$88.200,00</strong></p>
+// </td>
+// <td>
+// <p><strong>R$8.429,73 &ndash; (0,095575 &times; renda anual), at&eacute; zerar para quem ganha R$88.200,00&nbsp;</strong></p>
+// </td>
+// </tr>
+// <tr>
+// <td>
+// <p><strong>A partir de R$ 88.200,01</strong></p>
+// </td>
+// <td>
+// <p><strong>N&atilde;o haver&aacute; redu&ccedil;&atilde;o (segue o percentual de desconto normal com al&iacute;quotas de 7,5% a 27,5%).&nbsp;</strong></p>
+// </td>
+// </tr>
+// </tbody>
+// </table>
+// <p></p>
+// <p><strong>Fonte: Gov.br</strong></p>
+// <p></p>
+// <p><span style="font-weight: 400;">*</span><strong>R$60.000,01 (R$ 5.000,00 x 12 meses)&nbsp; &nbsp; -&nbsp; &nbsp; R$88.200,00 (R$7.350,00 x 12 meses).</strong></p>
+// <p></p>
+// <p><strong>OBS: Em resumo</strong><span style="font-weight: 400;">, a isen&ccedil;&atilde;o total do Imposto de Renda da Pessoa F&iacute;sica (IRPF) alcan&ccedil;a quem possui </span><strong>renda anual at&eacute; R$60.000,00</strong><span style="font-weight: 400;">. Por&eacute;m, rendas entre </span><strong>R$60.000,01 a R$ 88.200,00 ao ano</strong><span style="font-weight: 400;"> consta com redu&ccedil;&atilde;o parcial e decrescente do imposto, e acompanha uma f&oacute;rmula matem&aacute;tica para verificar de quanto ser&aacute; o desconto, pois cada contribuinte aufere renda diferente um do outro.&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">No entanto, para aqueles que a renda anual for maior que </span><strong>R$88.200,01</strong><span style="font-weight: 400;">, </span><strong>n&atilde;o haver&aacute;</strong><span style="font-weight: 400;"> redu&ccedil;&atilde;o e segue o percentual de desconto normal da tabela </span><strong>(al&iacute;quotas de 7,5% a 27,5%)</strong><span style="font-weight: 400;">.&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">O redutor anual &eacute; limitado ao imposto apurado, ou seja, n&atilde;o gera imposto negativo nem restitui&ccedil;&atilde;o autom&aacute;tica extra.</span></p>
+// <p>&nbsp;</p>
+// <p><strong>►Agora, outro ponto que se pergunta de como ficariam os cofres p&uacute;blicos ap&oacute;s a reforma do Imposto de Renda?</strong></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">Todavia, ao mesmo tempo que ocorre a altera&ccedil;&atilde;o nos valores quanto a isen&ccedil;&atilde;o de Imposto de Renda de Pessoa F&iacute;sica (IRPF), ou a redu&ccedil;&atilde;o parcial tamb&eacute;m </span><strong>ocorre a taxa&ccedil;&atilde;o</strong><span style="font-weight: 400;"> para rendimentos mais elevados levando a crer numa justi&ccedil;a fiscal mais equilibrada.&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Por isso</strong><span style="font-weight: 400;">, para compensar a falta de arrecada&ccedil;&atilde;o devido a isen&ccedil;&atilde;o total e parcial do Imposto de Renda de acordo com os valores mencionados foi criado um novo imposto para aqueles que possui rendimentos elevados, denominado I</span><strong>mposto de Renda de Pessoa F&iacute;sica M&iacute;nimo (IRPFM),</strong><span style="font-weight: 400;"> com al&iacute;quotas progressivas e ganhos maiores de</span><strong> R$600.000,00 </strong><strong>ao ano</strong><span style="font-weight: 400;">.</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Ou seja, </strong><span style="font-weight: 400;">para renda mensal </span><strong>acima de R$50.000,00 </strong><strong>ao m&ecirc;s</strong><strong>, </strong><span style="font-weight: 400;">ou seja, acima de </span><strong>R$ R$600.000,00 </strong><strong>ao ano</strong><span style="font-weight: 400;"> &eacute; aplicada a al&iacute;quota progressiva</span> <strong>at&eacute; 10%</strong><strong>, e significa que </strong><strong>a partir de 01/01/2026</strong><span style="font-weight: 400;">, as retiradas de lucros/dividendos acima de </span><strong>desses valores</strong><strong>, </strong><span style="font-weight: 400;">quando realizada</span> <span style="font-weight: 400;">por uma mesma pessoa jur&iacute;dica &agrave; mesma pessoa f&iacute;sica ir&aacute; sofrer a reten&ccedil;&atilde;o de </span><strong>IR na fonte</strong><span style="font-weight: 400;">. Se ultrapassar a esses valores haver&aacute; taxa&ccedil;&atilde;o de </span><strong>10%</strong><span style="font-weight: 400;"> incidente sobre o total ou sobre a parcela que ultrapassar o limite, e podendo ver como ser&aacute; a compensa&ccedil;&atilde;o anual.</span></p>
+// <p>&nbsp;</p>
+// <p><strong>E, acima de 1,2 milh&otilde;es</strong><span style="font-weight: 400;"> - </span><strong>aplica&ccedil;&atilde;o da al&iacute;quota m&iacute;nima efetiva de 10%, quer dizer </strong><span style="font-weight: 400;">&nbsp;&nbsp;que o imposto total pago sobre todos os rendimentos (sal&aacute;rios, lucros, dividendos, alugu&eacute;is), ap&oacute;s todos os descontos deve corresponder a, no m&iacute;nimo </span><strong>10% (dez por cento), do total recebido</strong><span style="font-weight: 400;">. Se o contribuinte pagar menos que isso atrav&eacute;s das regras normais, a diferen&ccedil;a ser&aacute; cobrada como um adicional de imposto, ent&atilde;o esse contribuinte ter&aacute; que p</span><span style="font-weight: 400;">agar a diferen&ccedil;a para atingir os 10%</span><span style="font-weight: 400;"><br /><br /></span></p>
+// <p><strong>Vejamos a tabela:</strong></p>
+// <p>&nbsp;</p>
+// <table>
+// <tbody>
+// <tr>
+// <td>
+// <p><strong>Acima de R$50.000,00 (mensal) que equivale a&nbsp; 600.000,00 (anual)</strong></p>
+// </td>
+// <td>
+// <p><strong>Acima desses valores aplica&ccedil;&atilde;o da al&iacute;quota progressiva at&eacute; 10%</strong></p>
+// </td>
+// </tr>
+// <tr>
+// <td>
+// <p><strong>Acima de&nbsp; R$1,2 milh&otilde;es</strong></p>
+// </td>
+// <td>
+// <p><strong>Aplica&ccedil;&atilde;o da al&iacute;quota m&iacute;nima efetiva de 10%</strong></p>
+// </td>
+// </tr>
+// </tbody>
+// </table>
+// <p>&nbsp;</p>
+// <p><strong>Fonte: Gov.br</strong></p>
+// <p><br /><br /></p>
+// <p><strong>►E, o que entraria no c&aacute;lculo do novo Imposto de Renda M&iacute;nimo (IRPFM)?</strong></p>
+// <p><span style="font-weight: 400;">No c&aacute;lculo do </span><strong>IRPFM</strong><span style="font-weight: 400;">, entrariam os sal&aacute;rios; lucros e dividendos; rendimentos de aplica&ccedil;&otilde;es financeiras tribut&aacute;veis.</span></p>
+// <p><strong>►E, o que estaria fora do c&aacute;lculo do novo Imposto de Renda M&iacute;nimo (IRPFM)?</strong></p>
+// <p>&nbsp;</p>
+// <p><strong>Estariam de fora do c&aacute;lculo do IRPFM</strong><span style="font-weight: 400;">: poupan&ccedil;a, Letras de Cr&eacute;dito Imobili&aacute;rio (LCI), Letras de Cr&eacute;dito do agroneg&oacute;cio (LCA), fundos imobili&aacute;rios, </span><span style="font-weight: 400;">o Fiagro (Fundo de Investimento nas Cadeias Produtivas Agroindustriais)&nbsp;</span><span style="font-weight: 400;"> e outros investimentos incentivados;&nbsp; heran&ccedil;as e doa&ccedil;&otilde;es;&nbsp; indeniza&ccedil;&otilde;es por doen&ccedil;a grave;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">ganhos de capital na venda de im&oacute;veis, exceto fora da bolsa;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"> alugu&eacute;is atrasados, valores recebidos acumuladamente por meio de a&ccedil;&otilde;es judiciais;&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">►</span><span style="font-weight: 400;">Lembrando que as mudan&ccedil;as na tabela de valores a declarar, abrange a de</span><strong>clara&ccedil;&atilde;o de 2027 - ano calend&aacute;rio 2026. </strong><span style="font-weight: 400;">A </span><strong>declara&ccedil;&atilde;o de 2026 - ano calend&aacute;rio 2025, segue a regra antiga.&nbsp;</strong></p>
+// <p>&nbsp;</p>
+// <p><strong>OBS</strong><strong>: O governo estima que cerca de 141 mil contribuintes ser&atilde;o afetados.</strong></p>
+// <p><br /><br /></p>
+// <p><strong>►E, qual a novidade sobre a famosa tributa&ccedil;&atilde;o de dividendos na fonte, os quais at&eacute; ent&atilde;o eram isentos?</strong></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">A tributa&ccedil;&atilde;o ser&aacute; de </span><strong>10% de imposto retido sobre dividendos</strong><span style="font-weight: 400;">, e apenas quando for excedido o valor de </span><strong>R$50.000,00 ao m&ecirc;s</strong><span style="font-weight: 400;">;&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><strong>Da mesma forma </strong><span style="font-weight: 400;">ser&aacute; tributado, quando houver o valor pago somente por uma &uacute;nica empresa &agrave; pessoa f&iacute;sica.</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">.</span></p>
+// <p><strong>OBS</strong><span style="font-weight: 400;">: A al&iacute;quota ser&aacute; aplicada especialmente a s&oacute;cios e empres&aacute;rios que recebem quantias financeiras elevadas em dividendos, e at&eacute; o momento eram isentos.</span></p>
+// <p><strong>*A grande maioria dos investidores n&atilde;o ser&atilde;o afetados.</strong></p>
+// <p><strong>OBS</strong><span style="font-weight: 400;">: de qualquer forma o imposto retido poder&aacute; ser compensado na declara&ccedil;&atilde;o de imposto de renda anual.</span></p>
+// <p>&nbsp;</p>
+// <p><strong>►A reforma do Imposto de Renda em rela&ccedil;&atilde;o ao novo teto, afetariam as dedu&ccedil;&otilde;es que j&aacute; est&atilde;o programadas na declara&ccedil;&atilde;o?</strong></p>
+// <p>&nbsp;</p>
+// <p><strong>N&atilde;o. Nada muda</strong><span style="font-weight: 400;"> nas principais dedu&ccedil;&otilde;es:</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">Quanto aos </span><strong>dependentes</strong><span style="font-weight: 400;"> continua o valor de </span><strong>R$189,59 por m&ecirc;s &ndash; R$2.275,08 ao ano</strong></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">Quanto ao </span><strong>desconto simplificado mensal</strong><span style="font-weight: 400;"> continua de at&eacute; </span><strong>R$ 607,20</strong><strong>;</strong><strong><br /><br /></strong></p>
+// <p><span style="font-weight: 400;">Quanto a </span><strong>educa&ccedil;&atilde;o</strong><span style="font-weight: 400;"> at&eacute; </span><strong>R$ 3.561,50</strong><span style="font-weight: 400;"> por pessoa ao ano;</span><span style="font-weight: 400;"><br /><br /></span></p>
+// <p><strong>Na declara&ccedil;&atilde;o anual</strong><span style="font-weight: 400;">: desconto simplificado de at&eacute; </span><strong>R$ 17.640,00.</strong></p>
+// <p><br /><br /></p>
+// <p><span style="font-weight: 400;">Portanto, a reforma do Imposto de Renda trazida pela </span><strong>Lei n&deg;15.270/2025</strong><span style="font-weight: 400;">, especificamente ao novo teto de desconto de valores, quer seja na isen&ccedil;&atilde;o total ou quer seja de forma parcial, sem d&uacute;vida &eacute; muito bem-vinda, </span><strong>e se constitui num marco hist&oacute;rico para o Brasil</strong><span style="font-weight: 400;">, porque al&eacute;m de trazer um al&iacute;vio no bolso de milh&otilde;es de brasileiros, principalmente em meio a tantas distor&ccedil;&otilde;es salariais, ao mesmo tempo traz um incentivo &agrave; circula&ccedil;&atilde;o de moedas impulsionando a economia.</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">Todavia, a reforma busca equilibrar a isen&ccedil;&atilde;o para rendas menores e a taxa&ccedil;&atilde;o par lucros elevados, os quais anteriormente eram isentos.&nbsp;</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">Portanto, </span><strong>momento esse de justi&ccedil;a tribut&aacute;ria e compensat&oacute;ria para os contribuintes</strong><span style="font-weight: 400;">.</span></p>
+// <p><br /><br /></p>
+// <p><strong>Refer&ecirc;ncias</strong></p>
+// <p><span style="font-weight: 400;">BRASIL.&nbsp;</span><a href="https://legislacao.planalto.gov.br/legisla/legislacao.nsf/viwTodos/509f2321d97cd2d203256b280052245a?OpenDocument&amp;Highlight=1,constitui%C3%A7%C3%A3o&amp;AutoFramed"><strong>Constitui&ccedil;&atilde;o da Rep&uacute;blica Federativa do Brasil de 1988</strong></a><span style="font-weight: 400;">. dispon&iacute;vel em </span><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"><span style="font-weight: 400;">https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm</span></a><strong>.</strong><span style="font-weight: 400;"> Acesso em 20 fev. 2026.</span></p>
+// <h1>&nbsp;</h1>
+// <h1><span style="font-weight: 400;">BRASIL</span><strong>.&nbsp;</strong><strong> Receita divulga nova tabela do IRPF com as mudan&ccedil;as ap&oacute;s isen&ccedil;&atilde;o para quem ganha at&eacute; R$ 5 mil. </strong><a href="https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/janeiro/receita-divulga-nova-tabela-do-irpf-com-as-mudancas-apos-isencao-para-quem-ganha-ate-r-5-mil.%20"><span style="font-weight: 400;">https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/janeiro/receita-divulga-nova-tabela-do-irpf-com-as-mudancas-apos-isencao-para-quem-ganha-ate-r-5-mil. </span></a><span style="font-weight: 400;">Acesso em 20 fev. 2026.</span></h1>
+// <p><span style="font-weight: 400;">BRASIL.&nbsp;</span> <strong>Sancionada isen&ccedil;&atilde;o do Imposto de Renda para quem ganha at&eacute; R$ 5 mil por m&ecirc;s</strong><span style="font-weight: 400;">.</span> <a href="https://www12.senado.leg.br/noticias/materias/2025/11/27/sancionada-isencao-do-imposto-de-renda-para-quem-ganha-ate-r-5-mil-por-mes#:~:text=O%20presidente%20da%20Rep%C3%BAblica%2C%20Luiz,R%24%205%20mil%20por%20m%C3%AAs"><span style="font-weight: 400;">https://www12.senado.leg.br/noticias/materias/2025/11/27/sancionada-isencao-do-imposto-de-renda-para-quem-ganha-ate-r-5-mil-por-mes#:~:text=O%20presidente%20da%20Rep%C3%BAblica%2C%20Luiz,R%24%205%20mil%20por%20m%C3%AAs</span></a><span style="font-weight: 400;">.</span> <span style="font-weight: 400;">&nbsp;Acesso em 20 fev. 2026.</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">______.Lei nᵒ&nbsp;</span><a href="https://www.jusbrasil.com.br/legislacao/91647/codigo-tributario-nacional-lei-5172-66"><span style="font-weight: 400;">5.172</span></a><span style="font-weight: 400;">, de 25.10.66. </span><strong>Disp&otilde;e sobre o Sistema Tribut&aacute;rio Nacional e institui normas gerais de direito tribut&aacute;rio aplic&aacute;veis a Uni&atilde;o, estados e Munic&iacute;pios</strong><span style="font-weight: 400;">. Dispon&iacute;vel em:&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm"><span style="font-weight: 400;">https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm</span></a><span style="font-weight: 400;">. Acesso em 20 fev. 2026.</span></p>
+// <p>&nbsp;</p>
+// <p><span style="font-weight: 400;">______.</span><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/lei%204.320-1964?OpenDocument"><span style="font-weight: 400;">Lei n&deg;15.270, em 26 de novembro de 2025. </span></a><strong>Altera a Lei n&ordm; 9.250, de 26 de dezembro de 1995, e a Lei n&ordm; 9.249, de 26 de dezembro de 1995, para instituir a redu&ccedil;&atilde;o do imposto sobre a renda devido nas bases de c&aacute;lculo mensal e anual e a tributa&ccedil;&atilde;o m&iacute;nima para as pessoas f&iacute;sicas que auferem altas rendas; e d&aacute; outras provid&ecirc;ncias</strong><span style="font-weight: 400;">.</span><span style="font-weight: 400;"> Dispon&iacute;vel em </span><a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15270.htm"><span style="font-weight: 400;">https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15270.htm</span></a><span style="font-weight: 400;">.</span> <span style="font-weight: 400;">Acesso em 20 fev. 2026.</span></p>
+// <p>&nbsp;</p>`,
+//         "tags": ["Finanças Públicas ", " Isenção de Imposto de Renda", "Novo teto"]
+//       },
+
+
+
+
       {
         "id": 1,
         "category": "civil",
@@ -2712,7 +3068,7 @@
         "id": 4,
         "category": "financeiro",
         "categoryName": "Direito Financeiro e Orçamentário",
-        "date": "21 de julho de 2025",
+        "date": "21 de junho de 2025",
         "readTime": "20 min de leitura",
         "title": "Orçamento Público II",
         "excerpt": "Análise do orçamento público brasileiro, seus princípios, instrumentos constitucionais e a importância na gestão das finanças públicas.",
@@ -3121,7 +3477,7 @@
         "id": 5,
         "category": "constitucional",
         "categoryName": "Direito Constitucional",
-        "date": "26 de maio de 2024",
+        "date": "11 de outubro de 2025 ",
         "readTime": "25 min de leitura",
         "title": "Ação Declaratória de Constitucionalidade",
         "excerpt": "Análise  sobre a ADC como instrumento de garantia da segurança jurídica no ordenamento brasileiro, desde sua criação até a regulamentação legal.",
@@ -3132,13 +3488,15 @@
       <div class="publication-header_titleWrapper__BRm1q">
 </div>
 
-<div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2">&nbsp;</div>
-<div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2">Dispon&iacute;vel em:<a href="https://www.jusbrasil.com.br/artigos/acao-declaratoria-de-constitucionalidade/225090264">https://www.jusbrasil.com.br/artigos/acao-declaratoria-de-constitucionalidade/225090264</a></div>
+<div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2">Artigo atualizado em 26 de maio de 2024.</div>
+<div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2">Dispon&iacute;vel em:<a href=" https://www.jusbrasil.com.br/artigos/acao-declaratoria-de-constitucionalidade/225090264">https://www.jusbrasil.com.br/artigos/acao-declaratoria-de-constitucionalidade/225090264</a></div>
 <div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2">&nbsp;</div>
 <div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2">
   <ul>
 <li><strong>Breve Introdu&ccedil;&atilde;o</strong></li>
+
 </ul>
+
 <p>A a&ccedil;&atilde;o declarat&oacute;ria de Constitucionalidade &eacute; o meio processual utilizado para confirmar a constitucionalidade de certa lei ou ato normativo federal, cuja compatibilidade est&aacute; sendo questionada no &acirc;mbito do Supremo Tribunal Federal.</p>
 <p>Serve para propiciar seguran&ccedil;a jur&iacute;dica, evitar o estado de incertezas e apontar a efetividade da lei ou ato normativo federal.</p>
 <p>Criada pela Emenda Constitucional n&ordm;&nbsp;<a class="cite" title="EMENDA CONSTITUCIONAL N&ordm; 3, DE 17 DE MAR&Ccedil;O DE 1993" href="https://www.jusbrasil.com.br/legislacao/1767919984/emenda-constitucional-3-17-marco-1993" rel="11293076">3</a>&nbsp;de 17.03.1993, e est&aacute; esculpida no inciso&nbsp;<a class="cite" title="Inciso I, art. 102 da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/10688695/inciso-i-do-artigo-102-da-constituicao-federal-de-1988" rel="10688695">I</a>, al&iacute;nea&nbsp;<a class="cite" title="Al&iacute;nea " href="https://www.jusbrasil.com.br/topicos/10688111/alinea-a-do-inciso-i-do-artigo-102-da-constituicao-federal-de-1988" rel="10688111">a</a>&nbsp;do art.&nbsp;<a class="cite" title="Art. 102 da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/10688723/artigo-102-da-constituicao-federal-de-1988" rel="10688723">102</a>&nbsp;da&nbsp;CF/88, cuja compet&ecirc;ncia para processar e julgar &eacute; da Corte Constitucional, vejamos:</p>
@@ -3346,7 +3704,7 @@
         "id": 7,
         "category": "processo-civil",
         "categoryName": "Direito Processual Civil",
-        "date": "04 de abril de 2025 - atualizado",
+        "date": "07 de abril de 2025",
         "readTime": "20 min de leitura",
         "title": "Dos Atos Processuais",
         "excerpt": "Análise sobre os atos processuais, sua classificação, formas, requisitos e importância no ordenamento processual civil brasileiro.",
@@ -3354,11 +3712,12 @@
         "author": "Redação",
 
         "content": `
-      
-<p><br />Dispon&iacute;vel em: <a href="https://www.jusbrasil.com.br/artigos/dos-atos-processuais/2298317408">https://www.jusbrasil.com.br/artigos/dos-atos-processuais/2298317408</a><br /><br /></p>
+      <div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2">Artigo atualizado em 07 de abril de 2025.</div>
+<br />Dispon&iacute;vel em: <a href="https://www.jusbrasil.com.br/artigos/dos-atos-processuais/2298317408">https://www.jusbrasil.com.br/artigos/dos-atos-processuais/2298317408</a><br /><br /></p>
  <ul>
 <li><strong>Resumo</strong></li>
 </ul>
+ 
 <p>Atos processuais s&atilde;o a&ccedil;&otilde;es praticadas pela manifesta&ccedil;&atilde;o da vontade humana no andamento de um processo de forma l&oacute;gica com in&iacute;cio, meio e fim estimando a cada novo ato a realiza&ccedil;&atilde;o de um ato seguinte at&eacute; o ato final com a entrega da tutela definitiva. A formaliza&ccedil;&atilde;o dos atos se faz por meio de procedimento, e procedimento &eacute; um modelo que integra o processo. Para cada procedimento, h&aacute; uma forma que consiste na maneira pela qual se apresenta um ato processual, e a forma do ato visa preservar a ordem, a clareza, a certeza, e a seguran&ccedil;a, al&eacute;m de respeitar os princ&iacute;pios do devido processo legal e do contradit&oacute;rio. &Eacute; no procedimento que ocorre a sequ&ecirc;ncia l&oacute;gica dos atos processuais, por meio da forma como &eacute; realizado. Por sua vez conceitua-se processo como sendo uma ferramenta de trabalho da Jurisdi&ccedil;&atilde;o, cuja finalidade &eacute; exteriorizar e documentar a sequ&ecirc;ncia de atos praticados pelas partes e seus procuradores, pelo Juiz e os serventu&aacute;rios da Justi&ccedil;a e pelos demais sujeitos processuais, como exemplo, os promotores, peritos, testemunhas, tradutores e int&eacute;rpretes. Na mesma linha, para formar os atos processuais, &eacute; necess&aacute;rio atender a alguns requisitos que regulam os atos e s&atilde;o exigidos pela jurisdi&ccedil;&atilde;o, como exemplo, o idioma utilizado, o prazo de publica&ccedil;&atilde;o dos atos, a exig&ecirc;ncia de motiva&ccedil;&otilde;es das decis&otilde;es judici&aacute;rias em geral, al&eacute;m daqueles particulares sujeitados pela lei para atender a demanda, cita&ccedil;&atilde;o, contesta&ccedil;&atilde;o, senten&ccedil;a, dentre outros. Os atos processuais tamb&eacute;m podem ser realizados no &acirc;mbito extraprocessual, por meio de transa&ccedil;&atilde;o ou acordo quando for do interesse das partes, e homologado pelo Ju&iacute;zo quando for decorrente de uma a&ccedil;&atilde;o judicial. No decorrer deste artigo, descrevem-se sequencialmente os conceitos, classifica&ccedil;&otilde;es, formas e requisitos dos atos processuais.</p>
 <p><strong>Palavras-chave</strong>: Atos Processuais. Processo. Procedimento. Forma. Requisitos. Classifica&ccedil;&atilde;o.</p>
 <p><strong>1 INTRODU&Ccedil;&Atilde;O</strong></p>
@@ -3476,7 +3835,7 @@
         "id": 8,
         "category": "financeiro",
         "categoryName": "Direito Processual Civil",
-        "date": "18 de agosto de 2018",
+        "date": "11 de agosto de 2025",
         "readTime": "20 min de leitura",
         "title": "TCC - Especialização Processo civil",
         "excerpt": "A criação dos Juizados Especiais como forma inovadora de garantir o acesso à Justiça",
@@ -3485,6 +3844,7 @@
 
         "content": `
         <div class="publication-header_titleWrapper__BRm1q">
+<div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2">Artigo criado em 18 de agosto de 2018.</div>
 <table>
 <tbody>
 <tr>
@@ -4877,9 +5237,9 @@
         "author": "Redação",
 
         "content": `
-
-        <div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2"><a href="https://www.jusbrasil.com.br/artigos/direito-tributario/2544357460">https://www.jusbrasil.com.br/artigos/direito-tributario/2544357460<                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           /a></div>
-          <p>&nbsp;</p>
+        <div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2">Artigo atualizado em 07 de abril de 2025.</div>
+        <div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2"><a href="https://www.jusbrasil.com.br/artigos/direito-tributario/2544357460">https://www.jusbrasil.com.br/artigos/direito-tributario/2544357460</div>
+         <p>&nbsp;</p>
           <p><strong>Breve Introdu&ccedil;&atilde;o</strong></p>
 <p>&nbsp;</p>
 <p>A&nbsp;<a class="cite" title="CONSTITUI&Ccedil;&Atilde;O FEDERAL, DE 1988" href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988" rel="302754">Constitui&ccedil;&atilde;o Federal</a>&nbsp;&eacute; quem fixa o chamado poder de tributar. Embora esteja descrito na&nbsp;<a class="cite" title="CONSTITUI&Ccedil;&Atilde;O FEDERAL, DE 1988" href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988" rel="302754">Constitui&ccedil;&atilde;o Federal</a>/88, esse poder &eacute; entregue aos entes federados como a Uni&atilde;o, Estados Distrito Federal e Munic&iacute;pios.</p>
@@ -5202,108 +5562,123 @@
         "categoryName": "Direito previdenciário",
         "date": "06 de outubro de 2025",
         "readTime": "20 min de leitura",
-        "title": "AUXÍLIO RECLUSÃO",
+        "title": "AUXÍLIO-RECLUSÃO",
         "excerpt": "Análise jurídica e social do benefício de auxílio-reclusão no Brasil.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762628689/close-up-disponivel-usando-algemas-na-prisao_tzo0sj.jpg",
         "author": "Redação",
 
         "content": `
-        <div class="publication-header_titleWrapper__BRm1q">
-<div class="publication-header_titleWrapper__BRm1q">
-</div>
-<div class="toolbar_toolbar__RhVHI print_unprintable__KCAm2"><a href="https://www.jusbrasil.com.br/artigos/auxilio-reclusao/5038668779?_gl=1*ufoy99*_gcl_au*MTA0MzIzNDYyMy4xNzYwMDQwODY0LjMzMTk1ODEyMi4xNzYxODY1NTEwLjE3NjE4NjU1MTA.*_ga*MzMzNzAxODg2LjE3NjAwNDA4NjQ.*_ga_QCSXBQ8XPZ*czE3NjE4NjQyNzYkbzckZzEkdDE3NjE4NjU1MzckajI4JGwwJGgw">https://www.jusbrasil.com.br/topicos/10641860</a></div>
-
+        <p><strong>AUX&Iacute;LIO-RECLUS&Atilde;O</strong></p>
+<p><span style="font-weight: 400;">O que &eacute; o aux&iacute;lio-reclus&atilde;o - Fato gerador - Dependentes -Valores - Quantidade de contribui&ccedil;&otilde;es necess&aacute;rias - Tipo de regime de cumprimento pena - In&iacute;cio e t&eacute;rmino do aux&iacute;lio-reclus&atilde;o - Leis - entre outros.</span></p>
 <p><strong>Breve Introdu&ccedil;&atilde;o</strong></p>
-<p>&nbsp;</p>
-<p>O&nbsp;<strong>inciso&nbsp;</strong><strong><a class="cite" title="Inciso III, art. 1&ordm; da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/10731879/inciso-iii-do-artigo-1-da-constituicao-federal-de-1988" rel="10731879">III</a></strong>, do artigo&nbsp;<a class="cite" title="Artigo 1 da Constitui&ccedil;&atilde;o Federal de 1988" href="https://www.jusbrasil.com.br/topicos/10641860/artigo-1-da-constituicao-federal-de-1988" rel="10641860">primeiro</a>&nbsp;da&nbsp;<a class="cite" title="CONSTITUI&Ccedil;&Atilde;O FEDERAL, DE 1988" href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988" rel="302754">constitui&ccedil;&atilde;o Federal</a>/88 diz que entre os fundamentos da Rep&uacute;blica Federativa do Brasil est&aacute; &agrave; dignidade da pessoa humana. Em complemento ao&nbsp;<strong>inciso III da CF/88, o artigo 5&ordm;</strong>, determina que todos s&atilde;o iguais perante a Lei, sem distin&ccedil;&atilde;o de qualquer natureza, e garantindo entre outras coisas o direito &agrave; vida.</p>
-<p><strong>Vejamos</strong><strong>:</strong></p>
-<p><strong>Art. 1&ordm;</strong>&nbsp;A Rep&uacute;blica Federativa do Brasil, formada pela uni&atilde;o indissol&uacute;vel dos Estados e Munic&iacute;pios e do Distrito Federal, constitui-se em Estado Democr&aacute;tico de Direito e tem como fundamentos:</p>
-<p>I - a soberania</p>
-<p>II - a cidadania</p>
+<p><span style="font-weight: 400;color: darkgoldenrod;" >O inciso </span><span style="font-weight: 400;color: darkgoldenrod;" >III</span><span style="font-weight: 400;color: darkgoldenrod;" >, do art. </span><span style="font-weight: 400;color: darkgoldenrod;" >1</span><span style="font-weight: 400;color: darkgoldenrod;" >&deg;, da </span><span style="font-weight: 400;color: darkgoldenrod;" >constitui&ccedil;&atilde;o Federal</span></a><span style="font-weight: 400;color: darkgoldenrod;" >/88, </span><span style="font-weight: 400;">diz que entre os fundamentos da Rep&uacute;blica Federativa do Brasil est&aacute; &agrave; dignidade da pessoa humana. Em complemento ao Inciso III da CF/88, </span><span style="font-weight: 400;color: darkgoldenrod;"   >o artigo 5&ordm;</span><span style="font-weight: 400;">, determina que todos s&atilde;o iguais perante a Lei, sem distin&ccedil;&atilde;o de qualquer natureza, e garantindo entre outras coisas o direito &agrave; vida.</span></p>
+<p><strong>Vejamos</strong><strong>:&nbsp;</strong></p>
+<p><strong>Art. 1&ordm;</strong><span style="font-weight: 400;"> A Rep&uacute;blica Federativa do Brasil, formada pela uni&atilde;o indissol&uacute;vel dos Estados e Munic&iacute;pios e do Distrito Federal, constitui-se em Estado Democr&aacute;tico de Direito e tem como fundamentos:</span></p>
+<p><strong>I </strong><span style="font-weight: 400;">- &nbsp; a soberania</span></p>
+<p><strong>II</strong><span style="font-weight: 400;"> - a cidadania</span></p>
 <p><strong>III - a dignidade da pessoa humana;</strong></p>
-<p>IV - os valores sociais do trabalho e da livre iniciativa;&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13874.htm#art1" target="_blank" rel="nofollow">(Vide Lei n&ordm; 13.874, de 2019)</a></p>
-<p>V - o pluralismo pol&iacute;tico.</p>
-<p><strong>A&nbsp;</strong><strong><a class="cite" title="CONSTITUI&Ccedil;&Atilde;O FEDERAL, DE 1988" href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988" rel="302754">Constitui&ccedil;&atilde;o Federal</a></strong><strong>&nbsp;de 1988, determina</strong><strong>:</strong></p>
-<p><strong>Art. 5&ordm;</strong>&nbsp;Todos s&atilde;o iguais perante a lei, sem distin&ccedil;&atilde;o de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no Pa&iacute;s a inviolabilidade do direito &agrave; vida, &agrave; liberdade, &agrave; igualdade, &agrave; seguran&ccedil;a e &agrave; propriedade.</p>
-<p>A Previd&ecirc;ncia Social, imbu&iacute;da pelo objetivo de prote&ccedil;&atilde;o social &agrave; vida abrange as atividades de Seguridade Social por meio do INSS (Autarquia Federal), as quais s&atilde;o destinadas a amparar o trabalhador nos casos previs&iacute;veis ou n&atilde;o.</p>
-<p><strong>O INSS - Instituto Nacional do Seguro Social</strong>&nbsp;&eacute; uma autarquia do Governo Federal vinculada ao Minist&eacute;rio da Previd&ecirc;ncia Social, que tem por objetivo assegurar meios para a manuten&ccedil;&atilde;o dos trabalhadores filiados a ele, e seus dependentes, mediante a administra&ccedil;&atilde;o e pagamento de benef&iacute;cios.</p>
-<p><strong>Os benef&iacute;cios est&atilde;o previstos no art. 18 da Lei&nbsp;</strong>n⁰&nbsp;<strong><a class="cite" title="LEI N&ordm; 8.213, DE 24 DE JULHO DE 1991" href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" rel="11364779">8.213</a></strong><strong>/91,&nbsp;</strong>tais como:</p>
-<p><strong>I - quanto ao segurado:</strong></p>
-<p>a) aposentadoria por invalidez;</p>
-<p>b) aposentadoria por idade;</p>
-<p>c) aposentadoria por tempo de contribui&ccedil;&atilde;o;&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/leis/LCP/Lcp123.htm#art82" target="_blank" rel="nofollow">(Reda&ccedil;&atilde;o dada pela Lei Complementar n&ordm; 123, de 2006)</a></p>
-<p>d) aposentadoria especial;</p>
-<p>e) aux&iacute;lio-doen&ccedil;a;</p>
-<p>f) sal&aacute;rio-fam&iacute;lia;</p>
-<p>g) sal&aacute;rio-maternidade;</p>
-<p>h) aux&iacute;lio-acidente;</p>
-<p>i)&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/leis/L8870.htm#art29" target="_blank" rel="nofollow">(Revogada pela Lei n&ordm; 8.870, de 1994)</a></p>
-<p><strong>II - quanto ao dependente:</strong></p>
-<p>a) pens&atilde;o por morte;</p>
-<p>b) aux&iacute;lio-reclus&atilde;o;</p>
-<p><strong>III - quanto ao segurado e dependente:</strong></p>
-<p>a)&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/leis/L9032.htm#art8" target="_blank" rel="nofollow">(Revogada pela Lei n&ordm; 9.032, de 1995)</a></p>
-<p>b) servi&ccedil;o social;</p>
-<p>c) reabilita&ccedil;&atilde;o profissional.</p>
-<p>E, para fazer jus &agrave; percep&ccedil;&atilde;o dos benef&iacute;cios s&atilde;o exigidos alguns requisitos como idade m&iacute;nima, car&ecirc;ncia,<strong>&nbsp;al&eacute;m de pr&eacute;via contribui&ccedil;&atilde;o</strong>&nbsp;<strong>exceto</strong>&nbsp;para aqueles benef&iacute;cios expressos no&nbsp;<strong>inciso&nbsp;<a class="cite" title="Inciso I, art. 26 da Lei n&ordm; 8.213, de 24 de julho de 1991" href="https://www.jusbrasil.com.br/topicos/11355703/inciso-i-do-artigo-26-da-lei-n-8213-de-24-de-julho-de-1991" rel="11355703">I</a>, do art.&nbsp;<a class="cite" title="Art. 26 da Lei n&ordm; 8.213, de 24 de julho de 1991" href="https://www.jusbrasil.com.br/topicos/11355745/artigo-26-da-lei-n-8213-de-24-de-julho-de-1991" rel="11355745">26</a>&nbsp;da Lei n&ordm;&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 8.213, DE 24 DE JULHO DE 1991" href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" rel="11364779">8.213</a></strong><strong>/91</strong>: pens&atilde;o por morte; sal&aacute;rio-fam&iacute;lia e aux&iacute;lio-acidente&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow">(Reda&ccedil;&atilde;o dada pela Lei n&ordm; 13.846/2019)</a>. Os benef&iacute;cios expressos no inciso&nbsp;<strong>II</strong>, do art. 26 cujas doen&ccedil;as s&atilde;o espec&iacute;ficas merecem o tratamento particularizado;</p>
-<p>Todavia, a&nbsp;<strong>pr&eacute;via contribui&ccedil;&atilde;o</strong>&nbsp;significa que a Previd&ecirc;ncia Social &eacute; organizada sob a forma do Regime Geral de Previd&ecirc;ncia Social, possui&nbsp;<strong>car&aacute;ter contributivo e filia&ccedil;&atilde;o obrigat&oacute;ria</strong>, observados os crit&eacute;rios que resguarde o equil&iacute;brio financeiro e atuarial conforme previsto no&nbsp;<strong>artigo&nbsp;<a class="cite" title="Art. 201 da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/1160355/artigo-201-da-constituicao-federal-de-1988" rel="1160355">201</a>&nbsp;da&nbsp;<a class="cite" title="CONSTITUI&Ccedil;&Atilde;O FEDERAL, DE 1988" href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988" rel="302754">CF/88</a>, par&aacute;grafo &uacute;nico e incisos de I a V.</strong></p>
-<p><strong>Ademais,</strong>&nbsp;o sistema se assegura de v&aacute;rios princ&iacute;pios dentre os quais pode-se citar o princ&iacute;pio constitucional da solidariedade que est&aacute; esculpido no inciso&nbsp;<strong><a class="cite" title="Inciso I, art. 3&ordm; da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/10731686/inciso-i-do-artigo-3-da-constituicao-federal-de-1988" rel="10731686">I</a></strong><strong>&nbsp;do artigo&nbsp;</strong><strong><a class="cite" title="Art. 3&ordm; da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/10641719/artigo-3-da-constituicao-federal-de-1988" rel="10641719">3&ordm;</a></strong><strong>, da&nbsp;</strong><strong><a class="cite" title="CONSTITUI&Ccedil;&Atilde;O FEDERAL, DE 1988" href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988" rel="302754">Constitui&ccedil;&atilde;o Federal</a></strong><strong>/88</strong>, e resulta na colabora&ccedil;&atilde;o e o apoio m&uacute;tuo entre os indiv&iacute;duos e a sociedade, com a finalidade de propiciar o bem estar e justi&ccedil;a social.</p>
-<p>Vejamos:</p>
-<p><strong>Art. 3&ordm;</strong>&nbsp;Constituem objetivos fundamentais da Rep&uacute;blica Federativa do Brasil:</p>
-<p><strong>I&nbsp;</strong>- construir uma sociedade livre, justa e solid&aacute;ria;</p>
-<p><strong>Ressalta Daniel Machado da Rocha (apud CASTRO; LAZZARI, 2010, p. 112),&nbsp;</strong>&ldquo;A solidariedade legitima-se na ideia de que, al&eacute;m de direitos e liberdades, os indiv&iacute;duos tamb&eacute;m t&ecirc;m deveres para com a comunidade no qual est&atilde;o inseridos&rdquo;.</p>
-<p><em>Em outras palavras a solidariedade chama os indiv&iacute;duos &agrave; responsabilidade que eles t&ecirc;m em cooperar com os outros indiv&iacute;duos, porque a partir dessa solidariedade se constr&oacute;i a base de um sistema harm&ocirc;nico de seguridade social, onde todos podem usufruir e ao mesmo tempo contribuir (Felippe, 2013, p. 28).</em></p>
-<p>Por conseguinte, para ter acesso ao benef&iacute;cio a pessoa precisa se registrar por meio do&nbsp;<strong>NIT (n&uacute;mero de identifica&ccedil;&atilde;o do trabalhador), juntamente com o c&oacute;digo referente a sua atividade laboral,&nbsp;</strong>os quais servem para que o&nbsp;<strong>INSS&nbsp;</strong>identifique quem faz parte do sistema, por exemplo: se aut&ocirc;nomos, facultativos, empregados dom&eacute;sticos e segurados especiais, entre outros.</p>
-<p>O NIT registrado no INSS, se torna essencial para que as pessoas possam estar dentro do sistema previdenci&aacute;rio, contribuir e ter acesso aos benef&iacute;cios.</p>
+<p><span style="font-weight: 400;">IV - os valores sociais do trabalho e da livre iniciativa; </span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13874.htm#art1"><span style="font-weight: 400;">(Vide Lei n&ordm; 13.874, de 2019)</span></a></p>
+<p><span style="font-weight: 400;">V - o pluralismo pol&iacute;tico.</span></p>
+<p>&nbsp;</p>
+<p><strong>A </strong><a href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988"><strong>Constitui&ccedil;&atilde;o   Federal</strong></a><strong> de 1988, determina:</strong></p>
+<p style="color: darkgoldenrod;"><strong>Art. 5&ordm;</strong><span style="font-weight: 400;"> Todos s&atilde;o iguais perante a lei, sem distin&ccedil;&atilde;o de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no Pa&iacute;s a inviolabilidade do direito &agrave; vida, &agrave; liberdade, &agrave; igualdade, &agrave; seguran&ccedil;a e &agrave; propriedade.</span></p>
+<p><span style="font-weight: 400;">A Previd&ecirc;ncia Social, imbu&iacute;da pelo objetivo de prote&ccedil;&atilde;o social &agrave; vida abrange as atividades de Seguridade Social por meio do INSS (Autarquia Federal), as quais s&atilde;o destinadas a amparar o trabalhador nos casos previs&iacute;veis ou n&atilde;o.</span><span style="font-weight: 400;">&nbsp;</span></p>
+<p><strong>O INSS - Instituto Nacional do Seguro Social</strong><span style="font-weight: 400;"> &eacute; uma autarquia do Governo Federal vinculada ao Minist&eacute;rio da Previd&ecirc;ncia Social, que tem por objetivo assegurar meios para a manuten&ccedil;&atilde;o dos trabalhadores filiados a ele, e seus dependentes, mediante a administra&ccedil;&atilde;o e pagamento de benef&iacute;cios.</span></p>
+<p><strong>Os benef&iacute;cios est&atilde;o previstos no art. 18 da Lei </strong><span style="font-weight: 400;">n⁰ </span><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><strong>8.213</strong></a><strong>/91,&nbsp;</strong><span style="font-weight: 400;">tais como:&nbsp;</span></p>
+<p><strong>&nbsp;I - quanto ao segurado:</strong></p>
+<ol>
+<li><span style="font-weight: 400;">a) aposentadoria por invalidez;</span></li>
+<li><span style="font-weight: 400;">b) aposentadoria por idade;</span></li>
+<li><span style="font-weight: 400;">c) aposentadoria por tempo&nbsp; de contribui&ccedil;&atilde;o;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/leis/LCP/Lcp123.htm#art82"><span style="font-weight: 400;">(Reda&ccedil;&atilde;o dada pela Lei Complementar n&ordm; &nbsp; 123, de 2006)</span></a></li>
+<li><span style="font-weight: 400;">d) aposentadoria especial;</span></li>
+<li><span style="font-weight: 400;">e) aux&iacute;lio-doen&ccedil;a;</span></li>
+<li><span style="font-weight: 400;">f) sal&aacute;rio-fam&iacute;lia;</span></li>
+<li><span style="font-weight: 400;">g) sal&aacute;rio-maternidade;</span></li>
+<li><span style="font-weight: 400;">h) aux&iacute;lio-acidente;</span></li>
+<li><span style="font-weight: 400;">i) &nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/leis/L8870.htm#art29"><span style="font-weight: 400;">(Revogada pela Lei n&ordm; 8.870, de 1994)</span></a></li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>&nbsp;II - quanto ao dependente:&nbsp;</strong></p>
+<ol>
+<li><span style="font-weight: 400;">a) pens&atilde;o por morte;</span></li>
+<li><span style="font-weight: 400;">b) aux&iacute;lio-reclus&atilde;o;</span></li>
+</ol>
+<p><span style="font-weight: 400;">&nbsp;</span></p>
+<p><strong>&nbsp;III - quanto ao segurado e dependente</strong><strong>:&nbsp;</strong></p>
+<ol start="9">
+<li><span style="font-weight: 400;">a)&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/leis/L9032.htm#art8"><span style="font-weight: 400;">(Revogada pela Lei n&ordm; 9.032, de 1995)</span></a></li>
+<li><span style="font-weight: 400;">b) servi&ccedil;o social;</span></li>
+<li><span style="font-weight: 400;">c) reabilita&ccedil;&atilde;o profissional.</span></li>
+</ol>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">E, para fazer jus &agrave; percep&ccedil;&atilde;o dos benef&iacute;cios s&atilde;o exigidos alguns requisitos como idade m&iacute;nima, car&ecirc;ncia,</span><strong> al&eacute;m de pr&eacute;via contribui&ccedil;&atilde;o</strong> <strong>exceto</strong><span style="font-weight: 400;"> para aqueles benef&iacute;cios expressos no </span><strong>inciso I, do art. 26 da Lei n&ordm; &nbsp;</strong><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><strong>8.213</strong></a><strong>/91</strong><span style="font-weight: 400;">: pens&atilde;o por morte; sal&aacute;rio-fam&iacute;lia e aux&iacute;lio-acidente </span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><span style="font-weight: 400;">(Reda&ccedil;&atilde;o dada pela Lei n&ordm; 13.846/2019)</span></a><span style="font-weight: 400;">. Os benef&iacute;cios expressos no inciso </span><strong>II</strong><span style="font-weight: 400;">, do art. 26 cujas doen&ccedil;as s&atilde;o espec&iacute;ficas merecem o tratamento particularizado;&nbsp;</span></p>
+<p><span style="font-weight: 400;">Todavia, a </span><strong>pr&eacute;via contribui&ccedil;&atilde;o</strong><span style="font-weight: 400;"> significa que a Previd&ecirc;ncia Social &eacute; organizada sob a forma do Regime Geral de Previd&ecirc;ncia Social, possui </span><strong>car&aacute;ter contributivo e filia&ccedil;&atilde;o obrigat&oacute;ria</strong><span style="font-weight: 400;">,&nbsp;observados os crit&eacute;rios que resguarde o equil&iacute;brio financeiro e atuarial conforme previsto no </span><strong>artigo 201 da CF/88, par&aacute;grafo &uacute;nico e incisos de I a V.&nbsp;</strong></p>
+<p><strong>Ademais,</strong><span style="font-weight: 400;"> o sistema se assegura de v&aacute;rios princ&iacute;pios dentre os quais pode-se citar o princ&iacute;pio constitucional da solidariedade que est&aacute; esculpido no inciso </span><a href="https://www.jusbrasil.com.br/topicos/10731686/inciso-i-do-artigo-3-da-constituicao-federal-de-1988"><strong>I</strong></a><strong> do artigo </strong><a href="https://www.jusbrasil.com.br/topicos/10641719/artigo-3-da-constituicao-federal-de-1988"><strong>3&ordm;</strong></a><strong>, da </strong><a href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988"><strong>Constitui&ccedil;&atilde;o Federal</strong></a><strong>/88</strong><span style="font-weight: 400;">, e resulta na colabora&ccedil;&atilde;o e o apoio m&uacute;tuo entre os indiv&iacute;duos e a sociedade, com a finalidade de propiciar o bem estar e justi&ccedil;a social.&nbsp;</span></p>
+<p><span style="font-weight: 400;">Vejamos:</span></p>
+<p><strong>Art. 3&ordm;</strong><span style="font-weight: 400;"> Constituem objetivos fundamentais da Rep&uacute;blica Federativa do Brasil:</span></p>
+<p><strong>I </strong><span style="font-weight: 400;">- construir uma sociedade livre, justa e solid&aacute;ria;</span></p>
+<p>&nbsp;</p>
+<p><strong>Ressalta Daniel Machado da Rocha (apud CASTRO; LAZZARI, 2010, p. 112), </strong><span style="font-weight: 400;">&ldquo;A solidariedade legitima-se na ideia de que, al&eacute;m de direitos e liberdades, os indiv&iacute;duos tamb&eacute;m t&ecirc;m deveres para com a comunidade no qual est&atilde;o inseridos&rdquo;.</span></p>
+<p><em><span style="font-weight: 400;">Em outras palavras a solidariedade chama os indiv&iacute;duos &agrave; responsabilidade que eles t&ecirc;m em cooperar com os outros indiv&iacute;duos, porque a partir dessa solidariedade se constr&oacute;i a base de um sistema harm&ocirc;nico de seguridade social, onde todos podem usufruir e ao mesmo tempo contribuir (</span></em><em><span style="font-weight: 400;">Felippe, 2013, p. 28)</span></em><em><span style="font-weight: 400;">.&nbsp;</span></em></p>
+<p><span style="font-weight: 400;">Por conseguinte, para ter acesso ao benef&iacute;cio a pessoa precisa se registrar por meio do </span><strong>NIT (n&uacute;mero de identifica&ccedil;&atilde;o do trabalhador), juntamente com o c&oacute;digo referente a sua atividade laboral, </strong><span style="font-weight: 400;">os quais servem para que o </span><strong>INSS </strong><span style="font-weight: 400;">identifique quem faz parte do sistema, por exemplo: se aut&ocirc;nomos, facultativos, empregados dom&eacute;sticos e segurados especiais, entre outros.&nbsp;</span></p>
+<p><span style="font-weight: 400;">O NIT registrado no INSS, se torna essencial para que as pessoas possam estar dentro do sistema previdenci&aacute;rio, contribuir e ter acesso aos benef&iacute;cios.</span></p>
 <p><strong>►Assim, trataremos a seguir do aux&iacute;lio-reclus&atilde;o.</strong></p>
-<p><strong>O Aux&iacute;lio-reclus&atilde;o est&aacute; previsto no art. 18, inciso II, b, e art. 80 &sect;&sect; 1</strong>⁰<strong>&nbsp;&agrave; 8</strong>⁰<strong>&nbsp;da Lei&nbsp;</strong>n⁰<strong>&nbsp;</strong><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" target="_blank"><strong>8.213</strong></a><strong>/91; previsto no art.&nbsp;<a class="cite notIndex" title="Art. 25 da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/10638886/artigo-25-da-constituicao-federal-de-1988" rel="10638886">25</a>, IV, a</strong><strong>rt. 27-A, art.&nbsp;<a class="cite" title="Art. 39 da Lei n&ordm; 13.846, de 18 de junho de 2019" href="https://www.jusbrasil.com.br/topicos/229996922/artigo-39-da-lei-n-13846-de-18-de-junho-de-2019" rel="229996922">39</a>&nbsp;da Lei n&ordm;&nbsp;<a class="cite" title="LEI N&ordm; 13.846, DE 18 DE JUNHO DE 2019" href="https://www.jusbrasil.com.br/legislacao/1592827401/lei-13846-19" rel="229997766">13.846</a>/2019,&nbsp;<strong>assim como no inciso IV, art.&nbsp;</strong></strong><strong><a class="cite" title="Art. 201 da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/1160355/artigo-201-da-constituicao-federal-de-1988" rel="1160355">201</a></strong><strong>&nbsp;da CF/88.</strong></p>
-<p>Dentre o universo de benef&iacute;cios do INSS, est&aacute; o aux&iacute;lio-reclus&atilde;o, um benef&iacute;cio previdenci&aacute;rio bastante incompreendido pela maioria da popula&ccedil;&atilde;o, que n&atilde;o o conhece na sua integralidade<strong>,</strong>&nbsp;por&eacute;m &eacute; um benef&iacute;cio importante destinado aos dependentes do segurado preso que contribuiu para o sistema previdenci&aacute;rio, por&eacute;m em determinado momento de sua vida, passou a cumprir pena privativa de liberdade, e automaticamente a fam&iacute;lia ficou desamparada.</p>
-<p>Todavia, para evitar o desamparo aos&nbsp;<strong>dependentes do segurado recluso, estes&nbsp;</strong>podem usufruir do aux&iacute;lio-reclus&atilde;o para custear as despesas como alimenta&ccedil;&atilde;o, vestimenta e todos os gastos dentro de suas casas. Assim, os dependentes n&atilde;o ficam desprovidos das necessidades b&aacute;sicas.</p>
-<p>Entretanto, para os dependentes terem acesso ao benef&iacute;cio do recluso s&atilde;o exigidos alguns requisitos como a filia&ccedil;&atilde;o obrigat&oacute;ria no INSS, o recolhimento das contribui&ccedil;&otilde;es e o regime fechado de cumprido de pena.</p>
-<p>E sobre o regime de cumprimento de pena, houve mudan&ccedil;a significativa na lei em rela&ccedil;&atilde;o ao&nbsp;<strong>pagamento do aux&iacute;lio-reclus&atilde;o que &eacute; destinado somente aos presos em regime fechado</strong>, proibindo o aux&iacute;lio-reclus&atilde;o no regime semiaberto.</p>
-<p><strong>O aux&iacute;lio-reclus&atilde;o no regime semiaberto</strong>&nbsp;&eacute; devido para as pris&otilde;es que ocorreram antes da&nbsp;<strong>Medida Provis&oacute;ria&nbsp;<a class="cite" title="MEDIDA PROVIS&Oacute;RIA N&ordm; 871, DE 18 DE JANEIRO DE 2019" href="https://www.jusbrasil.com.br/legislacao/1760807796/medida-provisoria-871-19" rel="216159274">871</a>&nbsp;de 18/01/2019</strong>, a qual alterou a Lei para restringir o benef&iacute;cio em regime fechado.&nbsp;<strong>(Lei n&ordm; 13.846/2019).</strong></p>
-<p>Ademais, outro requisito foi inclu&iacute;do na Lei como o&nbsp;<strong>preenchimento de 24 (vinte e quatro) meses de car&ecirc;ncia para a sua concess&atilde;o</strong>, o que j&aacute; passou a dificultar um pouco mais o seu acesso. (Art. 25, IV, da Lei n⁰&nbsp;<a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" target="_blank">8.213</a>/91 -&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</a>.</p>
-<p>A partir das&nbsp;<a href="https://previdenciarista.com/blog/entenda-a-reforma-da-previdencia-e-as-novas-regras-dos-beneficios-do-inss/?utm_medium=push&amp;utm_source=notificacoes" target="_blank" rel="nofollow">novas regras da&nbsp;</a><a class="cite" title="EMENDA CONSTITUCIONAL N&ordm; 103, DE 12 DE NOVEMBRO DE 2019" href="https://www.jusbrasil.com.br/legislacao/1764993423/emenda-constitucional-103-19" rel="244574613">Reforma da Previd&ecirc;ncia</a>, a sua forma de c&aacute;lculo sofreu mais um requisito com as altera&ccedil;&otilde;es trazidas pelo art. 27-A da Lei n⁰&nbsp;<strong><a class="cite" title="LEI N&ordm; 8.213, DE 24 DE JULHO DE 1991" href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" rel="11364779">8.213</a></strong><strong>/91</strong>, que veremos adiante.</p>
-<p><strong>Vejamos o que disp&otilde;e o Art. 80 da&nbsp;</strong><strong>Lei n⁰&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 8.213, DE 24 DE JULHO DE 1991" href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" rel="11364779">8.213</a></strong><strong>/91</strong><strong>:</strong></p>
-<p><strong>Art. 80</strong>. O aux&iacute;lio-reclus&atilde;o, cumprida a car&ecirc;ncia prevista no inciso IV do&nbsp;<strong>caput</strong>&nbsp;do art. 25 desta Lei, ser&aacute; devido, nas condi&ccedil;&otilde;es da pens&atilde;o por morte, aos dependentes do segurado de baixa renda recolhido &agrave; pris&atilde;o em regime fechado que n&atilde;o receber remunera&ccedil;&atilde;o da empresa nem estiver em gozo de aux&iacute;lio-doen&ccedil;a, de pens&atilde;o por morte, de sal&aacute;rio-maternidade, de aposentadoria ou de abono de perman&ecirc;ncia em servi&ccedil;o.&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</a>.</p>
-<p>Considera-se de baixa renda para fins de concess&atilde;o do benef&iacute;cio de aux&iacute;lio-reclus&atilde;o aquele segurado que no m&ecirc;s de compet&ecirc;ncia de recolhimento &agrave; pris&atilde;o, tenha renda nos termos do disposto no&nbsp;<strong>&sect; 4&ordm;</strong>&nbsp;deste artigo ou seja, na m&eacute;dia dos sal&aacute;rios de contribui&ccedil;&atilde;o apurados no per&iacute;odo de 12 (doze) meses anteriores ao m&ecirc;s do recolhimento &agrave; pris&atilde;o.&nbsp;<strong>(&sect;&sect; 3&ordm; e 4&ordm; da Lei n⁰&nbsp;</strong><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" target="_blank"><strong>8.213</strong></a><strong>/91) -&nbsp;</strong><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow"><strong>(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</strong></a><strong>.</strong></p>
-<p>O INSS celebrar&aacute; conv&ecirc;nios com os &oacute;rg&atilde;os p&uacute;blicos respons&aacute;veis pelo cadastro dos presos para obter informa&ccedil;&otilde;es sobre o recolhimento &agrave; pris&atilde;o. (&sect; 2⁰ da Lei n⁰&nbsp;<a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" target="_blank">8.213</a>/91) -&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</a></p>
-<p>O requerimento do aux&iacute;lio-reclus&atilde;o ser&aacute; instru&iacute;do com&nbsp;<strong>certid&atilde;o judicial</strong>&nbsp;que ateste o recolhimento efetivo &agrave; pris&atilde;o, e ser&aacute; obrigat&oacute;ria a apresenta&ccedil;&atilde;o de&nbsp;<strong>prova de perman&ecirc;ncia</strong>&nbsp;na condi&ccedil;&atilde;o de presidi&aacute;rio para a manuten&ccedil;&atilde;o do benef&iacute;cio. Tanto a certid&atilde;o judicial e a prova de perman&ecirc;ncia na condi&ccedil;&atilde;o de presidi&aacute;rio poder&atilde;o ser substitu&iacute;das pelo acesso &agrave; base de dados, por meio eletr&ocirc;nico, a ser disponibilizada pelo Conselho Nacional de Justi&ccedil;a, com dados cadastrais que assegurem a identifica&ccedil;&atilde;o plena do segurado e da sua condi&ccedil;&atilde;o de presidi&aacute;rio. (&sect; 1&ordm; e 5 &ordm; da Lei n&ordm; 8.213/91 -&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow">Inclu&iacute;dos pela Lei n&ordm; 13.846, de 2019)</a>.<br /><br /></p>
-<p>O segurado recluso em cumprimento de pena em regime fechado, em exerc&iacute;cio de atividade remunerada n&atilde;o vai ocasionar a perda do direito ao recebimento do aux&iacute;lio-reclus&atilde;o aos seus dependentes. (&sect; 7&ordm; da Lei n⁰&nbsp;<a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" target="_blank">8.213</a>/91) -&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</a>.</p>
-<p>Em se tratando de morte de segurado recluso que tenha contribu&iacute;do para a previd&ecirc;ncia social durante o per&iacute;odo de reclus&atilde;o, seu dependente ter&aacute; direito ao valor da pens&atilde;o por morte que ser&aacute; calculado levando-se em conta o tempo de contribui&ccedil;&atilde;o adicional e os sal&aacute;rios de contribui&ccedil;&atilde;o, facultada a op&ccedil;&atilde;o pelo valor do aux&iacute;lio-reclus&atilde;o. (&sect; 8&ordm; da Lei n⁰&nbsp;<a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" target="_blank">8.213</a>/91) -&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</a>.</p>
+<p><strong>O Aux&iacute;lio-reclus&atilde;o est&aacute; previsto no art. 18, inciso II, b, e art. 80 &sect;&sect;1</strong><span style="font-weight: 400;">⁰</span><strong> &agrave; 8</strong><span style="font-weight: 400;">⁰</span><strong> da Lei </strong><span style="font-weight: 400;">n⁰</span> <a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><strong>8.213</strong></a><strong>/91; previsto no art. 25, IV, art. 27-A, art. 39 da Lei n&ordm; 13.846/2019, assim como no inciso IV, art. </strong><a href="https://www.jusbrasil.com.br/topicos/1160355/artigo-201-da-constituicao-federal-de-1988"><strong>201</strong></a><strong> da CF/88.</strong><span style="font-weight: 400;">&nbsp;</span></p>
+<p><span style="font-weight: 400;">Dentre o universo de benef&iacute;cios do INSS, est&aacute; o aux&iacute;lio-reclus&atilde;o, um benef&iacute;cio previdenci&aacute;rio bastante incompreendido pela maioria da popula&ccedil;&atilde;o, que n&atilde;o o conhece na sua integralidade,&nbsp;por&eacute;m &eacute; um benef&iacute;cio importante destinado aos dependentes do segurado preso que contribuiu para o sistema previdenci&aacute;rio, por&eacute;m em determinado momento de sua vida, passou a cumprir pena privativa de liberdade, e automaticamente a fam&iacute;lia ficou desamparada.</span></p>
+<p><span style="font-weight: 400;">Todavia, para evitar o desamparo aos dependentes do segurado recluso, estes podem usufruir do aux&iacute;lio-reclus&atilde;o para custear as despesas como alimenta&ccedil;&atilde;o, vestimenta e todos os gastos dentro de suas casas. Assim, os dependentes n&atilde;o ficam desprovidos das necessidades b&aacute;sicas.</span></p>
+<p><span style="font-weight: 400;">Entretanto, para os dependentes terem acesso ao benef&iacute;cio do recluso s&atilde;o exigidos alguns requisitos como a filia&ccedil;&atilde;o obrigat&oacute;ria no INSS, o recolhimento das contribui&ccedil;&otilde;es e o regime fechado de cumprido de pena.</span></p>
+<p><span style="font-weight: 400;">E sobre o regime de cumprimento de pena, houve mudan&ccedil;a significativa na lei em rela&ccedil;&atilde;o ao </span><strong>pagamento do aux&iacute;lio-reclus&atilde;o que &eacute; destinado somente aos presos em regime fechado</strong><span style="font-weight: 400;">, proibindo o aux&iacute;lio-reclus&atilde;o no regime semiaberto.</span></p>
+<p>&nbsp;</p>
+<p><strong>O aux&iacute;lio-reclus&atilde;o no regime semiaberto</strong><span style="font-weight: 400;"> &eacute; devido para as pris&otilde;es que ocorreram antes da </span><strong>Medida Provis&oacute;ria 871 de 18/01/2019</strong><span style="font-weight: 400;">, a qual alterou a Lei para restringir o benef&iacute;cio em regime fechado. </span><strong>(Lei n&ordm; 13.846/2019).</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Ademais, outro requisito foi inclu&iacute;do na lei como o </span><strong>preenchimento de 24 (vinte e quatro) meses de car&ecirc;ncia para a sua concess&atilde;o</strong><span style="font-weight: 400;">, ou seja, que o preso tenha contribu&iacute;do pelo menos 24 (vinte e quatro) meses antes da pris&atilde;o, o que j&aacute; passou a dificultar um pouco mais o seu acesso. (Art. 25, </span><span style="font-weight: 400;">IV, da Lei&nbsp; </span><span style="font-weight: 400;">n⁰&nbsp;</span><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><span style="font-weight: 400;">8.213</span></a><span style="font-weight: 400;">/91</span><span style="font-weight: 400;"> - </span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><span style="font-weight: 400;">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">A partir das </span><a href="https://previdenciarista.com/blog/entenda-a-reforma-da-previdencia-e-as-novas-regras-dos-beneficios-do-inss/?utm_medium=push&amp;utm_source=notificacoes"><span style="font-weight: 400;">novas regras da </span></a><a href="https://www.jusbrasil.com.br/legislacao/1764993423/emenda-constitucional-103-19"><span style="font-weight: 400;">Reforma da Previd&ecirc;ncia</span></a><span style="font-weight: 400;">, a sua forma de c&aacute;lculo sofreu mais um requisito com as altera&ccedil;&otilde;es trazidas pelo art. </span><strong>27-A da Lei n⁰&nbsp;</strong><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><strong>8.213</strong></a><strong>/91</strong><span style="font-weight: 400;">, que veremos adiante.</span></p>
+<p>&nbsp;</p>
+<p><strong>Vejamos o que disp&otilde;e o Art. 80 da Lei n⁰&nbsp;</strong><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><strong>8.213</strong></a><strong>/91</strong><strong>:</strong></p>
+<p>&nbsp;</p>
+<p><strong>Art. 80</strong><span style="font-weight: 400;">. O aux&iacute;lio-reclus&atilde;o, cumprida a car&ecirc;ncia prevista no inciso IV do&nbsp;</span><strong>caput</strong><span style="font-weight: 400;">&nbsp;do art. 25 desta Lei, ser&aacute; devido, nas condi&ccedil;&otilde;es da pens&atilde;o por morte, aos dependentes do segurado de baixa renda recolhido &agrave; pris&atilde;o em regime fechado que n&atilde;o receber remunera&ccedil;&atilde;o da empresa nem estiver em gozo de aux&iacute;lio-doen&ccedil;a, de pens&atilde;o por morte, de sal&aacute;rio-maternidade, de aposentadoria ou de abono de perman&ecirc;ncia em servi&ccedil;o.&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><span style="font-weight: 400;">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Considera-se de baixa renda para fins de concess&atilde;o do benef&iacute;cio de aux&iacute;lio-reclus&atilde;o aquele segurado que</span><span style="font-weight: 400;"> no m&ecirc;s de compet&ecirc;ncia de recolhimento &agrave; pris&atilde;o, tenha renda nos termos do disposto no </span><strong>&sect;4&ordm;</strong><span style="font-weight: 400;"> deste artigo ou seja, na</span><span style="font-weight: 400;"> m&eacute;dia dos sal&aacute;rios de contribui&ccedil;&atilde;o apurados no per&iacute;odo de 12 (doze) meses anteriores ao m&ecirc;s do recolhimento &agrave; pris&atilde;o. </span><strong>(</strong><strong>&sect;&sect; 3&ordm; e 4&ordm; </strong><strong>da Lei n⁰&nbsp;</strong><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><strong>8.213</strong></a><strong>/91) - </strong><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><strong>(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</strong></a><strong>.</strong></p>
+<p><span style="font-weight: 400;">O INSS celebrar&aacute; conv&ecirc;nios com os &oacute;rg&atilde;os p&uacute;blicos respons&aacute;veis pelo cadastro dos presos para obter informa&ccedil;&otilde;es sobre o recolhimento &agrave; pris&atilde;o. (&sect;2</span><span style="font-weight: 400;">⁰&nbsp;da Lei</span> <span style="font-weight: 400;">n⁰&nbsp;</span><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><span style="font-weight: 400;">8.213</span></a><span style="font-weight: 400;">/91) - </span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><span style="font-weight: 400;">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</span></a></p>
+<p><span style="font-weight: 400;">O requerimento do aux&iacute;lio-reclus&atilde;o ser&aacute; instru&iacute;do com </span><strong>certid&atilde;o judicial</strong><span style="font-weight: 400;"> que ateste o recolhimento efetivo &agrave; pris&atilde;o, e ser&aacute; obrigat&oacute;ria a apresenta&ccedil;&atilde;o de </span><strong>prova de perman&ecirc;ncia</strong><span style="font-weight: 400;"> na condi&ccedil;&atilde;o de presidi&aacute;rio para a manuten&ccedil;&atilde;o do benef&iacute;cio. Tanto a certid&atilde;o judicial e a prova de perman&ecirc;ncia na condi&ccedil;&atilde;o de presidi&aacute;rio poder&atilde;o ser substitu&iacute;das pelo acesso &agrave; base de dados, por meio eletr&ocirc;nico, a ser disponibilizada pelo Conselho Nacional de Justi&ccedil;a, com dados cadastrais que assegurem a identifica&ccedil;&atilde;o plena do segurado e da sua condi&ccedil;&atilde;o de presidi&aacute;rio.&nbsp; (&sect; 1&ordm; e 5 &ordm; da Lei n&ordm; 8.213/91 - </span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><span style="font-weight: 400;">Inclu&iacute;dos pela Lei n&ordm; 13.846, de 2019)</span></a></p>
+<p><span style="font-weight: 400;">O segurado recluso em cumprimento de pena em regime fechado, em exerc&iacute;cio de atividade remunerada n&atilde;o vai ocasionar a perda do direito ao recebimento do aux&iacute;lio-reclus&atilde;o aos seus dependentes.&nbsp;(</span><span style="font-weight: 400;">&sect; 7&ordm; da </span><span style="font-weight: 400;">Lei n⁰&nbsp;</span><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><span style="font-weight: 400;">8.213</span></a><span style="font-weight: 400;">/91) </span><span style="font-weight: 400;">- </span><span style="font-weight: 400;">&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><span style="font-weight: 400;">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Em se tratando de morte de segurado recluso que tenha contribu&iacute;do para a previd&ecirc;ncia social durante o per&iacute;odo de reclus&atilde;o, seu dependente ter&aacute; direito ao valor da pens&atilde;o por morte que ser&aacute; calculado levando-se em conta o tempo de contribui&ccedil;&atilde;o adicional e os sal&aacute;rios de contribui&ccedil;&atilde;o, facultada a op&ccedil;&atilde;o pelo valor do aux&iacute;lio-reclus&atilde;o. (&sect;8&ordm;&nbsp;</span><span style="font-weight: 400;">da </span><span style="font-weight: 400;">Lei n⁰&nbsp;</span><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><span style="font-weight: 400;">8.213</span></a><span style="font-weight: 400;">/91)&nbsp;- </span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><span style="font-weight: 400;">(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</span></a><span style="font-weight: 400;">.</span></p>
+<p>&nbsp;</p>
 <p><strong>►Quanto aos valores</strong><strong>:</strong></p>
-<p><strong>De acordo com a Portaria Interministerial MPS/MF N&ordm; 6 DE 10/01/2025. (</strong><strong>Publicada no DOU em 13 janeiro de 2025</strong>).</p>
-<p><strong>Art. 2&ordm;</strong>&nbsp;O sal&aacute;rio de benef&iacute;cio e o sal&aacute;rio de contribui&ccedil;&atilde;o, a partir de 1&ordm; de janeiro de 2025, n&atilde;o poder&atilde;o ser inferiores a R$ 1.518,00 (mil quinhentos e dezoito reais) nem superiores a R$ 8.157,41 (oito mil cento e cinquenta e sete reais e quarenta e um centavos).</p>
-<p><strong>Art. 5&ordm;</strong>&nbsp;O aux&iacute;lio-reclus&atilde;o &eacute; devido aos dependentes do segurado de baixa renda recolhido &agrave; pris&atilde;o em regime fechado, que n&atilde;o receber remunera&ccedil;&atilde;o da empresa e nem estiver em gozo de aux&iacute;lio por incapacidade tempor&aacute;ria, pens&atilde;o por morte, sal&aacute;rio-maternidade, aposentadoria ou abono de perman&ecirc;ncia em servi&ccedil;o, ser&aacute; de R$ 1.518,00 (mil quinhentos e dezoito reais), a partir de 1&ordm; de janeiro de 2025.</p>
-<p><strong>►</strong>Par&aacute;grafo &Uacute;nico. Considera-se de baixa renda, para fins de concess&atilde;o do benef&iacute;cio de aux&iacute;lio-reclus&atilde;o o segurado cuja m&eacute;dia dos sal&aacute;rios de contribui&ccedil;&atilde;o apurados no per&iacute;odo dos doze meses anteriores ao m&ecirc;s de recolhimento &agrave; pris&atilde;o, corrigidos pelos mesmos &iacute;ndices de reajuste aplicados aos benef&iacute;cios do Regime Geral de Previd&ecirc;ncia Social - RGPS, seja igual ou inferior a R$ 1.906,04 (mil novecentos e seis reais e quatro centavos), a partir de 1&ordm; de janeiro de 2025.</p>
-<p><strong>►Em suma</strong><strong>:</strong></p>
-<p><strong>O fato gerador</strong>&nbsp;do aux&iacute;lio-reclus&atilde;o &eacute; o recolhimento do&nbsp;<strong>segurado &agrave; pris&atilde;o</strong>, e por isso o impossibilitou para a manuten&ccedil;&atilde;o da vida econ&ocirc;mica de seus dependentes.</p>
-<p>Quem tem&nbsp;<strong>direito a receber</strong>&nbsp;o benef&iacute;cio s&atilde;o os&nbsp;<strong>dependentes do segurado recluso</strong>: c&ocirc;njuges, companheiros, os filhos menores de 21 anos n&atilde;o emancipados ou que sejam inv&aacute;lidos, ou tenham defici&ecirc;ncia intelectual ou mental ou defici&ecirc;ncia grave, posteriormente os pais, e em seguida os irm&atilde;os n&atilde;o emancipados menores de 21 anos ou irm&atilde;os que sejam inv&aacute;lidos, ou com defici&ecirc;ncia intelectual ou mental ou defici&ecirc;ncia grave, desde que comprovem a depend&ecirc;ncia econ&ocirc;mica com o segurado, ainda que seja parcial.</p>
-<p>O&nbsp;<strong>valor do aux&iacute;lio-reclus&atilde;o &eacute; calculado com base no sal&aacute;rio do recluso,</strong>&nbsp;enquanto ele trabalhava.</p>
-<p>A concess&atilde;o do benef&iacute;cio de aux&iacute;lio-reclus&atilde;o ao segurado recluso dever&aacute; observar a m&eacute;dia dos sal&aacute;rios de contribui&ccedil;&atilde;o apurados no per&iacute;odo dos doze meses anteriores ao m&ecirc;s de recolhimento &agrave; pris&atilde;o, com a devida corre&ccedil;&atilde;o pelos mesmos &iacute;ndices de reajuste aplicados aos benef&iacute;cios do Regime Geral de Previd&ecirc;ncia Social - RGPS, sendo igual ou inferior a R$ 1.906,04 (mil novecentos e seis reais e quatro centavos), a partir de 1&ordm; de janeiro de 2025.</p>
-<p><strong>O tipo inicial</strong><strong>&nbsp;de cumprimento de pena &eacute; o regime fechado</strong><strong>, o&nbsp;</strong><strong>regime semiaberto</strong><strong>&nbsp;</strong>foi&nbsp;<strong>revogado pela Lei n&ordm;&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 13.846, DE 18 DE JUNHO DE 2019" href="https://www.jusbrasil.com.br/legislacao/1592827401/lei-13846-19" rel="229997766">13.846</a></strong><strong>, de 2019.</strong></p>
-<p>O aux&iacute;lio reclus&atilde;o em regime semiaberto &eacute; devido para as pris&otilde;es que ocorreram antes da Medida Provis&oacute;ria&nbsp;<a class="cite" title="MEDIDA PROVIS&Oacute;RIA N&ordm; 871, DE 18 DE JANEIRO DE 2019" href="https://www.jusbrasil.com.br/legislacao/1760807796/medida-provisoria-871-19" rel="216159274">871</a>&nbsp;de 18/01/2019, que alterou a Lei para restringir o benef&iacute;cio em regime fechado. (Lei n&ordm;&nbsp;<a class="cite" title="LEI N&ordm; 13.846, DE 18 DE JUNHO DE 2019" href="https://www.jusbrasil.com.br/legislacao/1592827401/lei-13846-19" rel="229997766">13.846</a>/2019).</p>
-<p><strong>O t&eacute;rmino do aux&iacute;lio-reclus&atilde;o</strong>&nbsp;ocorre quando finalizar o cumprimento da pena, ou da fuga da pris&atilde;o, ou quando cumprir a pena em regime aberto ou semiaberto.</p>
-<p>Os dependentes&nbsp;<strong>receber&atilde;o o aux&iacute;lio-reclus&atilde;o</strong>&nbsp;enquanto o segurado permanecer preso, em regime fechado.</p>
-<p><strong>A quantidade de contribui&ccedil;&otilde;es</strong>: 24 mensais, sendo apurada a m&eacute;dia das &uacute;ltimas contribui&ccedil;&otilde;es no per&iacute;odo de 12 (doze) meses anteriores ao m&ecirc;s do recolhimento &agrave; pris&atilde;o.&nbsp;<strong>(&sect;&sect; 3&ordm; e 4&ordm; da Lei n⁰&nbsp;</strong><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" target="_blank"><strong>8.213</strong></a><strong>/91) -&nbsp;</strong><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow"><strong>(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</strong></a><strong>.</strong></p>
-<p><strong>O Art. 27-A&nbsp;</strong>da<strong>&nbsp;</strong>Lei n&ordm; 13.846/2019, diz que&nbsp;<strong>na hip&oacute;tese de perda da qualidade de segurado, para fins da concess&atilde;o dos benef&iacute;cios</strong>&nbsp;[...], e de&nbsp;<strong>aux&iacute;lio-reclus&atilde;o</strong>, o segurado dever&aacute; contar, a partir da data da nova filia&ccedil;&atilde;o &agrave; Previd&ecirc;ncia Social, com metade dos per&iacute;odos previstos nos incisos I, III e&nbsp;<strong>IV&nbsp;</strong>do&nbsp;<strong>caput</strong>&nbsp;do art. 25.&nbsp;<a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24" target="_blank" rel="nofollow"><strong>(Reda&ccedil;&atilde;o dada pela Lei n&ordm; 13.846, de 2019)</strong></a>.</p>
-<p><em>Ou seja, caso haja perda da qualidade de segurado, a concess&atilde;o do benef&iacute;cio ser&aacute; contada a partir do momento em que o segurado se filiar novamente ao Regime Previdenci&aacute;rio, sendo que bastar&aacute; metade dos per&iacute;odos previstos, ou seja, equivale a 12 contribui&ccedil;&otilde;es</em>.</p>
-<p>O aux&iacute;lio-reclus&atilde;o n&atilde;o ser&aacute; inferior ao valor de 01 (um) sal&aacute;rio m&iacute;nimo, pois se trata de garantia prevista pelo art. 29, &sect; 2&ordm;, da Lei n⁰&nbsp;<a class="cite" title="LEI N&ordm; 8.213, DE 24 DE JULHO DE 1991" href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" rel="11364779">8.213</a>/91, Veja: &ldquo;o valor do sal&aacute;rio-de-benef&iacute;cio n&atilde;o ser&aacute; inferior ao de um sal&aacute;rio m&iacute;nimo, nem superior ao do limite m&aacute;ximo do sal&aacute;rio-de-contribui&ccedil;&atilde;o na data de in&iacute;cio do benef&iacute;cio&rdquo;,&nbsp;bem como a partir da aplica&ccedil;&atilde;o do&nbsp;<a class="cite notIndex" title="Par&aacute;grafo 2&ordm;, art. 201 da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/10652112/paragrafo-2-artigo-201-da-constituicao-federal-de-1988" rel="10652112">&sect; 2&ordm;</a>, do Artigo&nbsp;<a class="cite notIndex" title="Art. 201 da Constitui&ccedil;&atilde;o Federal, de 1988" href="https://www.jusbrasil.com.br/topicos/1160355/artigo-201-da-constituicao-federal-de-1988" rel="1160355">201</a>&nbsp;da&nbsp;<a class="cite" title="CONSTITUI&Ccedil;&Atilde;O FEDERAL, DE 1988" href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988" rel="302754">Constitui&ccedil;&atilde;o Federal</a>/88, que prev&ecirc; a garantia do sal&aacute;rio-m&iacute;nimo aos benef&iacute;cios da Previd&ecirc;ncia.</p>
-<p><strong>Art. 29</strong>&nbsp;&sect; 2&ordm; O valor do sal&aacute;rio-de-benef&iacute;cio n&atilde;o ser&aacute; inferior ao de um sal&aacute;rio m&iacute;nimo, nem superior ao do limite m&aacute;ximo do sal&aacute;rio-de-contribui&ccedil;&atilde;o na data de in&iacute;cio do benef&iacute;cio.</p>
-<p>Contudo, importante ressaltar que, apesar de grande parte da sociedade n&atilde;o conhecer o fundamento do benef&iacute;cio do aux&iacute;lio-reclus&atilde;o, salienta-se que&nbsp;<strong>n&atilde;o se trata de uma &ldquo;bolsa-presidi&aacute;rio</strong>&rdquo;, muito pelo contr&aacute;rio, o benef&iacute;cio foi criado para os dependentes do segurado recluso, a fim de n&atilde;o ficarem totalmente desamparados na sua aus&ecirc;ncia.</p>
-<p>Diante do exposto, &eacute; importante entender que o aux&iacute;lio-reclus&atilde;o n&atilde;o &eacute; um benef&iacute;cio ofertado ao segurado recluso de forma inconveniente nem pelo governo e nem pela sociedade, pois &eacute; mediante as contribui&ccedil;&otilde;es recolhidas ao INSS durante sua vida laboral, que os dependentes ter&atilde;o o acesso ao benef&iacute;cio.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>De acordo com a </strong><strong>Portaria Interministerial MPS/MF N&ordm; 13, de 09/01/2026.</strong><strong> (</strong><strong>Publicada no DOU em 12 janeiro de 2026</strong><span style="font-weight: 400;">).</span></p>
+<p><strong>Art. 2&ordm;</strong><span style="font-weight: 400;"> O sal&aacute;rio de benef&iacute;cio e o sal&aacute;rio de contribui&ccedil;&atilde;o, a partir de 1&ordm; de janeiro de 2026, n&atilde;o poder&atilde;o ser inferiores a R$1.621,00 (um mil seiscentos e vinte e um reais) nem superiores a R$8.475,55 (oito mil quatrocentos e setenta e cinco reais e cinquenta e cinco centavos).</span></p>
+<p><span style="font-weight: 400;">►</span><strong>Art. 5&ordm;</strong><span style="font-weight: 400;"> O aux&iacute;lio-reclus&atilde;o &eacute; devido aos dependentes do segurado de baixa renda recolhido &agrave; pris&atilde;o em regime fechado, que n&atilde;o receber remunera&ccedil;&atilde;o da empresa e nem estiver em gozo de aux&iacute;lio por incapacidade tempor&aacute;ria, pens&atilde;o por morte, sal&aacute;rio-maternidade, aposentadoria ou abono de perman&ecirc;ncia em servi&ccedil;o, ser&aacute; de R$ </span><span style="font-weight: 400;">R$ 1.621,00 (um mil seiscentos e vinte e um reais)</span><span style="font-weight: 400;">, a partir de 1&ordm; de janeiro de 2026.</span></p>
+<p>&nbsp;</p>
+<p><strong>►</strong><span style="font-weight: 400;">Par&aacute;grafo &Uacute;nico. Considera-se de baixa renda, para fins de concess&atilde;o do benef&iacute;cio de aux&iacute;lio-reclus&atilde;o o segurado cuja m&eacute;dia dos sal&aacute;rios de contribui&ccedil;&atilde;o apurados no per&iacute;odo dos doze meses anteriores ao m&ecirc;s de recolhimento &agrave; pris&atilde;o, corrigidos pelos mesmos &iacute;ndices de reajuste aplicados aos benef&iacute;cios do Regime Geral de Previd&ecirc;ncia Social - RGPS, seja igual ou inferior a R$ 1.980,38 (um mil novecentos e oitenta reais e trinta e oito centavos), a partir de 1&ordm; de janeiro de 2026.</span></p>
+<p>&nbsp;</p>
+<p><strong>►Em resumo</strong><strong>:</strong><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong><strong>O fato gerador</strong><span style="font-weight: 400;"> do aux&iacute;lio-reclus&atilde;o &eacute; o recolhimento do </span><strong>segurado &agrave; pris&atilde;o</strong><span style="font-weight: 400;">, e por isso o impossibilitou para a manuten&ccedil;&atilde;o da vida econ&ocirc;mica de seus dependentes.</span></p>
+<p><span style="font-weight: 400;">Quem tem </span><strong>direito a receber</strong><span style="font-weight: 400;"> o benef&iacute;cio s&atilde;o os </span><strong>dependentes do segurado recluso</strong><span style="font-weight: 400;">: c&ocirc;njuges, companheiros, os filhos menores de 21 anos </span><span style="font-weight: 400;">n&atilde;o emancipados </span><span style="font-weight: 400;">ou que sejam inv&aacute;lidos, ou tenham defici&ecirc;ncia intelectual ou mental ou defici&ecirc;ncia grave, posteriormente os pais, e em seguida os irm&atilde;os n&atilde;o emancipados menores de 21 anos ou irm&atilde;os que sejam inv&aacute;lidos, ou com defici&ecirc;ncia intelectual ou mental ou defici&ecirc;ncia grave, desde que comprovem a depend&ecirc;ncia econ&ocirc;mica com o segurado, ainda que seja parcial.</span></p>
+<p><span style="font-weight: 400;">O </span><strong>valor do aux&iacute;lio-reclus&atilde;o</strong><strong> &eacute; calculado com base no sal&aacute;rio do recluso,</strong><span style="font-weight: 400;"> enquanto ele trabalhava.</span></p>
+<p><span style="font-weight: 400;">A concess&atilde;o do benef&iacute;cio de aux&iacute;lio-reclus&atilde;o ao segurado recluso dever&aacute; observar a m&eacute;dia dos sal&aacute;rios de contribui&ccedil;&atilde;o apurados no per&iacute;odo dos doze meses anteriores ao m&ecirc;s de recolhimento &agrave; pris&atilde;o, com a devida corre&ccedil;&atilde;o pelos mesmos &iacute;ndices de reajuste aplicados aos benef&iacute;cios do Regime Geral de Previd&ecirc;ncia Social - RGPS, sendo igual ou inferior a R$</span><span style="font-weight: 400;">1.980,38 (um mil novecentos e oitenta reais e trinta e oito centavos)</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">a partir de 1&ordm; de janeiro de 2026</span><span style="font-weight: 400;">.</span></p>
+<p>&nbsp;</p>
+<p><strong>O tipo inicial</strong><span style="font-weight: 400;"> de cumprimento de pena &eacute; o regime fechado</span><strong>, o </strong><span style="font-weight: 400;">regime semiaberto</span> <span style="font-weight: 400;">foi </span><strong>revogado pela Lei n&ordm; </strong><a href="https://www.jusbrasil.com.br/legislacao/1592827401/lei-13846-19"><strong>13.846</strong></a><strong>, de 2019.</strong></p>
+<p><span style="font-weight: 400;">O aux&iacute;lio reclus&atilde;o em regime semiaberto &eacute; devido para as pris&otilde;es que ocorreram antes da Medida Provis&oacute;ria 871 de 18/01/2019, que alterou a Lei para restringir o benef&iacute;cio em regime fechado. (Lei n&ordm; 13.846/2019).</span></p>
+<p><strong>O t&eacute;rmino do aux&iacute;lio-reclus&atilde;o</strong><span style="font-weight: 400;"> ocorre quando finalizar o cumprimento da pena, ou da fuga da pris&atilde;o, ou quando cumprir a pena em regime aberto ou semiaberto.</span></p>
+<p><span style="font-weight: 400;">Os dependentes </span><strong>receber&atilde;o o aux&iacute;lio-reclus&atilde;o</strong><span style="font-weight: 400;"> enquanto o segurado permanecer preso, em regime fechado.&nbsp;</span></p>
+<p><strong>A quantidade de contribui&ccedil;&otilde;es</strong><span style="font-weight: 400;">: 24 mensais (n&atilde;o necessariamente seguidos, mas 24 meses totais de pagamentos na vida ou para retomar a qualidade de segurado), para que seus familiares recebam o benef&iacute;cio, sendo apurada a m&eacute;dia das &uacute;ltimas contribui&ccedil;&otilde;es no per&iacute;odo de 12 (doze) meses anteriores ao m&ecirc;s do recolhimento &agrave; pris&atilde;o. </span><strong>(&sect;&sect; 3&ordm; e 4&ordm; da Lei n⁰ </strong><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><strong>8.213</strong></a><strong>/91) - </strong><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><strong>(Inclu&iacute;do pela Lei n&ordm; 13.846, de 2019)</strong></a><strong>.</strong></p>
+<p><strong>O Art. 27-A</strong> <span style="font-weight: 400;">da</span> <span style="font-weight: 400;">Lei n&ordm; 13.846/2019, diz que </span><strong>na hip&oacute;tese de perda da qualidade de segurado, para fins da concess&atilde;o dos benef&iacute;cios</strong><span style="font-weight: 400;"> [...], e de </span><strong>aux&iacute;lio-reclus&atilde;o</strong><span style="font-weight: 400;">, o segurado dever&aacute; contar, a partir da data da nova filia&ccedil;&atilde;o &agrave; Previd&ecirc;ncia Social, com metade dos per&iacute;odos previstos nos incisos&nbsp;I, III e </span><strong>IV&nbsp;</strong><span style="font-weight: 400;">do </span><strong>caput</strong><span style="font-weight: 400;"> do art. 25. </span><span style="font-weight: 400;">&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13846.htm#art24"><span style="font-weight: 400;">(Reda&ccedil;&atilde;o dada pela Lei n&ordm; 13.846, de 2019)</span></a><span style="font-weight: 400;">.</span></p>
+<p><em><span style="font-weight: 400;">Ou seja, caso haja perda da qualidade de segurado, a concess&atilde;o do benef&iacute;cio ser&aacute; contada a partir do momento em que o segurado se filiar novamente ao Regime Previdenci&aacute;rio, sendo que bastar&aacute; metade dos per&iacute;odos previstos, ou seja, equivale a 12 contribui&ccedil;&otilde;es</span></em><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">O aux&iacute;lio-reclus&atilde;o n&atilde;o ser&aacute; inferior ao valor de 01 (um) sal&aacute;rio m&iacute;nimo, pois se trata de garantia prevista pelo art. 29, &sect; 2&ordm;, da Lei n⁰ </span><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><span style="font-weight: 400;">8.213</span></a><span style="font-weight: 400;">/91, Veja: &ldquo;o valor do sal&aacute;rio-de-benef&iacute;cio n&atilde;o ser&aacute; inferior ao de um sal&aacute;rio m&iacute;nimo, nem superior ao do limite m&aacute;ximo do sal&aacute;rio-de-contribui&ccedil;&atilde;o na data de in&iacute;cio do benef&iacute;cio&rdquo;, </span><em><span style="font-weight: 400;">&nbsp;</span></em><span style="font-weight: 400;">bem como a partir da aplica&ccedil;&atilde;o do </span><a href="https://www.jusbrasil.com.br/topicos/10652112/paragrafo-2-artigo-201-da-constituicao-federal-de-1988"><span style="font-weight: 400;">&sect; 2&ordm;</span></a><span style="font-weight: 400;">, do Artigo 201 da </span><a href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988"><span style="font-weight: 400;">Constitui&ccedil;&atilde;o Federal</span></a><span style="font-weight: 400;">/88</span><span style="font-weight: 400;">, que prev&ecirc; a garantia do sal&aacute;rio-m&iacute;nimo aos benef&iacute;cios da Previd&ecirc;ncia.</span></p>
+<p><span style="font-weight: 400;">&nbsp;</span><span style="font-weight: 400;">Art. 29 &sect; 2&ordm;&nbsp;O valor do sal&aacute;rio-de-benef&iacute;cio n&atilde;o ser&aacute; inferior ao de um sal&aacute;rio m&iacute;nimo, nem superior ao do limite m&aacute;ximo do sal&aacute;rio-de-contribui&ccedil;&atilde;o na data de in&iacute;cio do benef&iacute;cio.</span></p>
+<p><span style="font-weight: 400;">Contudo, importante ressaltar que, apesar de grande parte da sociedade n&atilde;o conhecer o fundamento do benef&iacute;cio do aux&iacute;lio-reclus&atilde;o, salienta-se que </span><strong>n&atilde;o se trata de uma &ldquo;bolsa-presidi&aacute;rio</strong><span style="font-weight: 400;">&rdquo;, muito pelo contr&aacute;rio, o benef&iacute;cio foi criado para os dependentes do segurado recluso, a fim de n&atilde;o ficarem totalmente desamparados na sua aus&ecirc;ncia.</span></p>
+<p><span style="font-weight: 400;">Diante do exposto, &eacute; importante entender que o aux&iacute;lio-reclus&atilde;o n&atilde;o &eacute; um benef&iacute;cio ofertado ao segurado recluso de forma inconveniente nem pelo governo e nem pela sociedade, pois &eacute; mediante as contribui&ccedil;&otilde;es recolhidas ao INSS durante sua vida laboral, que os dependentes ter&atilde;o o acesso ao benef&iacute;cio.</span></p>
 <p>&nbsp;</p>
 <p><strong>REFER&Ecirc;NCIAS:</strong></p>
-<p>BRASIL.&nbsp;<a class="cite" title="CONSTITUI&Ccedil;&Atilde;O FEDERAL, DE 1988" href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988" rel="302754">Constitui&ccedil;&atilde;o Federal</a>&nbsp;(1988).&nbsp;<strong>Vade Mecum</strong>. 1&ordf;. Ed. Revista dos Tribunais, 2020.</p>
-<p>CASTRO, Carlos Alberto Pereira de; Lazzari, Jo&atilde;o Batista.&nbsp;<strong>Manual de Direito Previdenci&aacute;rio</strong>. 12 ed. Florian&oacute;polis: Conceito Editorial, 2010.</p>
-<p>______. EC n&ordm;&nbsp;<a class="cite" title="EMENDA CONSTITUCIONAL N&ordm; 103, DE 12 DE NOVEMBRO DE 2019" href="https://www.jusbrasil.com.br/legislacao/1764993423/emenda-constitucional-103-19" rel="244574613">103</a>&nbsp;de 12.11.2019.&nbsp;<strong>Altera o sistema de previd&ecirc;ncia social e estabelece regras de transi&ccedil;&atilde;o e disposi&ccedil;&otilde;es transit&oacute;rias.</strong>&nbsp;Dispon&iacute;vel em:&nbsp;<a href="http://www.planalto.gov.br/ccivil03/constituicao/emendas/emc/emc103.htm" target="_blank" rel="nofollow">http://www.planalto.gov.br/ccivil03</a>&nbsp;<a class="cite" title="CONSTITUI&Ccedil;&Atilde;O FEDERAL, DE 1988" href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988" rel="302754">/constitui&ccedil;&atilde;o</a>/emendas/emc/emc103.htm. Acesso em: 01 mar.2020.</p>
-<p>FELIPPE, F&aacute;tima Teresinha. O aux&iacute;lio-acidente de trabalho e sua concess&atilde;o limitada pela s&uacute;mula&nbsp;<a href="https://www.jusbrasil.com.br/jurisprudencia/busca?q=sumula+65" target="_blank">65</a>&nbsp;da Advocacia-Geral da Uni&atilde;o. 2013. Florian&oacute;polis, 2013.</p>
-<p>______. Lei n&ordm;&nbsp;<a class="cite" title="LEI N&ordm; 8.213, DE 24 DE JULHO DE 1991" href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" rel="11364779">8.213</a>, 24/07/1991<strong>.</strong>&nbsp;<strong>Disp&otilde;e sobre os Planos de Benef&iacute;cios da Previd&ecirc;ncia Social e d&aacute; outras provid&ecirc;ncias</strong>. Dispon&iacute;vel em&nbsp;<a href="http://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm" target="_blank" rel="nofollow">http://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm</a>: Acesso em: 01 mar.2020.</p>
-<p>______. Lei n&ordm;&nbsp;<a class="cite" title="LEI N&ordm; 13.846, DE 18 DE JUNHO DE 2019" href="https://www.jusbrasil.com.br/legislacao/1592827401/lei-13846-19" rel="229997766">13.846</a>, de 18/06/2019.&nbsp;<strong>Institui o Programa Especial para An&aacute;lise de Benef&iacute;cios com Ind&iacute;cios de Irregularidade, o Programa de Revis&atilde;o de Benef&iacute;cios por Incapacidade, o B&ocirc;nus de Desempenho Institucional por An&aacute;lise de Benef&iacute;cios com Ind&iacute;cios de Irregularidade do Monitoramento Operacional de Benef&iacute;cios e o B&ocirc;nus de Desempenho Institucional por Per&iacute;cia M&eacute;dica em Benef&iacute;cios por Incapacidade; altera as Leis nos&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 6.015, DE 31 DE DEZEMBRO DE 1973" href="https://www.jusbrasil.com.br/legislacao/103486/lei-de-registros-publicos-lei-6015-73" rel="11333736">6.015</a></strong><strong>, de 31 de dezembro de 1973,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 7.783, DE 28 DE JUNHO DE 1989" href="https://www.jusbrasil.com.br/legislacao/109060/lei-de-greve-lei-7783-89" rel="11656123">7.783</a></strong><strong>, de 28 de junho de 1989,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 8.112, DE 11 DE DEZEMBRO DE 1990" href="https://www.jusbrasil.com.br/legislacao/97937/regime-juridico-dos-servidores-publicos-civis-da-uniao-lei-8112-90" rel="447818">8.112</a></strong><strong>, de 11 de dezembro de 1990,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 8.212, DE 24 DE JULHO DE 1991" href="https://www.jusbrasil.com.br/legislacao/104107/lei-organica-da-seguridade-social-lei-8212-91" rel="11367997">8.212</a></strong><strong>, de 24 de julho de 1991,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 8.213, DE 24 DE JULHO DE 1991" href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91" rel="11364779">8.213</a></strong><strong>, de 24 de julho de 1991,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 8.742, DE 07 DE DEZEMBRO DE 1993" href="https://www.jusbrasil.com.br/legislacao/104422/lei-da-assistencia-social-lei-8742-93" rel="11361592">8.742</a></strong><strong>, de 7 de dezembro de 1993,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 9.620, DE 02 DE ABRIL DE 1998" href="https://www.jusbrasil.com.br/legislacao/107518/lei-9620-98" rel="11555291">9.620</a></strong><strong>, de 2 de abril de 1998,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 9.717, DE 27 DE NOVEMBRO DE 1998" href="https://www.jusbrasil.com.br/legislacao/104149/lei-9717-98" rel="11325443">9.717</a></strong><strong>, de 27 de novembro de 1998,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 9.796, DE 05 DE MAIO DE 1999" href="https://www.jusbrasil.com.br/legislacao/104109/lei-do-hauly-lei-9796-99" rel="11341002">9.796</a></strong><strong>, de 5 de maio de 1999,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 10.855, DE 01 DE ABRIL DE 2004" href="https://www.jusbrasil.com.br/legislacao/97845/lei-10855-04" rel="10972719">10.855</a></strong><strong>, de 1&ordm; de abril de 2004,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 10.876, DE 02 DE JUNHO DE 2004" href="https://www.jusbrasil.com.br/legislacao/97689/lei-10876-04" rel="10951965">10.876</a></strong><strong>, de 2 de junho de 2004,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 10.887, DE 18 DE JUNHO DE 2004" href="https://www.jusbrasil.com.br/legislacao/97651/lei-10887-04" rel="10950474">10.887</a></strong><strong>, de 18 de junho de 2004,&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 11.481, DE 31 DE MAIO DE 2007" href="https://www.jusbrasil.com.br/legislacao/94733/lei-11481-07" rel="10837967">11.481</a></strong><strong>, de 31 de maio de 2007, e&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 11.907, DE 02 DE FEVEREIRO DE 2009" href="https://www.jusbrasil.com.br/legislacao/92447/lei-11907-09" rel="10701040">11.907</a></strong><strong>, de 2 de fevereiro de 2009; e revoga dispositivo da Lei n&ordm;&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 10.666, DE 08 DE MAIO DE 2003" href="https://www.jusbrasil.com.br/legislacao/98671/lei-10666-03" rel="11003624">10.666</a></strong><strong>, de 8 de maio de 2003, e a Lei n&ordm;&nbsp;</strong><strong><a class="cite" title="LEI N&ordm; 11.720, DE 20 DE JUNHO DE 2008" href="https://www.jusbrasil.com.br/legislacao/93516/lei-11720-08" rel="10759993">11.720</a></strong><strong>, de 20 de junho de 2008. Disp&otilde;e sobre os Planos de Benef&iacute;cios da Previd&ecirc;ncia Social e d&aacute; outras provid&ecirc;ncias</strong>. Dispon&iacute;vel em&nbsp;<a href="http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13846.htm" target="_blank" rel="nofollow">http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13846.htm</a>: Acesso em: 01 mar.2020.</p>
-<p>______. MP n&ordm;&nbsp;<a class="cite" title="MEDIDA PROVIS&Oacute;RIA N&ordm; 871, DE 18 DE JANEIRO DE 2019" href="https://www.jusbrasil.com.br/legislacao/1760807796/medida-provisoria-871-19" rel="216159274">871</a>, de 18/01/2019.&nbsp;<strong>Disp&otilde;e sobre os Planos de Benef&iacute;cios da Previd&ecirc;ncia Social e d&aacute; outras provid&ecirc;ncias</strong>. Dispon&iacute;vel em&nbsp;<a href="http://www.planalto.gov.br/ccivil_03/Ato2019-2022/2019/Mpv/mpv871.htm" target="_blank" rel="nofollow">http://www.planalto.gov.br/ccivil_03/Ato2019-2022/2019/Mpv/mpv871.htm</a>: Acesso em: 01 mar.2020.</p>
-<p><strong>______. Portaria Interministerial</strong>&nbsp;6, de 10 de janeiro de 2025, do Minist&eacute;rio da Previd&ecirc;ncia e do Minist&eacute;rio da Fazenda. (Publicada no Di&aacute;rio Oficial da Uni&atilde;o em 13 de janeiro de 2025).</p>
-</div>
-</div>
+<p><span style="font-weight: 400;">BRASIL. </span><a href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988"><span style="font-weight: 400;">Constitui&ccedil;&atilde;o Federal</span></a><span style="font-weight: 400;"> (1988). </span><strong>Vade Mecum</strong><span style="font-weight: 400;">. 1&ordf;. Ed. Revista dos Tribunais, 2020.</span></p>
+<p><span style="font-weight: 400;">CASTRO, Carlos Alberto Pereira de; Lazzari, Jo&atilde;o Batista. </span><strong>Manual de Direito Previdenci&aacute;rio</strong><span style="font-weight: 400;">. 12 ed. Florian&oacute;polis: Conceito Editorial, 2010.</span></p>
+<p><span style="font-weight: 400;">______. EC n&ordm; </span><a href="https://www.jusbrasil.com.br/legislacao/1764993423/emenda-constitucional-103-19"><span style="font-weight: 400;">103</span></a><span style="font-weight: 400;"> de 12.11.2019. </span><strong>Altera o sistema de previd&ecirc;ncia social e estabelece regras de transi&ccedil;&atilde;o e disposi&ccedil;&otilde;es transit&oacute;rias.</strong><span style="font-weight: 400;"> Dispon&iacute;vel em: </span><a href="http://www.planalto.gov.br/ccivil03/constituicao/emendas/emc/emc103.htm"><span style="font-weight: 400;">http://www.planalto.gov.br/ccivil03</span></a> <a href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988"><span style="font-weight: 400;">/constitui&ccedil;&atilde;o</span></a><span style="font-weight: 400;">/emendas/emc/emc103.htm. Acesso em: 01 mar.2020.</span></p>
+<p><span style="font-weight: 400;">FELIPPE, F&aacute;tima Teresinha. </span><strong>O aux&iacute;lio-acidente de trabalho e sua concess&atilde;o limitada pela s&uacute;mula </strong><a href="https://www.jusbrasil.com.br/jurisprudencia/busca?q=sumula+65"><strong>65</strong></a><strong> da Advocacia-Geral da Uni&atilde;o</strong><span style="font-weight: 400;">. 2013. Florian&oacute;polis, 2013.</span></p>
+<p><span style="font-weight: 400;">______. Lei n&ordm; </span><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><span style="font-weight: 400;">8.213</span></a><span style="font-weight: 400;">, 24/07/1991</span><strong>.</strong> <strong>Disp&otilde;e sobre os Planos de Benef&iacute;cios da Previd&ecirc;ncia Social e d&aacute; outras provid&ecirc;ncias</strong><span style="font-weight: 400;">. Dispon&iacute;vel em </span><a href="http://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"><span style="font-weight: 400;">http://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm</span></a><span style="font-weight: 400;">: Acesso em: 01 mar.2020.</span></p>
+<p><span style="font-weight: 400;">______. Lei n&ordm; </span><a href="https://www.jusbrasil.com.br/legislacao/1592827401/lei-13846-19"><span style="font-weight: 400;">13.846</span></a><span style="font-weight: 400;">, de 18/06/2019. </span><strong>Institui o Programa Especial para An&aacute;lise de Benef&iacute;cios com Ind&iacute;cios de Irregularidade, o Programa de Revis&atilde;o de Benef&iacute;cios por Incapacidade, o B&ocirc;nus de Desempenho Institucional por An&aacute;lise de Benef&iacute;cios com Ind&iacute;cios de Irregularidade do Monitoramento Operacional de Benef&iacute;cios e o B&ocirc;nus de Desempenho Institucional por Per&iacute;cia M&eacute;dica em Benef&iacute;cios por Incapacidade; altera as Leis nos </strong><a href="https://www.jusbrasil.com.br/legislacao/103486/lei-de-registros-publicos-lei-6015-73"><strong>6.015</strong></a><strong>, de 31 de dezembro de 1973, </strong><a href="https://www.jusbrasil.com.br/legislacao/109060/lei-de-greve-lei-7783-89"><strong>7.783</strong></a><strong>, de 28 de junho de 1989, </strong><a href="https://www.jusbrasil.com.br/legislacao/3053865695/lei-8112-90"><strong>8.112</strong></a><strong>, de 11 de dezembro de 1990, </strong><a href="https://www.jusbrasil.com.br/legislacao/104107/lei-organica-da-seguridade-social-lei-8212-91"><strong>8.212</strong></a><strong>, de 24 de julho de 1991, </strong><a href="https://www.jusbrasil.com.br/legislacao/104108/lei-de-beneficios-da-previdencia-social-lei-8213-91"><strong>8.213</strong></a><strong>, de 24 de julho de 1991, </strong><a href="https://www.jusbrasil.com.br/legislacao/104422/lei-da-assistencia-social-lei-8742-93"><strong>8.742</strong></a><strong>, de 7 de dezembro de 1993, </strong><a href="https://www.jusbrasil.com.br/legislacao/107518/lei-9620-98"><strong>9.620</strong></a><strong>, de 2 de abril de 1998, </strong><a href="https://www.jusbrasil.com.br/legislacao/104149/lei-9717-98"><strong>9.717</strong></a><strong>, de 27 de novembro de 1998, </strong><a href="https://www.jusbrasil.com.br/legislacao/104109/lei-do-hauly-lei-9796-99"><strong>9.796</strong></a><strong>, de 5 de maio de 1999, </strong><a href="https://www.jusbrasil.com.br/legislacao/97845/lei-10855-04"><strong>10.855</strong></a><strong>, de 1&ordm; de abril de 2004, </strong><a href="https://www.jusbrasil.com.br/legislacao/97689/lei-10876-04"><strong>10.876</strong></a><strong>, de 2 de junho de 2004, </strong><a href="https://www.jusbrasil.com.br/legislacao/97651/lei-10887-04"><strong>10.887</strong></a><strong>, de 18 de junho de 2004, </strong><a href="https://www.jusbrasil.com.br/legislacao/94733/lei-11481-07"><strong>11.481</strong></a><strong>, de 31 de maio de 2007, e </strong><a href="https://www.jusbrasil.com.br/legislacao/92447/lei-11907-09"><strong>11.907</strong></a><strong>, de 2 de fevereiro de 2009; e revoga dispositivo da Lei n&ordm; </strong><a href="https://www.jusbrasil.com.br/legislacao/98671/lei-10666-03"><strong>10.666</strong></a><strong>, de 8 de maio de 2003, e a Lei n&ordm; </strong><a href="https://www.jusbrasil.com.br/legislacao/93516/lei-11720-08"><strong>11.720</strong></a><strong>, de 20 de junho de 2008. Disp&otilde;e sobre os Planos de Benef&iacute;cios da Previd&ecirc;ncia Social e d&aacute; outras provid&ecirc;ncias</strong><span style="font-weight: 400;">. Dispon&iacute;vel em </span><a href="http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13846.htm"><span style="font-weight: 400;">http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13846.htm</span></a><span style="font-weight: 400;">: Acesso em: 01 mar.2020.</span></p>
+<p><span style="font-weight: 400;">______. MP n&ordm; </span><a href="https://www.jusbrasil.com.br/legislacao/1760807796/medida-provisoria-871-19"><span style="font-weight: 400;">871</span></a><span style="font-weight: 400;">, de 18/01/2019. </span><strong>Disp&otilde;e sobre os Planos de Benef&iacute;cios da Previd&ecirc;ncia Social e d&aacute; outras provid&ecirc;ncias</strong><span style="font-weight: 400;">. Dispon&iacute;vel em </span><a href="http://www.planalto.gov.br/ccivil_03/Ato2019-2022/2019/Mpv/mpv871.htm"><span style="font-weight: 400;">http://www.planalto.gov.br/ccivil_03/Ato2019-2022/2019/Mpv/mpv871.htm</span></a><span style="font-weight: 400;">: Acesso em: 01 mar.2020.</span></p>
+<p><strong>______. </strong><span style="font-weight: 400;">Portaria Interministerial MPS/MF n&ordm; 13, de 09 de janeiro de 2026. </span><strong>Disp&otilde;e sobre o reajuste dos benef&iacute;cios pagos pelo INSS e demais valores</strong><span style="font-weight: 400;">. Dispon&iacute;vel em </span><a href="https://www.in.gov.br/web/dou/-/portaria-interministerial-mps/mf-n-13-de-9-de-janeiro-de-2026-680382603"><span style="font-weight: 400;">https://www.in.gov.br/web/dou/-/portaria-interministerial-mps/mf-n-13-de-9-de-janeiro-de-2026-680382603</span></a><span style="font-weight: 400;">. </span><span style="font-weight: 400;">Acesso em 16 fev. 2026</span></p>
     `,
         "tags": ["O que é o auxílio-reclusão", "Fato gerador", "Dependentes", "Valores", "Quantidade de contribuições necessárias", "Tipo de regime de cumprimento pena", "Início e término do auxílio-reclusão", "Leis", "entre outros"]
       },
@@ -5456,7 +5831,9 @@
           "Criação Cursos Jurídicos Brasil",
           "Faculdade Direito São Paulo",
           "Faculdade Direito Olinda"],
-        "content": `<p><span style="font-weight: 400;">Legisla&ccedil;&atilde;o Informatizada - LEI DE 11 DE AGOSTO DE 1827 - Publica&ccedil;&atilde;o Original</span></p>
+        "content": `
+
+<p><span style="font-weight: 400;">Legisla&ccedil;&atilde;o Informatizada - LEI DE 11 DE AGOSTO DE 1827 - Publica&ccedil;&atilde;o Original</span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Veja tamb&eacute;m:</span></p>
 <p><a href="https://www2.camara.leg.br/legin/fed/lei_sn/1824-1899/lei-38401-11-agosto-1827-566698-norma-pl.html"><strong>Dados da Norma</strong></a></p>
@@ -5688,11 +6065,158 @@
 <p><span style="font-weight: 400;">&nbsp; </span><a href="https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-31-28-fevereiro-1839-536479-norma-pe.html"><span style="font-weight: 400;">Decreto n&ordm; 31 de 28 de Fevereiro de 1839</span><span style="font-weight: 400;"> (</span><span style="font-weight: 400;">Poder Executivo</span><span style="font-weight: 400;">)</span> <span style="font-weight: 400;">-</span><span style="font-weight: 400;"> (</span><span style="font-weight: 400;">Regulamenta&ccedil;&atilde;o</span><span style="font-weight: 400;">)</span><span style="font-weight: 400;">. Art. 150.</span></a> <a href="https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-30-22-fevereiro-1839-536478-norma-pe.html"><span style="font-weight: 400;">Decreto n&ordm; 30 de 22 de Fevereiro de 1839</span><span style="font-weight: 400;"> (</span><span style="font-weight: 400;">Poder Executivo</span><span style="font-weight: 400;">)</span> <span style="font-weight: 400;">-</span><span style="font-weight: 400;"> (</span><span style="font-weight: 400;">Regulamenta&ccedil;&atilde;o</span><span style="font-weight: 400;">)</span><span style="font-weight: 400;">. Art. 150.</span></a> <a href="https://www2.camara.leg.br/legin/fed/leimp/1824-1899/lei-16-12-agosto-1834-532609-norma-pl.html"><span style="font-weight: 400;">Lei n&ordm; 16 de 12 de Agosto de 1834</span><span style="font-weight: 400;"> (</span><span style="font-weight: 400;">Poder Legislativo</span><span style="font-weight: 400;">)</span> <span style="font-weight: 400;">-</span><span style="font-weight: 400;"> (</span><span style="font-weight: 400;">Norma Complementar</span><span style="font-weight: 400;">)</span><span style="font-weight: 400;">. Art. 71.</span></a></p>
 <p><strong>Indexa</strong><strong>&ccedil;</strong><strong>&atilde;o</strong></p>
 
-` }
+`
+      },
+      {
+        "id": 20,
+        "category": "profissional",
+        "categoryName": "Direito Tributário",
+        "date": "18 de janeiro de 2026",
+        "readTime": "15 min de leitura",
+        "title": "Taxa de licenciamento Anual - (CRLV-E)",
+        "excerpt": "A Constituição Federal/88, por força do artigo 145, estabelece que a União, os Estados, o Distrito Federal e os Municípios poderão instituir os seguintes tributos: Impostos, Taxas e Contribuição de Melhoria.",
+        "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1769297516/Imagem_para_taxa_licenciamento_veiculo_page-0001_hd2uea.jpg",
+        "author": "Redação",
+        "tags": ["Taxa",
+          "TRU",
+          "Licenciamento ",
+          "Anual ", "Veículos ", "Digital CRVL-E ", "IPVA"],
+        "content": `
+  <p><strong><span style="color: darkgoldenrod;">TAXA DE LICENCIAMENTO ANUAL - (CRLV-E) CERTIFICADO DE REGISTRO E LICENCIAMENTO DE VE&Iacute;CULOS ELETR&Ocirc;NICO (CRLV-E).</span></strong></p>
+<p>&nbsp;</p>
+<p><strong>Breve Introdu&ccedil;&atilde;o</strong></p>
+<p>&nbsp;</p>
+<p><strong>A Constitui&ccedil;&atilde;o Federal/88, por for&ccedil;a do artigo 145, </strong><span style="font-weight: 400;">estabelece que a</span> <strong>Uni&atilde;o, os Estados, o Distrito Federal e os Munic&iacute;pios </strong><span style="font-weight: 400;">poder&atilde;o instituir os seguintes tributos: </span><strong>Impostos, Taxas e Contribui&ccedil;&atilde;o de Melhoria.</strong></p>
+<p><strong>Vejamos:</strong></p>
+<p>&nbsp;</p>
+<p><strong>Art. 145</strong><span style="font-weight: 400;">. A Uni&atilde;o, os Estados, o Distrito Federal e os Munic&iacute;pios poder&atilde;o instituir os seguintes tributos:</span></p>
+<p><strong>I </strong><span style="font-weight: 400;">- Impostos;</span></p>
+<p>&nbsp;</p>
+<p><strong><span style="color: darkgoldenrod;">►►II - taxas, em raz&atilde;o do exerc&iacute;cio do poder de pol&iacute;cia ou pela utiliza&ccedil;&atilde;o, efetiva ou potencial, de servi&ccedil;os p&uacute;blicos espec&iacute;ficos e divis&iacute;veis, prestados ao contribuinte ou postos a sua disposi&ccedil;&atilde;o;</span></strong></p>
+<p>&nbsp;</p>
+<p><strong>III</strong><span style="font-weight: 400;"> - contribui&ccedil;&atilde;o de melhoria, decorrente de obras p&uacute;blicas.</span></p>
+<ul>
+<li><span style="font-weight: 400;"> 1&ordm;</span><strong> Sempre que poss&iacute;vel, os impostos ter&atilde;o car&aacute;ter pessoal e ser&atilde;o graduados segundo a capacidade econ&ocirc;mica do contribuinte, facultado &agrave; administra&ccedil;&atilde;o tribut&aacute;ria, especialmente para conferir efetividade a esses objetivos, identificar, respeitados os direitos individuais e nos termos da lei, o patrim&ocirc;nio, os rendimentos e as atividades econ&ocirc;micas do contribuinte.</strong></li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><span style="color: darkgoldenrod;">►►&sect; 2&ordm; As taxas n&atilde;o poder&atilde;o ter base de c&aacute;lculo pr&oacute;pria de impostos.</span></strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>3&ordm;</strong><span style="font-weight: 400;"> O Sistema Tribut&aacute;rio Nacional deve observar os princ&iacute;pios da simplicidade, da transpar&ecirc;ncia, da justi&ccedil;a tribut&aacute;ria, da coopera&ccedil;&atilde;o e da defesa do meio ambiente.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/constituicao/Emendas/Emc/emc132.htm#art1"><span style="font-weight: 400;">(Inclu&iacute;do pela Emenda Constitucional n&ordm; 132, de 2023)</span></a></li>
+<li><strong> 4&ordm;</strong><span style="font-weight: 400;"> As altera&ccedil;&otilde;es na legisla&ccedil;&atilde;o tribut&aacute;ria buscar&atilde;o atenuar efeitos regressivos.&nbsp;&nbsp;&nbsp;</span></li>
+</ul>
+<p><br /><br /></p>
+<p><span style="font-weight: 400;">Por sua vez, conceitua-se &ldquo;<span style="color: darkgoldenrod;">TAXA</span>&rdquo; de acordo com o </span><strong><span style="color: darkgoldenrod;">art. 77 da Lei n&ordm; 5.172, de 25 de outubro de 1966 (C&oacute;digo Tribut&aacute;rio Nacional):</span></strong></p>
+<p><strong>Art. 77</strong><span style="font-weight: 400;">. As taxas cobradas pela Uni&atilde;o, pelos Estados, pelo Distrito Federal ou pelos Munic&iacute;pios, no &acirc;mbito de suas respectivas atribui&ccedil;&otilde;es, t&ecirc;m como fato gerador o exerc&iacute;cio regular do poder de pol&iacute;cia, ou a utiliza&ccedil;&atilde;o, efetiva ou potencial, de servi&ccedil;o p&uacute;blico espec&iacute;fico e divis&iacute;vel, prestado ao contribuinte ou posto &agrave; sua disposi&ccedil;&atilde;o.</span></p>
+<p><span style="font-weight: 400;">Par&aacute;grafo &uacute;nico. A taxa n&atilde;o pode ter base de c&aacute;lculo ou fato gerador id&ecirc;nticos aos que correspondam a imposto nem ser calculada em fun&ccedil;&atilde;o do capital das empresas.&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/ACP/acp-34-66.htm#alteracao10"><span style="font-weight: 400;">(Vide Ato Complementar n&ordm; 34, de 1967)</span></a></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Em outras palavras, </span><strong>&ldquo;</strong><strong>TAXA</strong><strong>&rdquo;</strong><span style="font-weight: 400;"> pode ser lida como sendo </span><strong>um pagamento obrigat&oacute;rio que </strong><span style="font-weight: 400;">est&aacute; vinculado a uma atividade desempenhada pelo Estado, e assim cobrado por este em raz&atilde;o de um fato que gerou a sua cobran&ccedil;a, como exemplo uma atividade fiscalizat&oacute;ria ou a utiliza&ccedil;&atilde;o pelo cidad&atilde;o de um servi&ccedil;o p&uacute;blico para determinado fim, o qual gerou custos para o &oacute;rg&atilde;o como a impress&atilde;o, digitaliza&ccedil;&atilde;o e outros. A exemplo as taxas de licenciamentos, documentos emitidos e etc.</span></p>
+<p><span style="font-weight: 400;">O Estado presta um servi&ccedil;o p&uacute;blico ao cidad&atilde;o e o cidad&atilde;o paga a contrapresta&ccedil;&atilde;o de um servi&ccedil;o p&uacute;blico utilizado.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">►</span><strong>Origem da taxa de licenciamento anual</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">A taxa de licenciamento anual, tem sua raiz na </span><strong>Taxa Rodovi&aacute;ria &Uacute;nica (TRU)</strong><span style="font-weight: 400;">, institu&iacute;da nacionalmente em&nbsp;</span><strong>1969</strong><span style="font-weight: 400;"> mediante o </span><strong>Decreto-Lei n&ordm; 999</strong><span style="font-weight: 400;">, durante o governo M&eacute;dici</span><span style="font-weight: 400;">, a qual evoluiu e se vinculou ao tributo cobrado e fiscalizado pelo Estado, o </span><strong>IPVA</strong><span style="font-weight: 400;"> -&nbsp; </span><strong>Imposto sobre a Propriedade de Ve&iacute;culos Automotores</strong><span style="font-weight: 400;">, o qual passou a ser de compet&ecirc;ncia dos Estados e Distrito Federal, conforme a </span><strong>Emenda Constitucional n&ordm; 3 de 1993</strong><span style="font-weight: 400;">, que alterou o </span><strong>Art. 155 da Constitui&ccedil;&atilde;o Federal.</strong></p>
+<p>&nbsp;</p>
+<p><strong>Vejamos:</strong></p>
+<p><span style="font-weight: 400;">►</span><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/DEL%20999-1969?OpenDocument"><strong><span style="color: darkgoldenrod;">DECRETO-LEI N&ordm; 999, DE 21 DE OUTUBRO DE 1969</span></strong><strong>.</strong></a></p>
+<table>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>
+<p><span style="font-weight: 400;">Institui Taxa Rodovi&aacute;ria &Uacute;nica, incidente sobre o registro e licenciamento de ve&iacute;culos e d&aacute; outras provid&ecirc;ncias.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+<p><strong>Art. 1&ordm;</strong><span style="font-weight: 400;"> &Eacute; institu&iacute;da a Taxa Rodovi&aacute;ria &Uacute;nica, devida pelos propriet&aacute;rios de ve&iacute;culos automotores registrados e licenciados em todo territ&oacute;rio nacional.</span></p>
+<p>&nbsp;</p>
+<ul>
+<li><strong> 1&ordm; A referida taxa, que ser&aacute; cobrada previamente ao registro do ve&iacute;culo ou &agrave; renova&ccedil;&atilde;o anual da licen&ccedil;a para circular, ser&aacute; o &uacute;nico tributo incidente sobre tal fato gerador.</strong></li>
+<li><span style="font-weight: 400;"> 2&ordm; A Taxa Rodovi&aacute;ria &Uacute;nica ser&aacute; arrecadada pelos Estados, Territ&oacute;rios e Distrito Federal.</span><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del1242.htm#art3"><span style="font-weight: 400;">(Revogado pelo Decreto-Lei n&ordm; 1.242, de 1972)</span></a></li>
+<li><strong> 2&ordm; A renova&ccedil;&atilde;o anual do licenciamento de ve&iacute;culos automotores, obedecida a correspond&ecirc;ncia com o algarismo final da placa de identifica&ccedil;&atilde;o, far-se-&aacute;, em todo o territ&oacute;rio nacional, nos seguintes meses [...]:&nbsp;</strong><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/Del1691.htm#art5"><strong>(Reda&ccedil;&atilde;o dada pelo Decreto-Lei n&ordm; 1.691, de 1979)</strong></a><strong>.</strong></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">►</span><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/emc%203-1993?OpenDocument"><strong>EMENDA CONSTITUCIONAL N&ordm; 3, DE 17 DE MAR&Ccedil;O DE 1993</strong></a><span style="font-weight: 400;">.</span></p>
+<p><a href="https://www.planalto.gov.br/ccivil_03/constituicao/Constituicao.htm#art155"><strong>Art. 155</strong><span style="font-weight: 400;">.</span></a><span style="font-weight: 400;">&nbsp;Compete aos Estados e ao Distrito Federal instituir impostos sobre:</span></p>
+<p>&nbsp;</p>
+<p><strong>I</strong><span style="font-weight: 400;"> - transmiss&atilde;o causa mortis e doa&ccedil;&atilde;o, de quaisquer bens ou direitos;</span></p>
+<p>&nbsp;</p>
+<p><strong>II</strong><span style="font-weight: 400;"> - opera&ccedil;&otilde;es relativas &agrave; circula&ccedil;&atilde;o de mercadorias e sobre presta&ccedil;&otilde;es de servi&ccedil;os de transporte interestadual e intermunicipal e de comunica&ccedil;&atilde;o, ainda que as opera&ccedil;&otilde;es e as presta&ccedil;&otilde;es se iniciem no exterior;</span></p>
+<p>&nbsp;</p>
+<p><strong><span style="color: darkgoldenrod;">►►III - propriedade de ve&iacute;culos automotores.</span></strong></p>
+<p>&nbsp;</p>
+<p><strong>►L</strong><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/lei%209.503-1997?OpenDocument"><strong><span style="color: darkgoldenrod;">EI N&ordm; 9.503 DE 23 DE SETEMBRO DE 1997</span></strong></a><strong><span style="color: darkgoldenrod;"> (C&Oacute;DIGO DE TR&Acirc;NSITO BRASILEIRO).</span></strong></p>
+<p><strong>Art. 130</strong><span style="font-weight: 400;">. Todo ve&iacute;culo automotor, articulado, reboque ou semirreboque, para transitar na via, dever&aacute; ser licenciado anualmente pelo &oacute;rg&atilde;o executivo de tr&acirc;nsito do Estado, ou do Distrito Federal, onde estiver registrado o ve&iacute;culo.&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14599.htm#art1"><span style="font-weight: 400;">(Reda&ccedil;&atilde;o dada pela Lei n&ordm; 14.599, de 2023)</span></a></p>
+<p><strong>Art. 131</strong><span style="font-weight: 400;">. &nbsp;O Certificado de Licenciamento Anual ser&aacute; expedido ao ve&iacute;culo licenciado, vinculado ao Certificado de Registro de Ve&iacute;culo, em meio f&iacute;sico e/ou digital, &agrave; escolha do propriet&aacute;rio, de acordo com o modelo e com as especifica&ccedil;&otilde;es estabelecidos pelo Contran.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L14071.htm#art1"><span style="font-weight: 400;">&nbsp;(Reda&ccedil;&atilde;o dada pela Lei n&ordm; 14.071, de 2020)</span></a><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L14071.htm#art7"><span style="font-weight: 400;">(Vig&ecirc;ncia)</span></a></p>
+<p>&nbsp;</p>
+<p><strong>►</strong><strong>Ent&atilde;o, o que &eacute; a taxa de Licenciamento anual de ve&iacute;culos e qual o objetivo?</strong></p>
+<p><span style="font-weight: 400;">A taxa de licenciamento anual, ou seja aquele valor que &eacute; pago anualmente juntamente com o </span><strong>IPVA - </strong><strong>Imposto de Propriedade de Ve&iacute;culos Automotores</strong><span style="font-weight: 400;">, &eacute; uma obriga&ccedil;&atilde;o administrada pelo </span><strong>Departamento de Tr&acirc;nsito de cada Estado (DETRAN),</strong><span style="font-weight: 400;"> com o objetivo de garantir que a circula&ccedil;&atilde;o dos ve&iacute;culos nas estradas do Brasil estejam aptos a circular, bem como o recolhimento do seu valor auxilia &agrave; </span><strong>financiar as atividades do &oacute;rg&atilde;o (DETRAN), </strong><span style="font-weight: 400;">tais como na</span> <span style="font-weight: 400;">fiscaliza&ccedil;&atilde;o e manuten&ccedil;&atilde;o do sistema de tr&acirc;nsito do pr&oacute;prio &oacute;rg&atilde;o, al&eacute;m de autorizar a emiss&atilde;o do </span><strong>certificado de registro e licenciamento de ve&iacute;culos eletr&ocirc;nico</strong> <strong>(CRLV-e),</strong><span style="font-weight: 400;"> o qual sem ele o ve&iacute;culo n&atilde;o pode circular.</span></p>
+<p><span style="font-weight: 400;">Por conseguinte, al&eacute;m da obrigatoriedade do documento </span><strong>(</strong><strong>CRLV-e)</strong><span style="font-weight: 400;">, a emiss&atilde;o dele somente ser&aacute; efetuada se o </span><strong>IPVA - </strong><strong>Imposto de Propriedade de Ve&iacute;culos Automotores</strong><span style="font-weight: 400;"> estiver devidamente quitado, juntamente com&nbsp; a quita&ccedil;&atilde;o das multas vencidas atribu&iacute;das ao ve&iacute;culo</span><span style="font-weight: 400;">, a quita&ccedil;&atilde;o da pr&oacute;pria taxa de licenciamento, e aus&ecirc;ncia de restri&ccedil;&otilde;es ativas no prontu&aacute;rio do ve&iacute;culo, tais como: </span><strong>Restri&ccedil;&atilde;o Renajud de circula&ccedil;&atilde;o; judicial (busca e apreens&atilde;o); Restri&ccedil;&atilde;o da RFB; Restri&ccedil;&atilde;o Recall; administrativa; de furto/roubo; informa&ccedil;&atilde;o de inten&ccedil;&atilde;o de venda</strong><span style="font-weight: 400;">; informa&ccedil;&atilde;o de mudan&ccedil;a de caracter&iacute;sticas;</span><strong> al&eacute;m de outras exig&ecirc;ncias que o &oacute;rg&atilde;o requerer.</strong></p>
+<p><span style="font-weight: 400;">A quita&ccedil;&atilde;o da taxa segue o final da placa do ve&iacute;culo, e os valores s&atilde;o diferentes em cada Estado da Federa&ccedil;&atilde;o.</span></p>
+<p><span style="font-weight: 400;">►</span><strong>A aus&ecirc;ncia do</strong> <strong>CRLV-e,</strong><span style="font-weight: 400;"> - </span><strong>Certificado de Registro e Licenciamento de Ve&iacute;culo eletr&ocirc;nico</strong><span style="font-weight: 400;"> faz com que o ve&iacute;culo n&atilde;o possa circular, al&eacute;m de que o propriet&aacute;rio estar&aacute; sujeito a infra&ccedil;&atilde;o, inser&ccedil;&atilde;o de pontos na Carteira Nacional de habilita&ccedil;&atilde;o (CNH), multa e medida administrativa como a reten&ccedil;&atilde;o do ve&iacute;culo, conforme os artigos </span><strong>230, 270 e 274</strong><span style="font-weight: 400;">, da </span><strong>lei</strong><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/lei%209.503-1997?OpenDocument"><strong> n&ordm; 9.503, de 23 de setembro de 1997</strong></a><strong> (C&oacute;digo de Tr&acirc;nsito Brasileiro).</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">►</span><strong>L</strong><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/lei%209.503-1997?OpenDocument"><strong>EI N&ordm; 9.503 DE 23 DE SETEMBRO DE 1997</strong></a><strong> (C&Oacute;DIGO DE TR&Acirc;NSITO BRASILEIRO).</strong></p>
+<p><span style="font-weight: 400;">&nbsp; </span><strong>Art. 230</strong><span style="font-weight: 400;">. Conduzir o ve&iacute;culo:</span></p>
+<p><strong>►►</strong><strong>V - que n&atilde;o esteja registrado e devidamente licenciado;</strong></p>
+<p><strong>Infra&ccedil;&atilde;o - grav&iacute;ssima;</strong></p>
+<p><strong>Penalidade - multa e apreens&atilde;o do ve&iacute;culo;</strong></p>
+<p><strong>Medida administrativa - remo&ccedil;&atilde;o do ve&iacute;culo;</strong></p>
+<p>&nbsp;</p>
+<p><strong>Art. 270</strong><span style="font-weight: 400;">. </span><strong><span style="color: darkgoldenrod;">O ve&iacute;culo poder&aacute; ser retido</span></strong> <span style="font-weight: 400;">nos casos expressos neste C&oacute;digo.</span></p>
+<ul>
+<li><strong> 1&ordm;</strong><span style="font-weight: 400;"> Quando a irregularidade puder ser sanada no local da infra&ccedil;&atilde;o, o ve&iacute;culo ser&aacute; liberado t&atilde;o logo seja regularizada a situa&ccedil;&atilde;o.</span></li>
+<li><strong> 2&ordm;</strong><span style="font-weight: 400;"> Quando n&atilde;o for poss&iacute;vel sanar a falha no local da infra&ccedil;&atilde;o, o ve&iacute;culo, desde que ofere&ccedil;a condi&ccedil;&otilde;es de seguran&ccedil;a para circula&ccedil;&atilde;o, dever&aacute; ser liberado e entregue a condutor regularmente habilitado, mediante recolhimento do Certificado de Licenciamento Anual, contra apresenta&ccedil;&atilde;o de recibo, assinalando-se ao condutor prazo razo&aacute;vel, n&atilde;o superior a 30 (trinta) dias, para regularizar a situa&ccedil;&atilde;o, e ser&aacute; considerado notificado para essa finalidade na mesma ocasi&atilde;o.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L14071.htm#art1"><span style="font-weight: 400;">(Reda&ccedil;&atilde;o dada pela Lei n&ordm; 14.071, de 2020)</span></a><a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L14071.htm#art7"><span style="font-weight: 400;">(Vig&ecirc;ncia)</span></a></li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Art. 274</strong><span style="font-weight: 400;">. O recolhimento do Certificado de Licenciamento Anual dar-se-&aacute; mediante recibo, al&eacute;m dos casos previstos neste C&oacute;digo, quando:</span></p>
+<p><strong>&nbsp; I</strong><span style="font-weight: 400;"> - houver suspeita de inautenticidade ou adultera&ccedil;&atilde;o;</span></p>
+<p><strong><span style="color: darkgoldenrod;">&nbsp;II - se o prazo de licenciamento estiver vencido;</span></strong></p>
+<p><span style="font-weight: 400;">&nbsp;</span><strong>III</strong><span style="font-weight: 400;"> - no caso de reten&ccedil;&atilde;o do ve&iacute;culo, se a irregularidade n&atilde;o puder ser&nbsp; &nbsp; sanada no &nbsp; &nbsp; local.</span></p>
+<p>&nbsp;</p>
+<p><strong>Todavia</strong><span style="font-weight: 400;">, a taxa foi regulamentada e modernizada </span><span style="font-weight: 400;">com o passar dos anos para atender a praticidade do cidad&atilde;o progredindo para digitaliza&ccedil;&atilde;o em 2020, conforme </span><strong>Resolu&ccedil;&atilde;o CONTRAN n&deg; </strong><strong>809, de 15 de dezembro de 2020.&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><strong><span style="color: darkgoldenrod;">►RESOLU&Ccedil;&Atilde;O CONTRAN N&ordm; 809, DE 15 DE DEZEMBRO DE 2020&nbsp;&nbsp;</span></strong></p>
+<p><strong>Disp&otilde;e sobre os requisitos para emiss&atilde;o do Certificado de Registro de Ve&iacute;culo (CRV), do Certificado de Licenciamento Anual (CLA) e do comprovante de transfer&ecirc;ncia de propriedade em meio digital.</strong></p>
+<p><strong>Art. 1&ordm;</strong><span style="font-weight: 400;"> Esta Resolu&ccedil;&atilde;o disp&otilde;e sobre os requisitos para emiss&atilde;o do Certificado de Registro de Ve&iacute;culo (CRV), do Certificado de Licenciamento Anual (CLA) e do Comprovante de Transfer&ecirc;ncia de Propriedade (CTP), </span><strong><span>em meio digital.</span></strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">►</span><strong>Ent&atilde;o, &eacute; obrigat&oacute;rio o porte do Certificado de Licenciamento Anual?</strong></p>
+<p><span style="font-weight: 400;">Em outras palavras, a lei declara obrigatoriedade do porte do documento, por&eacute;m dispensa o seu porte se o agente de tr&acirc;nsito na hora da abordagem ao ve&iacute;culo durante a fiscaliza&ccedil;&atilde;o obtiver o acesso ao sistema informatizado e permitir a sua apresenta&ccedil;&atilde;o em meio digital, conforme consta no par&aacute;grafo &uacute;nico da </span><strong>Lei n&deg; 9.503/1997</strong><span style="font-weight: 400;">, com as devidas altera&ccedil;&otilde;es inclu&iacute;das na </span><strong>lei n&deg;</strong><strong> 13.281/2016, que manteve o texto do art. 133</strong><strong>.</strong></p>
+<p>&nbsp;</p>
+<p><strong>► </strong><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/lei%209.503-1997?OpenDocument"><strong><span style="color: darkgoldenrod;">LEI N&ordm; 9.503, DE 23 DE SETEMBRO DE 1997</span></strong></a> <strong><span style="color: darkgoldenrod;">(C&Oacute;DIGO DE TR&Acirc;NSITO BRASILEIRO).</span></strong></p>
+<p><strong>Art. 133. &Eacute; obrigat&oacute;rio o porte do Certificado de Licenciamento Anual</strong><span style="font-weight: 400;">.</span></p>
+<p><strong>Par&aacute;grafo &uacute;nico.</strong><span style="font-weight: 400;"> O porte ser&aacute; dispensado quando, no momento da fiscaliza&ccedil;&atilde;o, for poss&iacute;vel ter acesso ao devido sistema informatizado para verificar se o ve&iacute;culo est&aacute; licenciado.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13281.htm#art1"><span style="font-weight: 400;">(Inclu&iacute;do pela Lei n&ordm; 13. 281, de 2016)</span></a><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Lei/L13281.htm#art7"><span style="font-weight: 400;">(Vig&ecirc;ncia)</span></a><span style="font-weight: 400;">.</span></p>
+<p>&nbsp;</p>
+<p><strong><span style="color: darkgoldenrod;">►Lei n&deg; 13.281/2016, de 04 de maio de 2016.</span></strong></p>
+<p><span style="font-weight: 400;">&ldquo;Art. 133. ...................................................................</span></p>
+<p><a href="https://www.planalto.gov.br/ccivil_03/LEIS/L9503.htm#art133p"><span style="font-weight: 400;">Par&aacute;grafo &uacute;nico&nbsp;</span></a><span style="font-weight: 400;">. O porte ser&aacute; dispensado quando, no momento da fiscaliza&ccedil;&atilde;o, for poss&iacute;vel ter acesso ao devido sistema informatizado para verificar se o ve&iacute;culo est&aacute; licenciado&rdquo; (NR).</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">A reda&ccedil;&atilde;o do </span><strong>art. 133</strong><span style="font-weight: 400;">, &eacute; objetiva e clara, pois pode haver no momento da poss&iacute;vel abordagem da autoridade de tr&acirc;nsito que os sistemas de inform&aacute;tica do &oacute;rg&atilde;o estejam sem acessibilidade, quer seja por falhas da internet quer seja pela &aacute;rea de localiza&ccedil;&atilde;o que n&atilde;o abrange um sinal de internet.</span></p>
+<p><strong><span style="color: darkgoldenrod;">►Por isso portar o documento em m&atilde;os &eacute; a melhor op&ccedil;&atilde;o, ainda que a tecnologia digital esteja ao nosso favor, pois n&atilde;o sabemos qual o momento em que ela poder&aacute; n&atilde;o funcionar como o esperado.&nbsp;</span></strong></p>
+<p><strong>Observa&ccedil;&atilde;o informativa:</strong></p>
+<p><strong>E,</strong><span style="font-weight: 400;"> acontecendo algumas discuss&otilde;es nos Estados sobre a poss&iacute;vel extin&ccedil;&atilde;o de cobran&ccedil;a da taxa, como no Estado de Santa Catarina em que a </span><strong>Assembleia Legislativa de Santa Catarina (ALESC) aprovou em 09 de dezembro de 2025, o projeto de lei (</strong><strong>PL 162/2022), o qual</strong><strong> extingue a cobran&ccedil;a da taxa anual de licenciamento veicular pelo fato de ser desnecess&aacute;ria tendo em vista que n&atilde;o precisa mais a impress&atilde;o do documento (CRLV-e), podendo ser feito em meio digital.</strong></p>
+<p><strong>A proposta, de autoria do deputado Jess&eacute; Lopes (PL), seguiu para a san&ccedil;&atilde;o do governador.</strong></p>
+<p><br /><br /></p>
+<p><strong>BIBLIOGRAFIA</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">BRASIL. [Constitui&ccedil;&atilde;o (1988)].&nbsp;</span><a href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988"><span style="font-weight: 400;">Constitui&ccedil;&atilde;o da Republica Federativa do Brasil</span></a><span style="font-weight: 400;">, 1988. Bras&iacute;lia, DF: Presid&ecirc;ncia da Rep&uacute;blica, [2025]. Dispon&iacute;vel em:&nbsp;</span><a href="https://www.planalto.gov.br/ccivil03/constituicao/constituicao.htm"><span style="font-weight: 400;">https://www.planalto.gov.br/ccivil03&nbsp;</span></a><a href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988"><span style="font-weight: 400;">/constitui&ccedil;&atilde;o</span></a><span style="font-weight: 400;">&nbsp;</span><a href="https://www.jusbrasil.com.br/legislacao/1503907193/constituicao-federal-constituicao-da-republica-federativa-do-brasil-1988"><span style="font-weight: 400;">/constitui&ccedil;&atilde;o</span></a><span style="font-weight: 400;">.htm. Acesso em: 18 Jan 2026.</span></p>
+<p><span style="font-weight: 400;">BRASIL. </span><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/DEL%20999-1969?OpenDocument"><span style="font-weight: 400;">Decreto-Lei n&ordm; 999, de 21 de outubro de 1969</span><strong>.</strong></a> <span style="font-weight: 400;">Institui Taxa Rodovi&aacute;ria &Uacute;nica, incidente sobre o registro e licenciamento de ve&iacute;culos e d&aacute; outras provid&ecirc;ncias</span><span style="font-weight: 400;">.</span><span style="font-weight: 400;"> Dispon&iacute;vel em:&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/del0999.htm"><span style="font-weight: 400;">https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/del0999.htm</span></a><span style="font-weight: 400;">.&nbsp; Acesso em: 18 Jan 2026.</span></p>
+<p><span style="font-weight: 400;">BRASIL. [Constitui&ccedil;&atilde;o (1988)].&nbsp;E</span><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/emc%203-1993?OpenDocument"><span style="font-weight: 400;">menda Constitucional n&ordm; 3, de 17 de mar&ccedil;o de 1993</span></a><span style="font-weight: 400;">. Altera os arts. 40, 42, 102, 103, 155, 156, 160, 167 da Constitui&ccedil;&atilde;o Federal. </span><span style="font-weight: 400;">Dispon&iacute;vel em:&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc03.htm"><span style="font-weight: 400;">https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc03.htm</span></a><span style="font-weight: 400;">. Acesso em: 18 Jan 2026.</span></p>
+<p><span style="font-weight: 400;">BRASIL. Lei nᵒ&nbsp;</span><a href="https://www.jusbrasil.com.br/legislacao/91647/codigo-tributario-nacional-lei-5172-66"><span style="font-weight: 400;">5.172</span></a><span style="font-weight: 400;">, de 25.10.66. Disp&otilde;e sobre o Sistema Tribut&aacute;rio Nacional e institui normas gerais de direito tribut&aacute;rio aplic&aacute;veis a Uni&atilde;o, estados e Munic&iacute;pios. Dispon&iacute;vel em:&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm.%20"><span style="font-weight: 400;">https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm. </span></a><span style="font-weight: 400;">&nbsp;Acesso em: 18 Jan 2026.</span></p>
+<p><span style="font-weight: 400;">BRASIL. </span><a href="http://legislacao.planalto.gov.br/legisla/legislacao.nsf/Viw_Identificacao/lei%209.503-1997?OpenDocument"><span style="font-weight: 400;">Lei n&ordm; 9.503, de 23 de setembro de 1997</span></a><span style="font-weight: 400;">. I</span><span style="font-weight: 400;">nstitui o C&oacute;digo de Tr&acirc;nsito Brasileiro</span><span style="font-weight: 400;">. Dispon&iacute;vel em:&nbsp;</span><a href="about:blank"><span style="font-weight: 400;"> https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm</span></a><span style="font-weight: 400;">. Acesso em: 18 Jan 2026.</span></p>
+<p><span style="font-weight: 400;">BRASIL. </span><span style="font-weight: 400;">Resolu&ccedil;&atilde;o CONTRAN N&ordm; 809 de 15 de dezembro de 2020</span><span style="font-weight: 400;">. Disp&otilde;e sobre os requisitos para emiss&atilde;o do Certificado de Registro de Ve&iacute;culo (CRV), do Certificado de Licenciamento Anual (CLA) e do comprovante de transfer&ecirc;ncia de propriedade em meio digital. Dispon&iacute;vel em:&nbsp;</span><a href="about:blank"><span style="font-weight: 400;"> https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao8092020.pdf</span></a><span style="font-weight: 400;">. Acesso em: 18 Jan 2026.</span></p>
+<p><span style="font-weight: 400;">BRASIL. </span><span style="font-weight: 400;">Lei nᵒ&nbsp;13.281, de 04 de maio de .2016</span><span style="font-weight: 400;">. Altera a Lei n&ordm; 9.503, de 23 de setembro de 1997 (C&oacute;digo de Tr&acirc;nsito Brasileiro), e a Lei n&ordm; 13.146, de 6 de julho de 2015. Dispon&iacute;vel em </span><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13281.htm"><span style="font-weight: 400;">https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13281.htm</span></a><span style="font-weight: 400;">. Acesso em: 18 Jan 2026.</span></p>
+
+
+
+
+` },
+
+
     ];
 
-
-    // Array de notícias (exemplo)
     const noticias = [
       {
         "id": 80,
@@ -5791,8 +6315,62 @@
 <p><span style="font-weight: 400;">Ag&ecirc;ncia Senado (Reprodu&ccedil;&atilde;o autorizada mediante cita&ccedil;&atilde;o da Ag&ecirc;ncia Senado)</span></p>
 
 `
-      },
+      }, {
+        "id": 21,
+        "category": "trabalhista",
+        "categoryName": "Previdenciário",
+        "date": "02 de fevereiro de 2026",
+        "readTime": "5 min de leitura",
+        "title": "Retorno dos serviços após atualização dos sistemas.",
+        "excerpt": "INSS -  Os serviços do INSS voltam a funcionar nesta segunda-feira, dia 02 de fevereiro de 2026, após passarem por uma atualização no sistema desde o dia 28 de janeiro (quarta-feira) até 01 de fevereiro (domingo), cuja atualização foi concluída com êxito.",
+        "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1770487785/Como-consultar-o-Meu-INSS_a2pzkg.webp",
+        "author": "Redação",
+        "tags": [
+          "Meu INSS",
+          "Central 135",
+          "Aplicativo",
+          "Atualização",
+          "Pataforma",
+          "Processamento",
+          "Agilidade"
+        ],
+        "content": `<p><strong>INSS - &nbsp; Not&iacute;cia informativa</strong><strong>.</strong></p>
+<p><br /><br /></p>
+<p><strong>Os servi&ccedil;os do INSS voltam a funcionar nesta segunda-feira, dia </strong><strong>02 de fevereiro de 2026</strong><strong>, ap&oacute;s passarem por uma atualiza&ccedil;&atilde;o no sistema desde o dia 28 de janeiro (quarta-feira) at&eacute; 01 de fevereiro (domingo), cuja atualiza&ccedil;&atilde;o foi conclu&iacute;da com &ecirc;xito.&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><span style="font-weight: 400;">A iniciativa conjunta realizada pelo </span><strong>Minist&eacute;rio da Previd&ecirc;ncia Social, o Instituto Nacional do Seguro Social (INSS), e DATAPREV</strong><span style="font-weight: 400;"> faz parte da gest&atilde;o de moderniza&ccedil;&atilde;o dos sistemas com a finalidade de atender a demanda dos milh&otilde;es de benefici&aacute;rios e usu&aacute;rios dos servi&ccedil;os do INSS, com mais agilidade.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">As ag&ecirc;ncias da Previd&ecirc;ncia Social tamb&eacute;m retornaram a oferecer os servi&ccedil;os que necessitam de atendimento presencial.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">O aplicativo </span><strong>&ldquo;MEU INSS</strong><span style="font-weight: 400;">&rdquo;, vinha apresentando instabilidades recorrentes que foram relatadas pelos benefici&aacute;rios e usu&aacute;rios atingindo servi&ccedil;os essenciais dispostos no aplicativo &ldquo;</span><strong>Meu INSS&rdquo;</strong><span style="font-weight: 400;">&nbsp;e no &ldquo;</span><strong>Gov.br&rdquo;</strong><span style="font-weight: 400;">, por isso o governo decidiu intensificar a manuten&ccedil;&atilde;o e a moderniza&ccedil;&atilde;o adequada dos sistemas pela </span><strong>DATAPREV.</strong></p>
+<p><strong>Al&eacute;m do aplicativo &ldquo;MEU INSS&rdquo;, a Central de atendimento (135), </strong><span style="font-weight: 400;">tamb&eacute;m foi restabelecida, assim que todo o sistema passou por atualiza&ccedil;&atilde;o, podendo esporadicamente ocorrer instabilidades, por&eacute;m h&aacute; informa&ccedil;&otilde;es das equipes t&eacute;cnicas respons&aacute;veis de que os sistemas estariam monitorados para evitar os impactos nos servi&ccedil;os.&nbsp;</span></p>
+<p><strong>O aplicativo &ldquo;MEU INSS&rdquo;, &eacute; constitu&iacute;do por uma plataforma robusta de servi&ccedil;os </strong><span style="font-weight: 400;">distribu&iacute;dos em v&aacute;rias op&ccedil;&otilde;es desde consultas &agrave; pedidos de benef&iacute;cios, como por exemplo aposentadorias, pens&otilde;es, aux&iacute;lios al&eacute;m de extratos e comprovantes de pagamento, extrato de consigna&ccedil;&atilde;o, bloqueio e desbloqueio de benef&iacute;cio, sal&aacute;rio maternidade, simula&ccedil;&atilde;o de aposentadoria, agendamentos, per&iacute;cia m&eacute;dica, entre outros.</span></p>
+<p>&nbsp;</p>
+<p><strong>A DATAPREV</strong><span style="font-weight: 400;"> (Empresa de Tecnologia e Informa&ccedil;&otilde;es da Previd&ecirc;ncia)&nbsp;&eacute; uma empresa p&uacute;blica federal brasileira de TI que gerencia os dados e sistemas da Previd&ecirc;ncia Social.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Al&eacute;m de </span><span style="font-weight: 400;">armazenar os dados ela oferece a tecnologia de suporte &agrave;s atividades do Instituto Nacional do Seguro Social (INSS), que &eacute; o respons&aacute;vel em gerenciar </span><strong>o RGPS (Regime Geral de Previd&ecirc;ncia Social), onde est&atilde;o concentrados os benef&iacute;cios.</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">O sistema processa em torno de 37 milh&otilde;es de benef&iacute;cios previdenci&aacute;rios e assistenciais (BPC, Abono Salarial), mensalmente, e necessitava de uma manuten&ccedil;&atilde;o e migra&ccedil;&atilde;o de dados para um sistema mais moderno com infraestrutura tecnol&oacute;gica, tendo a finalidade de atender e processar a grande demanda, bem como o acesso dos usu&aacute;rios de forma mais eficiente.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Segundo informa&ccedil;&otilde;es do governo ocorreu uma participa&ccedil;&atilde;o intensiva, cerca de </span><span style="font-weight: 400;">220 profissionais trabalharam dentre equipes do </span><strong>Minist&eacute;rio da Previd&ecirc;ncia, do INSS e da DATAPREV</strong><span style="font-weight: 400;">, a fim de que a migra&ccedil;&atilde;o e homologa&ccedil;&atilde;o dos servi&ccedil;os previdenci&aacute;rios finalizasse com &ecirc;xito at&eacute; o dia </span><strong>01 de fevereiro (domingo).</strong><span style="font-weight: 400;">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">A atualiza&ccedil;&atilde;o do sistema conta tamb&eacute;m com a redu&ccedil;&atilde;o do tempo de processamento dos benef&iacute;cios que eram de </span><strong>96 horas e passou a ser de 48 horas</strong><span style="font-weight: 400;">, o que eleva a capacidade de organizar e executar tarefas expandindo os servi&ccedil;os digitais, assim como os atendimentos que poder&atilde;o ser realizados aos benefici&aacute;rios e usu&aacute;rios do INSS, por meio do aplicativo sem a necessidade de comparecer presencialmente &agrave; ag&ecirc;ncia da Previd&ecirc;ncia Social.</span></p>
+<p><br /><br /></p>
+<p><strong>►OBS:</strong><span style="font-weight: 400;"> Importante frisar que alguns servi&ccedil;os tinham prazo de solicita&ccedil;&atilde;o, por exemplo a </span><span style="font-weight: 400;">devolu&ccedil;&atilde;o de valores descontados indevidamente</span><span style="font-weight: 400;"> dos benefici&aacute;rios do INSS, </span><strong>&nbsp;o prazo inicialmente seria encerrado em </strong><strong>14 de fevereiro de 2026</strong><strong>,</strong><span style="font-weight: 400;"> por&eacute;m devido a paralisa&ccedil;&atilde;o dos atendimentos e acessos para a manuten&ccedil;&atilde;o e moderniza&ccedil;&atilde;o do sistema, o governo noticiou que </span><strong>prorrogaria o prazo at&eacute; </strong><strong>20 de mar&ccedil;o de 2026</strong><span style="font-weight: 400;"> , para</span> <span style="font-weight: 400;">que aposentados e pensionistas possam </span><strong>requerer a devolu&ccedil;&atilde;o de valores descontados indevidamente de seus benef&iacute;cios do INSS.</strong></p>
+<p><strong>_____________________________________________________</strong></p>
+<p>&nbsp;</p>
+<p><strong>Refer&ecirc;ncias:</strong></p>
+<p><br /><br /></p>
+<p><span style="font-weight: 400;">Fonte: O Globo apud Infomoney.</span></p>
+<p><br /><br /></p>
+<h1><strong>INSS.&nbsp;O Globo. DATAPREV conclui atualiza&ccedil;&atilde;o em servi&ccedil;os digitais, e Meu INSS deve ser restabelecido nesta segunda. Dispon&iacute;vel em: </strong><span style="font-weight: 400;">[https://oglobo.globo.com/economia/noticia/<br>2026/02/01/dataprev-conclui-atualizacao-em-servicos-digitais-e-meu-inss-deve-ser-restabelecido-nesta-segunda.ghtml/]. Acesso em 01 fev. 2026.</span></h1>
+<p><br /><br /><br /></p>
+<h1><strong>INSS. In.&nbsp;Infomoney. Servi&ccedil;os do INSS voltam a funcionar nesta segunda ap&oacute;s atualiza&ccedil;&atilde;o de sistema. Dispon&iacute;vel em: </strong><span style="font-weight: 400;">[https://www.infomoney.com.br/politica/servicos-do-inss-voltam-a-funcionar-nesta-segunda-apos-atualizacao-de-sistema/]. Acesso em 02 fev. 2026.</span></h1>
+<h1>&nbsp;</h1>
+<p>&nbsp;</p>
+`}
     ];
+
 
     // Configurações de paginação
     const postsPerPage = 4;
@@ -5871,7 +6449,7 @@
             <span class="stat-label">Artigos Publicados</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">${new Set(posts.flatMap(post => post.tags)).size}+</span>
+            <span class="stat-number">+${new Set(posts.flatMap(post => post.tags)).size}</span>
             <span class="stat-label">Tópicos Abordados</span>
           </div>
           <div class="stat-item">

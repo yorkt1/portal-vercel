@@ -140,10 +140,15 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="hero-text">
-                            <h2>Bem-vindo ao Portal Jurídico</h2>
+                            <h1 style={{ textAlign: 'center' }}>Bem-vindo ao Portal Jurídico</h1>
                             <p>
                                 Este é um espaço online para escrever, publicar e compartilhar conhecimentos na área do direito e matérias
                                 afins, com pessoas interessadas e conectadas a grande rede.
+                            </p>
+                            <p>
+                                Além de artigos, oferece reflexões que possam auxiliar a estimular pensamentos, fornecendo novas perspectivas
+                                do cotidiano para além do âmbito estritamente jurídico, bem como a notícia informativa que faz parte da
+                                educação e da construção do conhecimento.
                             </p>
                             <p>
                                 Esperamos que você tenha acesso a informações precisas e relevantes para sua prática profissional,
@@ -201,10 +206,10 @@ export default function Home() {
                                         }}
                                     />
                                 </Link>
-                                <Link to={`/artigo/${leadArticle.id}`}>
-                                    <h1>{leadArticle.title}</h1>
+                                <Link to={`/artigo/${leadArticle.id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                                    <h2 style={{ margin: '12px 0 6px', fontSize: '22px' }}>{leadArticle.title}</h2>
                                 </Link>
-                                <p>{leadArticle.excerpt}</p>
+                                <p style={{ color: 'var(--muted)', fontSize: '14px' }}>{leadArticle.excerpt}</p>
                                 <div style={{ marginTop: '12px' }}>
                                     <Link
                                         to={`/artigo/${leadArticle.id}`}
@@ -218,7 +223,7 @@ export default function Home() {
                             {/* 2 side cards */}
                             <div className="side-cards">
                                 {sideArticles.map((post) => (
-                                    <Link key={post.id} to={`/artigo/${post.id}`} className="card-small">
+                                    <Link key={post.id} to={`/artigo/${post.id}`} className="card-small" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
                                         <span className={`category ${post.category}`}>{post.categoryName}</span>
                                         <img
                                             src={post.image}
@@ -227,7 +232,7 @@ export default function Home() {
                                                 e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
                                             }}
                                         />
-                                        <h3>{post.title}</h3>
+                                        <h3 style={{ margin: '8px 0 4px', fontSize: '14px' }}>{post.title}</h3>
                                         <div className="meta">
                                             por {post.author} • {post.date}
                                         </div>
@@ -243,38 +248,39 @@ export default function Home() {
                 </section>
 
                 {/* Artigos Section */}
-                <div className="titulo">Artigos</div>
+                <div className="titulo" id="postsContainer">Artigos</div>
                 <section className="main">
-                    <section className="posts">
+                    <section className="posts" aria-label="lista de posts">
                         {loading ? (
                             <>
                                 {[1, 2, 3, 4].map(i => <SkeletonCard key={i} />)}
                             </>
                         ) : (
                             paginate(mainArtigosList, currentPageArtigos).map((post) => (
-                                <article key={post.id} className="post">
+                                <Link
+                                    key={post.id}
+                                    to={`/artigo/${post.id}`}
+                                    className="post"
+                                    style={{ textDecoration: 'none', color: 'inherit' }}
+                                >
+                                    <img
+                                        src={post.image}
+                                        alt={post.title}
+                                        onError={(e) => {
+                                            e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                                        }}
+                                    />
                                     <div>
                                         <span className={`category ${post.category}`}>{post.categoryName}</span>
                                         <div className="post-meta">
                                             <span>{post.date}</span>
-                                            <span>•</span>
+                                            <span> • </span>
                                             <span>{post.readTime}</span>
                                         </div>
-                                        <Link to={`/artigo/${post.id}`}>
-                                            <img
-                                                src={post.image}
-                                                alt={post.title}
-                                                onError={(e) => {
-                                                    e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                                                }}
-                                            />
-                                        </Link>
-                                        <h3>
-                                            <Link to={`/artigo/${post.id}`}>{post.title}</Link>
-                                        </h3>
+                                        <h3>{post.title}</h3>
                                         <p className="excerpt">{post.excerpt}</p>
                                     </div>
-                                </article>
+                                </Link>
                             ))
                         )}
                     </section>
@@ -300,38 +306,39 @@ export default function Home() {
                 />
 
                 {/* Reflexões Section */}
-                <div className="titulo">Reflexões</div>
+                <div className="titulo" id="reflexoesContainer">Reflexões</div>
                 <section className="main">
-                    <section className="posts">
+                    <section className="posts" aria-label="lista de reflexões">
                         {loading ? (
                             <>
                                 {[1, 2, 3, 4].map(i => <SkeletonCard key={i} />)}
                             </>
                         ) : (
                             paginate(reflexoes, currentPageReflexoes).map((reflexao) => (
-                                <article key={reflexao.id} className="post">
+                                <Link
+                                    key={reflexao.id}
+                                    to={`/reflexao/${reflexao.id}`}
+                                    className="post"
+                                    style={{ textDecoration: 'none', color: 'inherit' }}
+                                >
+                                    <img
+                                        src={reflexao.image}
+                                        alt={reflexao.title}
+                                        onError={(e) => {
+                                            e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                                        }}
+                                    />
                                     <div>
                                         <span className={`category ${reflexao.category}`}>{reflexao.categoryName}</span>
                                         <div className="post-meta">
                                             <span>{reflexao.date}</span>
-                                            <span>•</span>
+                                            <span> • </span>
                                             <span>{reflexao.readTime}</span>
                                         </div>
-                                        <Link to={`/reflexao/${reflexao.id}`}>
-                                            <img
-                                                src={reflexao.image}
-                                                alt={reflexao.title}
-                                                onError={(e) => {
-                                                    e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                                                }}
-                                            />
-                                        </Link>
-                                        <h3>
-                                            <Link to={`/reflexao/${reflexao.id}`}>{reflexao.title}</Link>
-                                        </h3>
+                                        <h3>{reflexao.title}</h3>
                                         <p className="excerpt">{reflexao.excerpt}</p>
                                     </div>
-                                </article>
+                                </Link>
                             ))
                         )}
                     </section>
@@ -357,38 +364,39 @@ export default function Home() {
                 />
 
                 {/* Notícias Section */}
-                <div className="titulo">Notícias</div>
+                <div className="titulo" id="noticiasContainer">Notícias</div>
                 <section className="main">
-                    <section className="posts">
+                    <section className="posts" aria-label="lista de notícias">
                         {loading ? (
                             <>
                                 {[1, 2, 3, 4].map(i => <SkeletonCard key={i} />)}
                             </>
                         ) : noticias.length > 0 ? (
                             paginate(noticias, currentPageNoticias).map((noticia) => (
-                                <article key={noticia.id} className="post">
+                                <Link
+                                    key={noticia.id}
+                                    to={`/noticia/${noticia.id}`}
+                                    className="post"
+                                    style={{ textDecoration: 'none', color: 'inherit' }}
+                                >
+                                    <img
+                                        src={noticia.image}
+                                        alt={noticia.title}
+                                        onError={(e) => {
+                                            e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                                        }}
+                                    />
                                     <div>
                                         <span className={`category ${noticia.category}`}>{noticia.categoryName}</span>
                                         <div className="post-meta">
                                             <span>{noticia.date}</span>
-                                            <span>•</span>
+                                            <span> • </span>
                                             <span>{noticia.readTime}</span>
                                         </div>
-                                        <Link to={`/noticia/${noticia.id}`}>
-                                            <img
-                                                src={noticia.image}
-                                                alt={noticia.title}
-                                                onError={(e) => {
-                                                    e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                                                }}
-                                            />
-                                        </Link>
-                                        <h3>
-                                            <Link to={`/noticia/${noticia.id}`}>{noticia.title}</Link>
-                                        </h3>
+                                        <h3>{noticia.title}</h3>
                                         <p className="excerpt">{noticia.excerpt}</p>
                                     </div>
-                                </article>
+                                </Link>
                             ))
                         ) : (
                             <p style={{ color: 'var(--muted)', textAlign: 'center', padding: '40px', gridColumn: '1 / -1' }}>

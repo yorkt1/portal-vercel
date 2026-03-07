@@ -25,8 +25,8 @@ export default function Header() {
                         style={{ width: '50px', height: '50px', objectFit: 'contain' }}
                     />
                     <div>
-                        <div style={{ fontWeight: 700 }}>Fatima Felippe</div>
-                        <div style={{ fontSize: '13px', color: 'var(--muted)' }}>
+                        <div style={{ fontWeight: 700, fontSize: '25px' }}>Fatima Felippe</div>
+                        <div style={{ fontSize: '13px', color: 'var(--muted)', fontWeight: 500 }}>
                             Artigos, reflexões e notícias
                         </div>
                     </div>
