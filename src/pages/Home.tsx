@@ -1,8 +1,51 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../services/supabase';
 import type { Article } from '../data/content';
 import SkeletonCard from '../components/SkeletonCard';
+
+// Hook que anima um número de 0 até `target` em `duration`ms
+function useCountUp(target: number, duration = 800) {
+    const [count, setCount] = useState(0);
+    const rafRef = useRef<number | null>(null);
+
+    useEffect(() => {
+        if (target === 0) {
+            setCount(0);
+            return;
+        }
+        const startTime = performance.now();
+
+        const animate = (now: number) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // ease-out: desacelera no final
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.round(eased * target));
+            if (progress < 1) {
+                rafRef.current = requestAnimationFrame(animate);
+            }
+        };
+
+        rafRef.current = requestAnimationFrame(animate);
+        return () => {
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
+        };
+    }, [target, duration]);
+
+    return count;
+}
+
+// Componente que exibe o número animado com prefixo +
+function AnimatedStat({ value, label }: { value: number; label: string }) {
+    const count = useCountUp(value);
+    return (
+        <div className="stat-item">
+            <span className="stat-number">+{count}</span>
+            <span className="stat-label">{label}</span>
+        </div>
+    );
+}
 
 export default function Home() {
     const [posts, setPosts] = useState<Article[]>([]);
@@ -148,25 +191,16 @@ export default function Home() {
                             <p>
                                 Além de artigos, oferece reflexões que possam auxiliar a estimular pensamentos, fornecendo novas perspectivas
                                 do cotidiano para além do âmbito estritamente jurídico, bem como a notícia informativa que faz parte da
-                                educação e da construção do conhecimento.
+                                educação e da construção do conhecimento, mantendo os leitores inteirados sobre assuntos que interessem ao seu dia a dia.
                             </p>
                             <p>
                                 Esperamos que você tenha acesso a informações precisas e relevantes para sua prática profissional,
                                 estudos ou vida pessoal.
                             </p>
                             <div className="hero-stats">
-                                <div className="stat-item">
-                                    <span className="stat-number">+{posts.length}</span>
-                                    <span className="stat-label">Artigos Publicados</span>
-                                </div>
-                                <div className="stat-item">
-                                    <span className="stat-number">+{totalTopics}</span>
-                                    <span className="stat-label">Tópicos Abordados</span>
-                                </div>
-                                <div className="stat-item">
-                                    <span className="stat-number">+{posts.length + reflexoes.length + noticias.length}</span>
-                                    <span className="stat-label">Conteúdo Produzido</span>
-                                </div>
+                                <AnimatedStat value={posts.length} label="Artigos Publicados" />
+                                <AnimatedStat value={totalTopics} label="Tópicos Abordados" />
+                                <AnimatedStat value={posts.length + reflexoes.length + noticias.length} label="Conteúdo Produzido" />
                             </div>
                         </div>
                     </div>
@@ -179,12 +213,30 @@ export default function Home() {
                 <section className="hero">
                     {loading ? (
                         <>
-                            <div className="lead-article">
-                                <SkeletonCard />
+                            {/* Skeleton: lead-article — imagem 320px, h2, excerpt, botão */}
+                            <div className="lead-article skeleton-wrapper">
+                                <div className="skeleton" style={{ width: '100px', height: '24px', borderRadius: '4px', marginBottom: '8px' }}></div>
+                                <div className="skeleton" style={{ width: '160px', height: '16px', borderRadius: '4px', marginBottom: '10px' }}></div>
+                                <div className="skeleton" style={{ width: '100%', height: '320px', borderRadius: '8px', marginBottom: '14px' }}></div>
+                                <div className="skeleton" style={{ width: '85%', height: '26px', borderRadius: '4px', marginBottom: '6px' }}></div>
+                                <div className="skeleton" style={{ width: '60%', height: '26px', borderRadius: '4px', marginBottom: '14px' }}></div>
+                                <div className="skeleton" style={{ width: '100%', height: '14px', borderRadius: '4px', marginBottom: '5px' }}></div>
+                                <div className="skeleton" style={{ width: '95%', height: '14px', borderRadius: '4px', marginBottom: '5px' }}></div>
+                                <div className="skeleton" style={{ width: '75%', height: '14px', borderRadius: '4px', marginBottom: '14px' }}></div>
+                                <div className="skeleton" style={{ width: '130px', height: '36px', borderRadius: '8px' }}></div>
                             </div>
+
+                            {/* Skeleton: side-cards — 2x card-small com imagem 96px */}
                             <div className="side-cards">
-                                <SkeletonCard />
-                                <SkeletonCard />
+                                {[1, 2].map(i => (
+                                    <div key={i} className="card-small skeleton-wrapper">
+                                        <div className="skeleton" style={{ width: '90px', height: '22px', borderRadius: '4px', marginBottom: '8px' }}></div>
+                                        <div className="skeleton" style={{ width: '100%', height: '96px', borderRadius: '6px', marginBottom: '10px' }}></div>
+                                        <div className="skeleton" style={{ width: '90%', height: '16px', borderRadius: '4px', marginBottom: '4px' }}></div>
+                                        <div className="skeleton" style={{ width: '65%', height: '16px', borderRadius: '4px', marginBottom: '8px' }}></div>
+                                        <div className="skeleton" style={{ width: '130px', height: '13px', borderRadius: '4px' }}></div>
+                                    </div>
+                                ))}
                             </div>
                         </>
                     ) : leadArticle ? (

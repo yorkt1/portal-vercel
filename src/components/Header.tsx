@@ -57,7 +57,7 @@ export default function Header() {
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
-                        <button type="submit" className="btn primary" style={{ padding: '8px 16px' }}>Ir</button>
+                        <button type="submit" className="btn" style={{ padding: '8px 16px' }}>Ir</button>
                     </form>
                 </nav>
 

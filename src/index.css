@@ -257,7 +257,7 @@ nav.main-nav {
     width: 160px;
     height: 110px;
     object-fit: cover;
-    border-radius: 8px
+    border-radius: 8px;
 }
 
 .post h3 {
@@ -678,11 +678,18 @@ body.overlay-open {
     /* Ensure links acting as buttons don't have underline */
 }
 
-.btn.primary,
-.btn.active {
+.btn.primary {
     background: var(--accent);
     color: #fff;
     border-color: transparent;
+}
+
+.btn.active,
+.pagination .btn.primary {
+    background: #fff;
+    color: #111;
+    border-color: #9ca3af;
+    font-weight: 700;
 }
 
 .btn:disabled {
