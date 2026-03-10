@@ -275,7 +275,7 @@ nav.main-nav {
 
 .post h3 {
     margin: 0 0 6px;
-    font-size: 16px
+    font-size: 16px;
 }
 
 .excerpt {
@@ -411,11 +411,15 @@ body.overlay-open {
 .article-section p {
     line-height: 1.8;
     margin-bottom: 1.2em;
+    text-justify: inter-word;
+    white-space: normal !important;
+    word-break: normal !important;
+    hyphens: none;
 }
 
-/* Respeita alinhamento do parágrafo — não força justify se o Word definiu outro */
-.article-section p:not([style*="text-align"]) {
-    text-align: justify;
+/* Força justificado (encostado nas extremidades) ignorando "left" ou "start" do Word, mas respeitando se o usuário centralizar ou alinhar à direita no Editor */
+.article-section p:not([style*="center"]):not([style*="right"]) {
+    text-align: justify !important;
 }
 
 /* Spans com inline style: garante que herdem bem */

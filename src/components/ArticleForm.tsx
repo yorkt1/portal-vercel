@@ -94,6 +94,11 @@ function cleanWordHtml(html: string): string {
     let result = doc.body.innerHTML;
     result = result.replace(/<!--\[if[\s\S]*?\[endif\]-->/gi, '');
     result = result.replace(/<!--[^>]*-->/g, '');
+
+    // IMPORTANTE: Converte espaços fixos do Word (&nbsp;) para espaços normais. 
+    // Isso é o que mais impede o text-align: justify de encostar perfeitamente nas extremidades!
+    result = result.replace(/&nbsp;/g, ' ');
+
     return result;
 }
 

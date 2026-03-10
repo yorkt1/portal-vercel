@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { Article } from '../data/content';
+import { toTitleCase } from '../utils/titleCase';
 
 interface ArticleCardProps {
     article: Article;
@@ -16,7 +17,7 @@ export default function ArticleCard({ article, linkPrefix }: ArticleCardProps) {
                     {article.date} • {article.readTime}
                 </div>
                 <img src={article.image} alt={article.title} />
-                <h3>{article.title}</h3>
+                <h3>{toTitleCase(article.title)}</h3>
                 <p className="excerpt">{article.excerpt}</p>
             </div>
         </Link>

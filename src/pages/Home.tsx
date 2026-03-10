@@ -4,6 +4,7 @@ import { supabase } from '../services/supabase';
 import type { Article } from '../data/content';
 import SkeletonCard from '../components/SkeletonCard';
 import ArticleCard from '../components/ArticleCard';
+import { toTitleCase } from '../utils/titleCase';
 
 // Hook que anima um número de 0 até `target` em `duration`ms
 function useCountUp(target: number, duration = 800) {
@@ -260,7 +261,7 @@ export default function Home() {
                                     />
                                 </Link>
                                 <Link to={`/artigo/${leadArticle.id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
-                                    <h2 style={{ margin: '12px 0 6px', fontSize: '22px' }}>{leadArticle.title}</h2>
+                                    <h2 style={{ margin: '12px 0 6px', fontSize: '22px' }}>{toTitleCase(leadArticle.title)}</h2>
                                 </Link>
                                 <p style={{ color: 'var(--muted)', fontSize: '14px' }}>{leadArticle.excerpt}</p>
                                 <div style={{ marginTop: '12px' }}>
@@ -308,7 +309,7 @@ export default function Home() {
                             <ol style={{ paddingLeft: '18px', margin: 0 }}>
                                 {posts.slice(0, 5).map((post) => (
                                     <li key={post.id}>
-                                        <Link to={`/artigo/${post.id}`}>{post.title}</Link>
+                                        <Link to={`/artigo/${post.id}`}>{toTitleCase(post.title)}</Link>
                                     </li>
                                 ))}
                             </ol>
@@ -343,7 +344,7 @@ export default function Home() {
                             <ol style={{ paddingLeft: '18px', margin: 0 }}>
                                 {reflexoes.slice(0, 5).map((reflexao) => (
                                     <li key={reflexao.id}>
-                                        <Link to={`/reflexao/${reflexao.id}`}>{reflexao.title}</Link>
+                                        <Link to={`/reflexao/${reflexao.id}`}>{toTitleCase(reflexao.title)}</Link>
                                     </li>
                                 ))}
                             </ol>
@@ -382,7 +383,7 @@ export default function Home() {
                             <ol style={{ paddingLeft: '18px', margin: 0 }}>
                                 {noticias.slice(0, 5).map((noticia) => (
                                     <li key={noticia.id}>
-                                        <Link to={`/noticia/${noticia.id}`}>{noticia.title}</Link>
+                                        <Link to={`/noticia/${noticia.id}`}>{toTitleCase(noticia.title)}</Link>
                                     </li>
                                 ))}
                             </ol>

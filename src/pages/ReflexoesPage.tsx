@@ -3,6 +3,7 @@ import { supabase } from '../services/supabase';
 import type { Article } from '../data/content';
 import ArticleCard from '../components/ArticleCard';
 import SkeletonCard from '../components/SkeletonCard';
+import { toTitleCase } from '../utils/titleCase';
 
 export default function ReflexoesPage() {
     const [reflexoes, setReflexoes] = useState<Article[]>([]);
@@ -56,7 +57,7 @@ export default function ReflexoesPage() {
                             <ol style={{ paddingLeft: '18px', margin: 0 }}>
                                 {reflexoes.slice(0, 5).map((reflexao) => (
                                     <li key={reflexao.id}>
-                                        <a href={`/reflexao/${reflexao.id}`}>{reflexao.title}</a>
+                                        <a href={`/reflexao/${reflexao.id}`}>{toTitleCase(reflexao.title)}</a>
                                     </li>
                                 ))}
                             </ol>

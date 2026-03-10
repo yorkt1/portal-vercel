@@ -3,6 +3,7 @@ import { supabase } from '../services/supabase';
 import type { Article } from '../data/content';
 import ArticleCard from '../components/ArticleCard';
 import SkeletonCard from '../components/SkeletonCard';
+import { toTitleCase } from '../utils/titleCase';
 
 export default function ArtigosPage() {
     const [articles, setArticles] = useState<Article[]>([]);
@@ -67,7 +68,7 @@ export default function ArtigosPage() {
                             <ol style={{ paddingLeft: '18px', margin: 0 }}>
                                 {articles.slice(0, 5).map((article) => (
                                     <li key={article.id}>
-                                        <a href={`/artigo/${article.id}`}>{article.title}</a>
+                                        <a href={`/artigo/${article.id}`}>{toTitleCase(article.title)}</a>
                                     </li>
                                 ))}
                             </ol>
