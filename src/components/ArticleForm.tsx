@@ -354,6 +354,20 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                     </div>
                 </div>
 
+                {/* Autor */}
+                <div className="form-row">
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500, color: '#374151' }}>✍️ Autor</label>
+                    <input
+                        type="text"
+                        name="author"
+                        value={formData.author || ''}
+                        onChange={handleChange}
+                        required
+                        className="admin-login-input"
+                        placeholder="ex: Fátima T. Felippe, Redação..."
+                    />
+                </div>
+
                 {/* Imagem de Capa */}
                 <div className="form-row">
                     <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500, color: '#374151' }}>Imagem de Capa</label>
@@ -468,7 +482,7 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                                                     '#dc2626', '#ea580c', '#d97706', '#65a30d', '#16a34a',
                                                     '#0891b2', '#2563eb', '#7c3aed', '#db2777', '#be123c',
                                                     '#fca5a5', '#fed7aa', '#fef08a', '#bbf7d0', '#bfdbfe',
-                                                    '#a78bfa', '#f9a8d4', '#6ee7b7', '#93c5fd', '#fbbf24'
+                                                    '#a78bfa', '#f9a8d4', '#6ee7b7', '#93c5fd', 'darkgoldenrod'
                                                 ].map(c => (
                                                     <button
                                                         key={c}

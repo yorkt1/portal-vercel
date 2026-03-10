@@ -1,4 +1,4 @@
-﻿/* Reset básico */
+/* Reset básico */
 :root {
     --accent: #0b74da;
     --muted: #6b7280;
@@ -189,16 +189,29 @@ nav.main-nav {
 
 .card-small {
     background: var(--card);
-    padding: 12px;
-    border-radius: 10px
+    padding: 14px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+}
+
+.card-small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-small:hover h3 {
+    color: var(--accent);
 }
 
 .card-small img {
     width: 100%;
-    height: 96px;
+    height: 140px;
     object-fit: cover;
     border-radius: 6px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin-bottom: 8px;
 }
 
 /* Image fallback - solid background if image fails to load */

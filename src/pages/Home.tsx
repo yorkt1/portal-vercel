@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { supabase } from '../services/supabase';
 import type { Article } from '../data/content';
 import SkeletonCard from '../components/SkeletonCard';
+import ArticleCard from '../components/ArticleCard';
 
 // Hook que anima um número de 0 até `target` em `duration`ms
 function useCountUp(target: number, duration = 800) {
@@ -275,21 +276,7 @@ export default function Home() {
                             {/* 2 side cards */}
                             <div className="side-cards">
                                 {sideArticles.map((post) => (
-                                    <Link key={post.id} to={`/artigo/${post.id}`} className="card-small" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
-                                        <div className={`category ${post.category}`}>{post.categoryName}</div>
-                                        <div className="meta" style={{ marginBottom: '8px' }}>
-                                            {post.date} • {post.readTime}
-                                        </div>
-                                        <img
-                                            src={post.image}
-                                            alt={post.title}
-                                            onError={(e) => {
-                                                e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                                            }}
-                                        />
-                                        <h3 style={{ margin: '8px 0 4px', fontSize: '14px' }}>{post.title}</h3>
-                                        <p className="excerpt" style={{ fontSize: '13px', margin: 0 }}>{post.excerpt}</p>
-                                    </Link>
+                                    <ArticleCard key={post.id} article={post} linkPrefix="artigo" />
                                 ))}
                             </div>
                         </>
@@ -310,30 +297,7 @@ export default function Home() {
                             </>
                         ) : (
                             paginate(mainArtigosList, currentPageArtigos).map((post) => (
-                                <Link
-                                    key={post.id}
-                                    to={`/artigo/${post.id}`}
-                                    className="post"
-                                    style={{ textDecoration: 'none', color: 'inherit' }}
-                                >
-                                    <img
-                                        src={post.image}
-                                        alt={post.title}
-                                        onError={(e) => {
-                                            e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                                        }}
-                                    />
-                                    <div>
-                                        <span className={`category ${post.category}`}>{post.categoryName}</span>
-                                        <div className="post-meta">
-                                            <span>{post.date}</span>
-                                            <span> • </span>
-                                            <span>{post.readTime}</span>
-                                        </div>
-                                        <h3>{post.title}</h3>
-                                        <p className="excerpt">{post.excerpt}</p>
-                                    </div>
-                                </Link>
+                                <ArticleCard key={post.id} article={post} linkPrefix="artigo" />
                             ))
                         )}
                     </section>
@@ -368,30 +332,7 @@ export default function Home() {
                             </>
                         ) : (
                             paginate(reflexoes, currentPageReflexoes).map((reflexao) => (
-                                <Link
-                                    key={reflexao.id}
-                                    to={`/reflexao/${reflexao.id}`}
-                                    className="post"
-                                    style={{ textDecoration: 'none', color: 'inherit' }}
-                                >
-                                    <img
-                                        src={reflexao.image}
-                                        alt={reflexao.title}
-                                        onError={(e) => {
-                                            e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                                        }}
-                                    />
-                                    <div>
-                                        <span className={`category ${reflexao.category}`}>{reflexao.categoryName}</span>
-                                        <div className="post-meta">
-                                            <span>{reflexao.date}</span>
-                                            <span> • </span>
-                                            <span>{reflexao.readTime}</span>
-                                        </div>
-                                        <h3>{reflexao.title}</h3>
-                                        <p className="excerpt">{reflexao.excerpt}</p>
-                                    </div>
-                                </Link>
+                                <ArticleCard key={reflexao.id} article={reflexao} linkPrefix="reflexao" />
                             ))
                         )}
                     </section>
@@ -426,30 +367,7 @@ export default function Home() {
                             </>
                         ) : noticias.length > 0 ? (
                             paginate(noticias, currentPageNoticias).map((noticia) => (
-                                <Link
-                                    key={noticia.id}
-                                    to={`/noticia/${noticia.id}`}
-                                    className="post"
-                                    style={{ textDecoration: 'none', color: 'inherit' }}
-                                >
-                                    <img
-                                        src={noticia.image}
-                                        alt={noticia.title}
-                                        onError={(e) => {
-                                            e.currentTarget.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                                        }}
-                                    />
-                                    <div>
-                                        <span className={`category ${noticia.category}`}>{noticia.categoryName}</span>
-                                        <div className="post-meta">
-                                            <span>{noticia.date}</span>
-                                            <span> • </span>
-                                            <span>{noticia.readTime}</span>
-                                        </div>
-                                        <h3>{noticia.title}</h3>
-                                        <p className="excerpt">{noticia.excerpt}</p>
-                                    </div>
-                                </Link>
+                                <ArticleCard key={noticia.id} article={noticia} linkPrefix="noticia" />
                             ))
                         ) : (
                             <p style={{ color: 'var(--muted)', textAlign: 'center', padding: '40px', gridColumn: '1 / -1' }}>
