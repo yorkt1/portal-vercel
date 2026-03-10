@@ -276,7 +276,10 @@ export default function Home() {
                             <div className="side-cards">
                                 {sideArticles.map((post) => (
                                     <Link key={post.id} to={`/artigo/${post.id}`} className="card-small" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
-                                        <span className={`category ${post.category}`}>{post.categoryName}</span>
+                                        <div className={`category ${post.category}`}>{post.categoryName}</div>
+                                        <div className="meta" style={{ marginBottom: '8px' }}>
+                                            {post.date} • {post.readTime}
+                                        </div>
                                         <img
                                             src={post.image}
                                             alt={post.title}
@@ -285,9 +288,7 @@ export default function Home() {
                                             }}
                                         />
                                         <h3 style={{ margin: '8px 0 4px', fontSize: '14px' }}>{post.title}</h3>
-                                        <div className="meta">
-                                            por {post.author} • {post.date}
-                                        </div>
+                                        <p className="excerpt" style={{ fontSize: '13px', margin: 0 }}>{post.excerpt}</p>
                                     </Link>
                                 ))}
                             </div>
