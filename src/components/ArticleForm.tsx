@@ -123,8 +123,13 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
     const [tableRows, setTableRows] = useState(3);
     const [tableCols, setTableCols] = useState(3);
     const [showTableInput, setShowTableInput] = useState(false);
+    const [showTextColorPalette, setShowTextColorPalette] = useState(false);
+    const [showBgColorPalette, setShowBgColorPalette] = useState(false);
+    const [currentTextColor, setCurrentTextColor] = useState('#111111');
+    const [currentBgColor, setCurrentBgColor] = useState('#ffff00');
     const textColorRef = useRef<HTMLInputElement>(null);
     const bgColorRef = useRef<HTMLInputElement>(null);
+    const docxInputRef = useRef<HTMLInputElement>(null);
 
     const [formData, setFormData] = useState<Partial<Article>>(initialData || {
         title: '',
@@ -394,33 +399,21 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                 </div>
 
                 {/* ══════════════ EDITOR RICO — LAYOUT DOCUMENTO ══════════════ */}
-                <div className="form-row doc-editor-wrapper">
+                <div className="doc-editor-wrapper" style={{ width: '100%' }}>
 
-                    {/* Cabeçalho do editor */}
-                    <div className="doc-editor-header">
-                        <div>
-                            <span className="doc-editor-title">✏️ Conteúdo Completo</span>
-                            <span className="doc-editor-hint">Cole do Word ou importe um .docx — formatação preservada</span>
-                        </div>
-                        <label className="doc-import-btn">
-                            📄 Importar .DOCX
-                            <input
-                                type="file"
-                                accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                                onChange={handleDocxImport}
-                                style={{ display: 'none' }}
-                                disabled={loading}
-                            />
-                        </label>
+                    {/* Título simples acima do editor, sem deslocar o layout */}
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
+                        <label style={{ fontWeight: 600, color: '#1e293b', fontSize: '15px' }}>✏️ Conteúdo Completo</label>
+                        <span style={{ fontSize: '12px', color: '#64748b' }}>Cole do Word ou importe um .docx — formatação preservada</span>
                     </div>
 
                     {/* Container principal do editor */}
                     <div className="doc-editor-container">
 
-                        {/* ── BARRA DE FERRAMENTAS STICKY ── */}
+                        {/* ── BARRA DE FERRAMENTAS FIXA NA VIEWPORT ── */}
                         <div className="doc-toolbar">
 
-                            {/* Linha 1: Fonte + Tamanho + Sep + Formatação + Sep + Cores + Sep + Títulos */}
+                            {/* Linha principal de ferramentas */}
                             <div className="doc-toolbar-row">
                                 <select
                                     title="Família da Fonte"
@@ -455,25 +448,102 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
 
                                 <div className="doc-sep" />
 
-                                {/* Cor do texto */}
-                                <div className="doc-color-btn" title="Cor do Texto">
-                                    <button type="button" onClick={() => textColorRef.current?.click()} className="doc-btn">
-                                        <span className="doc-color-letter">A</span>
-                                        <span className="doc-color-bar" style={{ background: editor?.getAttributes('textStyle').color || '#111' }} />
+                                {/* ── COR DO TEXTO — paleta visual ── */}
+                                <div className="doc-color-picker-wrap" title="Cor do Texto">
+                                    <button
+                                        type="button"
+                                        className="doc-btn doc-color-trigger"
+                                        onClick={() => { setShowTextColorPalette(v => !v); setShowBgColorPalette(false); }}
+                                    >
+                                        <span style={{ fontWeight: 700, fontSize: 13 }}>A</span>
+                                        <span className="doc-color-bar" style={{ background: currentTextColor }} />
+                                        <span style={{ fontSize: 9, marginLeft: 1, color: '#94a3b8' }}>▼</span>
                                     </button>
-                                    <input ref={textColorRef} type="color" style={{ position: 'absolute', opacity: 0, width: 0, height: 0 }}
-                                        onChange={e => editor?.chain().focus().setColor(e.target.value).run()} />
+                                    {showTextColorPalette && (
+                                        <div className="doc-color-palette">
+                                            <div className="doc-palette-label">Cor do Texto</div>
+                                            <div className="doc-palette-grid">
+                                                {['#000000', '#1a1a2e', '#16213e', '#0f3460', '#e94560',
+                                                    '#374151', '#6b7280', '#9ca3af', '#d1d5db', '#ffffff',
+                                                    '#dc2626', '#ea580c', '#d97706', '#65a30d', '#16a34a',
+                                                    '#0891b2', '#2563eb', '#7c3aed', '#db2777', '#be123c',
+                                                    '#fca5a5', '#fed7aa', '#fef08a', '#bbf7d0', '#bfdbfe',
+                                                    '#a78bfa', '#f9a8d4', '#6ee7b7', '#93c5fd', '#fbbf24'
+                                                ].map(c => (
+                                                    <button
+                                                        key={c}
+                                                        type="button"
+                                                        className="doc-palette-swatch"
+                                                        style={{ background: c, outline: currentTextColor === c ? '2px solid #2563eb' : undefined }}
+                                                        title={c}
+                                                        onClick={() => {
+                                                            setCurrentTextColor(c);
+                                                            editor?.chain().focus().setColor(c).run();
+                                                            setShowTextColorPalette(false);
+                                                        }}
+                                                    />
+                                                ))}
+                                            </div>
+                                            <div className="doc-palette-custom">
+                                                <span>Personalizada:</span>
+                                                <input type="color" value={currentTextColor} ref={textColorRef}
+                                                    onChange={e => {
+                                                        setCurrentTextColor(e.target.value);
+                                                        editor?.chain().focus().setColor(e.target.value).run();
+                                                    }}
+                                                    className="doc-custom-color-input"
+                                                />
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
 
-                                {/* Cor de destaque */}
-                                <div className="doc-color-btn" title="Cor de Destaque">
-                                    <button type="button" onClick={() => bgColorRef.current?.click()} className="doc-btn">
-                                        <span style={{ fontSize: '12px' }}>🖊</span>
-                                        <span className="doc-color-bar" style={{ background: '#ffff00' }} />
+                                {/* ── COR DE DESTAQUE — paleta visual ── */}
+                                <div className="doc-color-picker-wrap" title="Realce">
+                                    <button
+                                        type="button"
+                                        className="doc-btn doc-color-trigger"
+                                        onClick={() => { setShowBgColorPalette(v => !v); setShowTextColorPalette(false); }}
+                                    >
+                                        <span style={{ fontSize: 13 }}>🖊</span>
+                                        <span className="doc-color-bar" style={{ background: currentBgColor }} />
+                                        <span style={{ fontSize: 9, marginLeft: 1, color: '#94a3b8' }}>▼</span>
                                     </button>
-                                    <input ref={bgColorRef} type="color" defaultValue="#ffff00"
-                                        style={{ position: 'absolute', opacity: 0, width: 0, height: 0 }}
-                                        onChange={e => editor?.chain().focus().toggleHighlight({ color: e.target.value }).run()} />
+                                    {showBgColorPalette && (
+                                        <div className="doc-color-palette">
+                                            <div className="doc-palette-label">Cor de Realce</div>
+                                            <div className="doc-palette-grid">
+                                                {['#fef08a', '#fde68a', '#fed7aa', '#fca5a5', '#fbcfe8',
+                                                    '#e9d5ff', '#bfdbfe', '#bae6fd', '#bbf7d0', '#d1fae5',
+                                                    '#ffffff', '#f1f5f9', '#e2e8f0', '#cbd5e1', '#94a3b8',
+                                                    '#ffff00', '#00ff7f', '#00bfff', '#ff69b4', '#ff6347'
+                                                ].map(c => (
+                                                    <button
+                                                        key={c}
+                                                        type="button"
+                                                        className="doc-palette-swatch"
+                                                        style={{ background: c, outline: currentBgColor === c ? '2px solid #2563eb' : undefined }}
+                                                        title={c}
+                                                        onClick={() => {
+                                                            setCurrentBgColor(c);
+                                                            editor?.chain().focus().toggleHighlight({ color: c }).run();
+                                                            setShowBgColorPalette(false);
+                                                        }}
+                                                    />
+                                                ))}
+                                            </div>
+                                            <div className="doc-palette-custom">
+                                                <span>Personalizada:</span>
+                                                <input type="color" value={currentBgColor} ref={bgColorRef}
+                                                    onChange={e => {
+                                                        setCurrentBgColor(e.target.value);
+                                                        editor?.chain().focus().toggleHighlight({ color: e.target.value }).run();
+                                                    }}
+                                                    className="doc-custom-color-input"
+                                                />
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="doc-sep" />
@@ -537,6 +607,31 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                                 <button type="button" className="doc-btn" onClick={() => editor?.chain().focus().undo().run()} title="Desfazer (Ctrl+Z)">↩</button>
                                 <button type="button" className="doc-btn" onClick={() => editor?.chain().focus().redo().run()} title="Refazer (Ctrl+Y)">↪</button>
                                 <button type="button" className="doc-btn" onClick={() => editor?.chain().focus().clearNodes().unsetAllMarks().run()} title="Limpar formatação" style={{ color: '#6b7280' }}>✗</button>
+
+                                <div className="doc-sep" />
+
+                                {/* Importar DOCX — na toolbar */}
+                                <label className="doc-btn doc-btn-import" title="Importar .DOCX" style={{ cursor: 'pointer', gap: '4px' }}>
+                                    📄 .DOCX
+                                    <input
+                                        ref={docxInputRef}
+                                        type="file"
+                                        accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                                        onChange={handleDocxImport}
+                                        style={{ display: 'none' }}
+                                        disabled={loading}
+                                    />
+                                </label>
+
+                                {/* Salvar na toolbar */}
+                                <button
+                                    type="submit"
+                                    className="doc-btn doc-btn-save"
+                                    disabled={loading}
+                                    title="Salvar conteúdo"
+                                >
+                                    {loading ? '⏳' : '💾'} Salvar
+                                </button>
                             </div>
 
                             {/* Popups inline */}
@@ -562,7 +657,7 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                         </div>
 
                         {/* ── CANVAS DO DOCUMENTO (FOLHA A4) ── */}
-                        <div className="doc-canvas">
+                        <div className="doc-canvas" onClick={() => { setShowTextColorPalette(false); setShowBgColorPalette(false); }}>
                             <div className="doc-page">
                                 <EditorContent editor={editor} className="doc-editor-body" />
                             </div>
@@ -587,64 +682,31 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                 /* ── Wrapper geral ── */
                 .doc-editor-wrapper { margin: 0 !important; }
 
-                /* ── Cabeçalho do editor ── */
-                .doc-editor-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 10px;
-                    flex-wrap: wrap;
-                    gap: 8px;
-                }
-                .doc-editor-title {
-                    font-weight: 600;
-                    color: #1e293b;
-                    font-size: 15px;
-                }
-                .doc-editor-hint {
-                    font-size: 12px;
-                    color: #64748b;
-                    margin-left: 10px;
-                }
-                .doc-import-btn {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 6px;
-                    background: #2563eb;
-                    color: white;
-                    padding: 7px 14px;
-                    border-radius: 7px;
-                    font-size: 13px;
-                    font-weight: 500;
-                    cursor: pointer;
-                    transition: background 0.18s;
-                    box-shadow: 0 1px 3px rgba(37,99,235,0.25);
-                }
-                .doc-import-btn:hover { background: #1d4ed8; }
-
                 /* ── Container principal ── */
                 .doc-editor-container {
                     border: 1.5px solid #cbd5e1;
                     border-radius: 12px;
-                    overflow: hidden;
+                    overflow: visible;
                     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+                    position: relative;
                 }
 
-                /* ── Toolbar ── */
+                /* ── Toolbar FIXA na tela ── */
                 .doc-toolbar {
                     position: sticky;
                     top: 0;
-                    z-index: 20;
+                    z-index: 100;
                     background: #f8fafc;
                     border-bottom: 1.5px solid #e2e8f0;
-                    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+                    border-radius: 12px 12px 0 0;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
                 }
                 .doc-toolbar-row {
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
                     gap: 1px;
-                    padding: 5px 10px;
+                    padding: 6px 10px;
                 }
 
                 /* Botões da toolbar */
@@ -654,7 +716,7 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                     justify-content: center;
                     min-width: 28px;
                     height: 28px;
-                    padding: 0 5px;
+                    padding: 0 6px;
                     border: none;
                     border-radius: 5px;
                     background: transparent;
@@ -670,6 +732,30 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                     color: #1d4ed8;
                     font-weight: 700;
                 }
+
+                /* Botão Importar DOCX na toolbar */
+                .doc-btn-import {
+                    background: #eff6ff;
+                    color: #2563eb;
+                    border: 1px solid #bfdbfe;
+                    font-weight: 500;
+                    padding: 0 9px;
+                    gap: 4px;
+                }
+                .doc-btn-import:hover { background: #dbeafe; }
+
+                /* Botão Salvar na toolbar */
+                .doc-btn-save {
+                    background: #16a34a;
+                    color: white;
+                    border: none;
+                    font-weight: 600;
+                    padding: 0 12px;
+                    gap: 4px;
+                    border-radius: 6px;
+                }
+                .doc-btn-save:hover { background: #15803d; }
+                .doc-btn-save:disabled { opacity: 0.6; cursor: not-allowed; }
 
                 /* Separadores */
                 .doc-sep {
@@ -695,18 +781,76 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                 .doc-select-font { width: 130px; }
                 .doc-select-size { width: 54px; }
 
-                /* Botão de cor */
-                .doc-color-btn { position: relative; display: inline-flex; align-items: center; }
-                .doc-color-letter { font-size: 13px; font-weight: 700; line-height: 1; }
+                /* ── Seletor de cor com paleta ── */
+                .doc-color-picker-wrap {
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                }
+                .doc-color-trigger {
+                    flex-direction: column;
+                    height: 32px;
+                    gap: 1px;
+                    padding: 0 5px;
+                }
                 .doc-color-bar {
                     display: block;
-                    width: 14px;
-                    height: 3px;
+                    width: 18px;
+                    height: 4px;
                     border-radius: 2px;
+                }
+                .doc-color-palette {
                     position: absolute;
-                    bottom: 3px;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    top: calc(100% + 4px);
+                    left: 0;
+                    background: white;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 10px;
+                    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+                    padding: 10px;
+                    z-index: 200;
+                    min-width: 180px;
+                }
+                .doc-palette-label {
+                    font-size: 11px;
+                    font-weight: 600;
+                    color: #64748b;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    margin-bottom: 8px;
+                }
+                .doc-palette-grid {
+                    display: grid;
+                    grid-template-columns: repeat(10, 20px);
+                    gap: 3px;
+                    margin-bottom: 8px;
+                }
+                .doc-palette-swatch {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 4px;
+                    border: 1px solid rgba(0,0,0,0.12);
+                    cursor: pointer;
+                    padding: 0;
+                    transition: transform 0.1s;
+                }
+                .doc-palette-swatch:hover { transform: scale(1.25); border-color: #2563eb; }
+                .doc-palette-custom {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 12px;
+                    color: #475569;
+                    border-top: 1px solid #f1f5f9;
+                    padding-top: 8px;
+                }
+                .doc-custom-color-input {
+                    width: 32px;
+                    height: 24px;
+                    padding: 0;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 4px;
+                    cursor: pointer;
                 }
 
                 /* Popups */

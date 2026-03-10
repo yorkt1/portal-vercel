@@ -212,7 +212,7 @@ export default function AdminPage() {
 
     if (isCreating) {
         return (
-            <div className="container" style={{ padding: '40px 20px' }}>
+            <div style={{ padding: '40px 20px', maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
                 <ArticleForm
                     type={selectedType}
                     initialData={editingArticle}
