@@ -398,7 +398,7 @@ body.overlay-open {
    ═══════════════════════════════════════════════════════════════ */
 .article-section {
     margin-bottom: 30px;
-    line-height: 1.8;
+    line-height: 1.5;
     color: #222;
     /* font-size não forçado aqui — respeita inline styles */
 }
@@ -409,7 +409,7 @@ body.overlay-open {
 }
 
 .article-section p {
-    line-height: 1.8;
+    line-height: 1.5;
     margin-bottom: 1.2em;
     text-justify: inter-word;
     white-space: normal !important;
@@ -2125,5 +2125,12 @@ textarea.form-control {
     text-justify: inter-word;
     white-space: normal;
     word-break: normal;
+}
+
+/* Espaçamento 1,5 linha (como Word) no editor e na visualização */
+.ProseMirror p,
+.tiptap-editor-content p,
+.article-section p {
+    line-height: 1.5 !important;
 }
 
