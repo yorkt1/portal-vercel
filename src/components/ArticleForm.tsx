@@ -43,6 +43,20 @@ const FontSize = Extension.create({
     },
 });
 
+// Extensão de Tab = recuo de parágrafo (como o Word)
+const TabIndent = Extension.create({
+    name: 'tabIndent',
+    addKeyboardShortcuts() {
+        return {
+            // Tab insere um recuo visual fixo (salvo no banco, exibido ao usuário)
+            Tab: () =>
+                this.editor.commands.insertContent(
+                    '<span style="display:inline-block;width:2em"> </span>'
+                ),
+        };
+    },
+});
+
 // Função que limpa HTML do Word preservando estilos visuais importantes
 function cleanWordHtml(html: string): string {
     const parser = new DOMParser();
@@ -70,9 +84,12 @@ function cleanWordHtml(html: string): string {
             const colonIdx = decl.indexOf(':');
             if (colonIdx === -1) continue;
             const prop = decl.slice(0, colonIdx).trim().toLowerCase();
-            const val = decl.slice(colonIdx + 1).trim();
+            const val = decl.slice(colonIdx + 1).trim().toLowerCase();
             // Ignora propriedades MSO/Office e valores vazios
             if (prop.startsWith('mso') || prop.startsWith('-aw') || !val) continue;
+            // Remove text-align: left/start do Word (será aplicado justify via CSS)
+            // Preserva center e right que o usuário escolheu explicitamente
+            if (prop === 'text-align' && (val === 'left' || val === 'start' || val === 'justify')) continue;
             if (KEEP_PROPS.has(prop)) {
                 kept.push(`${prop}: ${val}`);
             }
@@ -172,8 +189,9 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
             TableRow,
             TableHeader,
             TableCell,
+            TabIndent,
         ],
-        content: formData.content || '',
+        content: (formData.content || '').replace(/&nbsp;/g, ' ').replace(/ /g, ' '),
         onUpdate: ({ editor }) => {
             setFormData(prev => ({ ...prev, content: editor.getHTML() }));
         },
@@ -243,8 +261,9 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
             );
 
             if (editor) {
-                // Insere no editor preservando HTML Rico
-                editor.commands.setContent(result.value);
+                // Insere no editor preservando HTML Rico, sem &nbsp; do Word
+                const cleanedContent = result.value.replace(/&nbsp;/g, ' ').replace(/ /g, ' ');
+                editor.commands.setContent(cleanedContent);
             }
             alert("Documento Word importado com sucesso!");
         } catch (error) {

@@ -2116,3 +2116,14 @@ textarea.form-control {
 /* =========================================
    Fim dos estilos
    ========================================= */
+/* ── TipTap editor (Admin): justifica parágrafos sem alinhamento explícito ──
+   Parágrafos COM text-align inline (definido pelo toolbar) herdam o inline style.
+   A limpeza do Word remove text-align:left automaticamente no paste/import. ── */
+.ProseMirror p:not([style*="text-align"]),
+.tiptap-editor-content p:not([style*="text-align"]) {
+    text-align: justify;
+    text-justify: inter-word;
+    white-space: normal;
+    word-break: normal;
+}
+

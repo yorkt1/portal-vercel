@@ -4,6 +4,13 @@ import { supabase } from '../services/supabase';
 import type { Article } from '../data/content';
 import SkeletonArticleDetail from '../components/SkeletonArticleDetail';
 
+// Remove &nbsp; e outros resíduos do Word que quebram a justificação do texto
+function cleanHtml(html: string): string {
+    return html
+        .replace(/&nbsp;/g, ' ')
+        .replace(/\u00a0/g, ' ');
+}
+
 export default function NoticiaPage() {
     const { id } = useParams<{ id: string }>();
     const [noticia, setNoticia] = useState<Article | null>(null);
@@ -69,7 +76,7 @@ export default function NoticiaPage() {
 
                 <div
                     className="article-section"
-                    dangerouslySetInnerHTML={{ __html: noticia.content }}
+                    dangerouslySetInnerHTML={{ __html: cleanHtml(noticia.content) }}
                 />
 
 
