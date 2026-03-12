@@ -140,6 +140,7 @@ const FONT_FAMILIES = [
 
 export default function ArticleForm({ type, initialData, onCancel, onSuccess }: ArticleFormProps) {
     const [loading, setLoading] = useState(false);
+    const [audioUploading, setAudioUploading] = useState(false);
     const [linkUrl, setLinkUrl] = useState('');
     const [showLinkInput, setShowLinkInput] = useState(false);
     const [tableRows, setTableRows] = useState(3);
@@ -152,6 +153,7 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
     const textColorRef = useRef<HTMLInputElement>(null);
     const bgColorRef = useRef<HTMLInputElement>(null);
     const docxInputRef = useRef<HTMLInputElement>(null);
+    const audioInputRef = useRef<HTMLInputElement>(null);
 
     const [formData, setFormData] = useState<Partial<Article>>(initialData || {
         title: '',
@@ -163,7 +165,8 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
         content: '',
         date: new Date().toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' }),
         readTime: '5 min de leitura',
-        tags: []
+        tags: [],
+        audio_url: ''
     });
 
     const isEditing = !!initialData;
@@ -273,6 +276,34 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
             setLoading(false);
             e.target.value = ''; // Limpa o input
         }
+    };
+
+    // Upload de áudio para Supabase Storage
+    const handleAudioUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        try {
+            setAudioUploading(true);
+            if (!e.target.files || e.target.files.length === 0) return;
+            const file = e.target.files[0];
+            const fileExt = file.name.split('.').pop();
+            const fileName = `audio-${Date.now()}-${Math.random().toString(36).substring(2)}.${fileExt}`;
+            const { error: uploadError } = await supabase.storage
+                .from('content-images')
+                .upload(fileName, file);
+            if (uploadError) throw uploadError;
+            const { data } = supabase.storage.from('content-images').getPublicUrl(fileName);
+            setFormData(prev => ({ ...prev, audio_url: data.publicUrl }));
+        } catch (error) {
+            console.error('Error uploading audio:', error);
+            alert('Erro ao enviar áudio. Verifique as permissões do storage.');
+        } finally {
+            setAudioUploading(false);
+        }
+    };
+
+    // Remover áudio
+    const handleRemoveAudio = () => {
+        setFormData(prev => ({ ...prev, audio_url: '' }));
+        if (audioInputRef.current) audioInputRef.current.value = '';
     };
 
     // Upload de imagem DENTRO do editor
@@ -427,6 +458,64 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                             setFormData(prev => ({ ...prev, tags: newTags }));
                         }}
                         className="admin-login-input" />
+                </div>
+
+                {/* Áudio da Reflexão / Artigo */}
+                <div className="form-row">
+                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: 500, color: '#374151' }}>🎧 Áudio (opcional)</label>
+                    <p style={{ fontSize: '12px', color: '#6b7280', marginBottom: '10px', marginTop: 0 }}>Envie um arquivo de áudio (.mp3, .wav, .ogg) que será exibido junto ao conteúdo para o leitor.</p>
+                    
+                    {!formData.audio_url ? (
+                        <div className="audio-upload-area">
+                            <input
+                                ref={audioInputRef}
+                                type="file"
+                                accept="audio/mpeg,audio/wav,audio/ogg,audio/mp3,.mp3,.wav,.ogg"
+                                onChange={handleAudioUpload}
+                                className="image-upload-input"
+                                disabled={audioUploading}
+                            />
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', color: '#6b7280' }}>
+                                <span style={{ fontSize: '32px' }}>{audioUploading ? '⏳' : '🎵'}</span>
+                                <span>{audioUploading ? 'Enviando áudio...' : 'Clique para upload ou arraste um áudio'}</span>
+                                <span style={{ fontSize: '11px', color: '#9ca3af' }}>Formatos: MP3, WAV, OGG</span>
+                            </div>
+                        </div>
+                    ) : (
+                        <div style={{ 
+                            padding: '16px', 
+                            background: '#f0fdf4', 
+                            borderRadius: '10px', 
+                            border: '1px solid #bbf7d0',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '12px'
+                        }}>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                <span style={{ fontWeight: 600, color: '#16a34a', fontSize: '14px' }}>✅ Áudio carregado</span>
+                                <button
+                                    type="button"
+                                    onClick={handleRemoveAudio}
+                                    style={{
+                                        background: '#fee2e2',
+                                        color: '#dc2626',
+                                        border: '1px solid #fca5a5',
+                                        borderRadius: '6px',
+                                        padding: '4px 12px',
+                                        cursor: 'pointer',
+                                        fontSize: '13px',
+                                        fontWeight: 500
+                                    }}
+                                >
+                                    🗑 Remover
+                                </button>
+                            </div>
+                            <audio controls style={{ width: '100%' }}>
+                                <source src={formData.audio_url} type="audio/mpeg" />
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                        </div>
+                    )}
                 </div>
 
                 {/* Resumo */}

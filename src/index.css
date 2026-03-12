@@ -2116,6 +2116,43 @@ textarea.form-control {
 /* =========================================
    Fim dos estilos
    ========================================= */
+
+/* Audio Upload Area (Admin) */
+.audio-upload-area {
+    border: 2px dashed #c4b5fd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background: #faf5ff;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.audio-upload-area:hover {
+    border-color: #8b5cf6;
+    background: #f3e8ff;
+}
+
+/* Audio Player - Artigo/Reflexão (público) */
+.article-audio-player {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+.article-audio-player p {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.article-audio-player audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
 /* ── TipTap editor (Admin): justifica parágrafos sem alinhamento explícito ──
    Parágrafos COM text-align inline (definido pelo toolbar) herdam o inline style.
    A limpeza do Word remove text-align:left automaticamente no paste/import. ── */

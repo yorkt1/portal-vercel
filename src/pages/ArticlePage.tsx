@@ -87,6 +87,16 @@ export default function ArticlePage() {
 
                 <img src={article.image} alt={article.title} className="article-hero-img" />
 
+                {article.audio_url && (
+                    <div className="article-audio-player">
+                        <p>🎧 Áudio da Reflexão</p>
+                        <audio controls>
+                            <source src={article.audio_url} type="audio/mpeg" />
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                    </div>
+                )}
+
                 <div
                     className="article-section"
                     dangerouslySetInnerHTML={{ __html: cleanHtml(article.content) }}

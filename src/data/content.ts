@@ -13,6 +13,7 @@ export interface Article {
   content: string;
   featured?: boolean;
   position?: number;
+  audio_url?: string;
 }
 
 // Dados das reflexões
