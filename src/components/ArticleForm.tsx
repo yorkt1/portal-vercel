@@ -131,6 +131,22 @@ const LineHeight = Extension.create({
                             return { style: `line-height: ${attributes.lineHeight} !important` };
                         },
                     },
+                    marginTop: {
+                        default: null,
+                        parseHTML: element => element.style.marginTop || null,
+                        renderHTML: attributes => {
+                            if (!attributes.marginTop) return {};
+                            return { style: `margin-top: ${attributes.marginTop} !important` };
+                        },
+                    },
+                    marginBottom: {
+                        default: null,
+                        parseHTML: element => element.style.marginBottom || null,
+                        renderHTML: attributes => {
+                            if (!attributes.marginBottom) return {};
+                            return { style: `margin-bottom: ${attributes.marginBottom} !important` };
+                        },
+                    },
                 },
             },
         ];
@@ -161,6 +177,70 @@ const LineHeight = Extension.create({
                             if (dispatch) {
                                 const attrs = { ...node.attrs };
                                 delete attrs.lineHeight;
+                                tr.setNodeMarkup(pos, undefined, attrs);
+                            }
+                            changed = true;
+                        }
+                    }
+                });
+                return changed;
+            },
+            setMarginTop: (marginTop: string) => ({ tr, state, dispatch }: any) => {
+                const { from, to } = state.selection;
+                let changed = false;
+                state.doc.nodesBetween(from, to, (node: any, pos: number) => {
+                    if (node.type.name === 'paragraph' || node.type.name === 'heading') {
+                        if (node.attrs.marginTop !== marginTop) {
+                            if (dispatch) {
+                                tr.setNodeMarkup(pos, undefined, { ...node.attrs, marginTop });
+                            }
+                            changed = true;
+                        }
+                    }
+                });
+                return changed;
+            },
+            unsetMarginTop: () => ({ tr, state, dispatch }: any) => {
+                const { from, to } = state.selection;
+                let changed = false;
+                state.doc.nodesBetween(from, to, (node: any, pos: number) => {
+                    if (node.type.name === 'paragraph' || node.type.name === 'heading') {
+                        if (node.attrs.marginTop) {
+                            if (dispatch) {
+                                const attrs = { ...node.attrs };
+                                delete attrs.marginTop;
+                                tr.setNodeMarkup(pos, undefined, attrs);
+                            }
+                            changed = true;
+                        }
+                    }
+                });
+                return changed;
+            },
+            setMarginBottom: (marginBottom: string) => ({ tr, state, dispatch }: any) => {
+                const { from, to } = state.selection;
+                let changed = false;
+                state.doc.nodesBetween(from, to, (node: any, pos: number) => {
+                    if (node.type.name === 'paragraph' || node.type.name === 'heading') {
+                        if (node.attrs.marginBottom !== marginBottom) {
+                            if (dispatch) {
+                                tr.setNodeMarkup(pos, undefined, { ...node.attrs, marginBottom });
+                            }
+                            changed = true;
+                        }
+                    }
+                });
+                return changed;
+            },
+            unsetMarginBottom: () => ({ tr, state, dispatch }: any) => {
+                const { from, to } = state.selection;
+                let changed = false;
+                state.doc.nodesBetween(from, to, (node: any, pos: number) => {
+                    if (node.type.name === 'paragraph' || node.type.name === 'heading') {
+                        if (node.attrs.marginBottom) {
+                            if (dispatch) {
+                                const attrs = { ...node.attrs };
+                                delete attrs.marginBottom;
                                 tr.setNodeMarkup(pos, undefined, attrs);
                             }
                             changed = true;
@@ -882,6 +962,60 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                                                 );
                                             })}
                                             <div style={{ borderTop: '1px solid #e2e8f0', marginTop: 6, paddingTop: 6 }}>
+                                                {(() => {
+                                                    const hasMarginTop = editor?.getAttributes('paragraph').marginTop || editor?.getAttributes('heading').marginTop;
+                                                    const hasMarginBottom = editor?.getAttributes('paragraph').marginBottom || editor?.getAttributes('heading').marginBottom;
+                                                    const isSpaceAfterRemoved = hasMarginBottom === '0pt' || hasMarginBottom === '0px' || hasMarginBottom === '0';
+                                                    
+                                                    return (
+                                                        <>
+                                                            <button
+                                                                type="button"
+                                                                className="doc-lineh-option"
+                                                                style={{ color: '#334155', fontSize: 12 }}
+                                                                onMouseDown={(e) => {
+                                                                    e.preventDefault();
+                                                                    if (!editor) return;
+                                                                    (window as any).isLineHeightConfirmed = true;
+                                                                    const sel = savedSelectionRef.current;
+                                                                    editor.view.dispatch(editor.state.tr.setSelection(sel));
+                                                                    if (hasMarginTop) {
+                                                                        (editor.chain().focus() as any).unsetMarginTop().run();
+                                                                    } else {
+                                                                        (editor.chain().focus() as any).setMarginTop('12pt').run();
+                                                                    }
+                                                                    setShowLineHeightMenu(false);
+                                                                }}
+                                                            >
+                                                                <span style={{ marginRight: 6 }}>{hasMarginTop ? '↓' : '↑'}</span> 
+                                                                {hasMarginTop ? 'Remover espaço antes do parágrafo' : 'Adicionar espaço antes do parágrafo'}
+                                                            </button>
+                                                            <button
+                                                                type="button"
+                                                                className="doc-lineh-option"
+                                                                style={{ color: '#334155', fontSize: 12 }}
+                                                                onMouseDown={(e) => {
+                                                                    e.preventDefault();
+                                                                    if (!editor) return;
+                                                                    (window as any).isLineHeightConfirmed = true;
+                                                                    const sel = savedSelectionRef.current;
+                                                                    editor.view.dispatch(editor.state.tr.setSelection(sel));
+                                                                    if (isSpaceAfterRemoved) {
+                                                                        (editor.chain().focus() as any).unsetMarginBottom().run();
+                                                                    } else {
+                                                                        (editor.chain().focus() as any).setMarginBottom('0pt').run();
+                                                                    }
+                                                                    setShowLineHeightMenu(false);
+                                                                }}
+                                                            >
+                                                                <span style={{ marginRight: 6 }}>{isSpaceAfterRemoved ? '↓' : '↑'}</span> 
+                                                                {isSpaceAfterRemoved ? 'Adicionar espaço depois do parágrafo' : 'Remover espaço depois do parágrafo'}
+                                                            </button>
+                                                        </>
+                                                    );
+                                                })()}
+                                            </div>
+                                            <div style={{ borderTop: '1px solid #e2e8f0', marginTop: 6, paddingTop: 6 }}>
                                                 <button
                                                     type="button"
                                                     className="doc-lineh-option"
@@ -892,7 +1026,7 @@ export default function ArticleForm({ type, initialData, onCancel, onSuccess }: 
                                                         (window as any).isLineHeightConfirmed = true;
                                                         const sel = savedSelectionRef.current;
                                                         editor.view.dispatch(editor.state.tr.setSelection(sel));
-                                                        (editor.chain().focus() as any).unsetLineHeight().run();
+                                                        (editor.chain().focus() as any).unsetLineHeight().unsetMarginTop().unsetMarginBottom().run();
                                                         setShowLineHeightMenu(false);
                                                     }}
                                                 >
