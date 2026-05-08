@@ -10,8 +10,10 @@ export default function AdminLoginPage() {
         e.preventDefault();
 
         if (password === 'Fatimaadv132!@#') {
-            // Save authentication state
-            sessionStorage.setItem('adminAuthenticated', 'true');
+            // Save authentication state to persist across browser restarts for 7 days
+            const expiryDate = new Date().getTime() + 7 * 24 * 60 * 60 * 1000;
+            localStorage.setItem('adminAuthenticated', 'true');
+            localStorage.setItem('adminAuthExpiry', expiryDate.toString());
             navigate('/admin');
         } else {
             setError('Código de acesso incorreto');

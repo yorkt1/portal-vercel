@@ -22,8 +22,13 @@ export default function AdminPage() {
     const { showToast, ToastComponent } = useToast();
 
     useEffect(() => {
-        const isAuthenticated = sessionStorage.getItem('adminAuthenticated');
-        if (isAuthenticated !== 'true') {
+        const isAuthenticated = localStorage.getItem('adminAuthenticated');
+        const authExpiry = localStorage.getItem('adminAuthExpiry');
+        const isValid = isAuthenticated === 'true' && authExpiry && new Date().getTime() < parseInt(authExpiry);
+
+        if (!isValid) {
+            localStorage.removeItem('adminAuthenticated');
+            localStorage.removeItem('adminAuthExpiry');
             navigate('/admin-login');
         }
     }, [navigate]);
